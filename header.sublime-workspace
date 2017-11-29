@@ -1,0 +1,345 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hea",
+				"header"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"obj",
+				"object-position"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"bor",
+				"border-width"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"st",
+				"sticky"
+			],
+			[
+				"fo",
+				"footer\tTag"
+			],
+			[
+				"text-l",
+				"text-align"
+			],
+			[
+				"texit",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"medi",
+				"medium-6"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"met",
+				"meta\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 248.0,
+		"last_filter": "me",
+		"selected_items":
+		[
+			[
+				"me",
+				"View: Toggle Menu"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/footer.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/header.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/index.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/indextest.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/header.php",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/footer.php",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/quiz.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/css/foundation.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/mystyle.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/index.php",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/title.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Website/mystyle.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Website/index.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/css/app.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/css/foundation.min.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/grid.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/index_original.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/backup.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Website/quiz.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/index_v1",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Foundation/index - Original.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Social, Legal and Ethanical/ascii check.c",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Individual Project/Website/css/style.css",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Individual Project/Website/index.html",
+		"/C/Users/Sharugi/OneDrive/FINAL YEAR BACK-UPS/Individual Project/Website/about.html"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "header.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
