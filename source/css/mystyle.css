@@ -130,4 +130,10 @@ footer {
 table th{
 	background-color: #FAFAFA;
 	border-style: none;
+	table-layout: fixed;
+
+}
+
+br.small{
+	line-height: 2.5;
 }
