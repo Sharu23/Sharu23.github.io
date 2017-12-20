@@ -2204,7 +2204,7 @@ td {
 
 p {
   margin-bottom: 1rem;
-  font-size: inherit;
+  font-size: 1rem;
   line-height: auto;
   text-rendering: optimizeLegibility;
   padding-left: 15px;
@@ -2253,7 +2253,8 @@ h1, .h1 {
   color: #ffffff;
   border-width: 10px;
   border-color: white;
-  border-style: solid; }
+  border-style: solid;
+  background: #E14658; }
 
 h2, .h2 {
   font-size: 1.25rem;
@@ -2262,7 +2263,7 @@ h2, .h2 {
   margin-bottom: 0.5rem; }
 
 h3, .h3 {
-  font-size: 1.1875rem;
+  font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -2272,7 +2273,9 @@ h4, .h4 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color:#E14658; }
+  color:#E14658;
+  font-weight: bold;
+  padding-left: 15px; }
 
 h5, .h5 {
   font-size: 1.0625rem;
@@ -2280,13 +2283,16 @@ h5, .h5 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   padding-left: 15px;
-  color:#E14658; }
+  color:#E14658;
+  text-decoration: underline;
+  padding-left: 10px; }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.065rem;
   line-height: 1.4;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  padding-left: 15px;}
 
 @media print, screen and (min-width: 40em) {
   h1, .h1 {
@@ -2334,10 +2340,11 @@ li {
 
 ul {
   margin-left: 1.25rem;
-  list-style-type: disc; }
+  list-style-type: disc;}
 
 ol {
-  margin-left: 1.25rem; }
+  margin-left: 1.25rem;
+  padding-left: 35px;}
 
 ul ul, ol ul, ul ol, ol ol {
   margin-left: 1.25rem;
@@ -4861,12 +4868,15 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
-  border-radius: 0; }
+  border-radius: 0;
+  background-color: #fafafa;
+  padding-right: 10px;
+  padding-top: 10px;}
   table thead,
   table tbody,
   table tfoot {
     border: 1px solid #f1f1f1;
-    background-color: #fefefe; }
+    background-color: #fafafa; }
   table caption {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold; }
@@ -4917,16 +4927,16 @@ table.scroll {
   overflow-x: auto; }
 
 table.hover thead tr:hover {
-  background-color: #f3f3f3; }
+  background-color: #fafafa; }
 
 table.hover tfoot tr:hover {
-  background-color: #ececec; }
+  background-color: #fafafa; }
 
 table.hover tbody tr:hover {
-  background-color: #f9f9f9; }
+  background-color: #fafafa; }
 
 table.hover:not(.unstriped) tr:nth-of-type(even):hover {
-  background-color: #ececec; }
+  background-color: #fafafa; }
 
 .table-scroll {
   overflow-x: auto; }
