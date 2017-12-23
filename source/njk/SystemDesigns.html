@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+  <div class= "content">
+  <header>
+      <a href= "Homepage.html">
+        <img src= "../img/logo.png" alt= "logo" class="logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href= "Homepage.html"> Homepage</a></li>
+          <li><a href= "Modules.html"> Modules</a></li>
+          <li><a href= "Quiz.html"> Quiz</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="maincell">
+    <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
+    <h4>Requirements Analysis and Systems Design</h4>
+    <p>Requirements are the key of getting the end product right. There are some challenges when it comes to building the right systems, if the objectives are not clear; communications between the team has problem or resources are limited.</p>
+    <p>System thinking is the process of understanding how things influence one another within a whole domain context establishing a view of the system in a holistic manner and examining the linkages and interactions between the components which compose the entire system. </p>
+    <p>However, there are some issues with the System Thinking</p>
+    <ul class="b">
+      <li><b>Holism:</b> emergent properties are not possible to detect by analysis, but should be possible to be defined by a holistic approach</li>
+      <li><b>Goal seeking:</b> systemic interaction must result in a final state to achieve some goals.</li>
+      <li><b>Inputs and Outputs:</b> in a closed system inputs are determined once and constant but in an open system additional inputs are admitted from the environment.</li>
+      <li><b>Transformation of inputs into outputs:</b> this is the process through which the goals are achieved</li>
+      <li><b>Regulations:</b> A “feedback” mechanism is necessary for a system and allow the system’s functions to evolve driven by the requirements changes.</li>
+    </ul>
+    <p>There are three mainstreams methodologies in realisation of Systems Thinking</p>
+    <ul class="b">
+      <li>Structure methodology like Waterfall</li>
+      <li>Rapid Application Development (RAD) methodology like Prototyping</li>
+      <li>Agile methodology like Scrum</li>
+    </ul>
+    <p>The Software System Development Process</p>
+    <ul class="b">
+      <li><b>Requirement: </b> what the customer would want</li>
+      <li><b>Specification:</b> what would be offered to build </li>
+      <li><b>Design:</b> How it would be built </li>
+      <li><b>Implementation:</b> a working system</li>
+      <li><b>Deployment: </b> putting it in place</li>
+      <li><b>Maintenance and Evolution:</b> helping to grow the system</li>
+    </ul>
+    <p>System design is pervasive. The designing aspect happens throughout the development.</p>
+    <p>There are issues in Software Systems Design, below are some that have been identified:</p>
+    <ul class="b">
+      <li><b>Decomposition and Modularisation:</b>  break a big system into smaller and self-evolving components</li>
+      <li><b>Abstraction:</b> not focusing on details to get the high-level structure right</li>
+      <li><b>Encapsulation/information hiding:</b> the ability to embed details</li>
+      <li><b>Workflow and event handling:</b> what the activities inside a workflow and how to handle events should be considered</li>
+      <li><b>Concurrency:</b> what the main concurrent activities are and how to manage their interaction should be considered</li>
+      <li><b>Error handling and recovery:</b> action when a physical component fails (e.g. the database server), and how to handle exceptional circumstances in the real world should be considered</li>
+      <li><b>Persistence of data:</b> what data should be stored in databases and files and how complex (e.g. syntactic, semantics, and pragmatics) they are should be considered</li>
+    </ul>
+    <p>There are two types of designs within Software Systems Design</p>
+    <ul class="b">
+      <li>High-level design (architectural design)</li>
+      <li>Low-level design (physical design)</li>
+    </ul>
+    <p>Design quality and evaluation should be considered.</p>
+    <ul class="b">
+      <li>Design quality include features like performance, reliability, security, availability, modifiability, portability, reusability, testability, maintainability</li>
+      <li>Evaluation can be achieved by measuring these features</li>
+    </ul>
+    <p>Object-orientation is an approach to systems development</p>
+    <ul class="b">
+      <li>A little module is known as object</li>
+      <li>The basic features of Object-Oriented Approach are</li>
+        <ul>
+          <li>Encapsulation: bundle data and processing functions of the data together</li>
+          <li>Information-hiding: a sturdy capsule is a black box – public interface and private representation</li>
+          <li>Message: message = {name of an operation and any required arguments}</li>
+        </ul>
+    </ul>
+    <p>Analysis and Design Process</p>
+    <p>NEED A PIC HERE</p>
+    <h4>Developing Use Case Diagrams</h4>
+    <p>Use Case is a scenario (task) that conveys a software system interactions with the end user (actor) or another system by performing the functions (gaining input and output) for achieving the specific business goal in the domain context</p>
+    <p>There are 2 levels for the Use Cases:</p>
+    <ul class="b">
+      <li>Business use cases (technology independent) which provides the information of</li>
+      <ul>
+        <li><b>what</b> functions (services) are performed in a business domain context</li>
+        <li>and <b>how</b> a business service being carried out is designed with Activity Diagrams</li>
+      </ul>
+      <li>System use cases (technology related) which provides the information of</li>
+        <ul>
+          <li><b>what</b> functions (services) performed in a software system context </li>
+          <li>and <b>how </b>the functional workflow being carried out in an application is designed with Sequence Diagrams</li>
+        </ul>
+      </ul>
+      <p>Software Systems Requirements are key and include:</p>
+      <ul class="b">
+        <li>Functions requirements specifies the behaviour of a software system.</li>
+        <li>Non-Functional aspects generally describe the non-functional requirements terms.</li>
+      </ul>
+        <table class="tabletopic">
+          <tr>
+            <th>
+               <p>Use Case Diagrams</p>
+                  <ul class="b">
+                    <li>The system boundary defines the scope of the system, what the system does but not how it does it.</li>
+                    <li>Use-cases describes a set of sequences of actions, which include variants that the system performs to yield an observable value to an actor</li>
+                    <li>Actor represents the role that someone might be playing (not a particular individual). These are external entities that has an interest in interacting with the system</li>
+                    <li>Interaction is a form of interaction between the actor and a use case.</li>
+            </th>
+            <th>
+                  <img src= "../img/UseCaseDiagram.png" alt= "Use Case Diagram">
+            </th>
+          </tr>
+        </table>
+        <p>Below a Use Case Description is presented. There are explanations of what to include for each of the titles.</p>
+        <img src= "../img/UseCaseDescription.png" alt= "Use Case Description" style="padding-left:90px;padding-bottom:20px;">
+        <p>Below are the different types of relationship notation that can be used in a Use Case diagram</p>
+        <table class="tabletopic">
+          <tr>
+            <th>1. Association </th>
+          </tr>
+          <tr>
+            <th><img src= "../img/association.png" alt= "Association" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+          </tr>
+          <tr>
+            <th>2. Include: can only occur between two use cases </th>
+          </tr>
+          <tr>
+            <th><img src= "../img/include.png" alt= "Include" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+          </tr>
+          <tr>
+            <th>3. Extent: can only occur between two use cases </th>
+          </tr>
+          <tr>
+            <th><img src= "../img/extend.png" alt= "Extend" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+          </tr>
+          <tr>
+            <th>4. Generalisation  </th>
+          </tr>
+          <tr>
+            <th><img src= "../img/generalisation.png" alt= "Generalisation" style="height:200px;padding-left:20px;padding-bottom:20px;"></th>
+          </tr>
+        </table>
+    <h4>Developing Activity Diagram</h4>
+    <p>Activity in reality would be the business process that establishing the steps to creating the product.</p>
+    <p>Representation of a Process</p>
+    <img src= "../img/process.png" alt= "Representation of a Process" style="height:400px;padding-left:20px;padding-bottom:20px;">
+		<p>Detailing activities in the Process</p>
+    <img src= "../img/detailedProcess.png" alt= "Detailing activities in the Process" style="height:400px;padding-left:20px;padding-bottom:20px;">
+		<p>Activity Diagrams are designed so that the behavioural steps involved in a process that produce and consume artefact and information can be represented.</p>
+		<p>They are created for the views of ‘as-is’ and ‘to-be’ business processes</p>
+		<p>Notations of Activity Diagrams:</p>
+		<table class="tabletopic">
+			<tr>
+				<th>An <b>Activity</b> node will contain a set of actions and be labelled by its name  </th>
+			</tr>
+			<tr>
+				<th><img src= "../img/activityName.png" alt= "Activity Node Notation" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>control flow</b> shows a sequence of execution</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/ControlFlow.png" alt= "Control Flow Node Notation" style="width:200px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>An <b>initial-activity</b> node will show the start of the set of activities</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/initial.png" alt= "Initial Activity Node Notation" style="height:50px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>finish-activity</b> node will stop the specific control flow</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/finish.png" alt= "Finish Activity Node Notation" style="height:50px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th><b>Decision</b> node will be used to ensure the activity flows through one path controlled by conditions</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/decision.png" alt= "Decision Node Notation" style="width:350px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>merge</b> node will be used to bring back together different decision paths</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/merge.png" alt= "Merge Node Notation" style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>fork</b> node will be used to split behaviour into a set of parallel or concurrent flows of activity</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/fork.png" alt= "Fork Node Notation" style="width:150px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>join</b> node will be used to bring back together a set of parallel of concurrent flows of activities</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/join.png" alt= "Join Node Notation" style="width:150px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A <b>swimlane</b> will be used to break up an activity diagram into rows and columns to assign the individual activity to the responsible role of a stakeholder who executes the activities.</th>
+			</tr>
+			<tr>
+				<th><img src= "../img/swimlane.png" alt= "Swimlane Node Notation" style="width:350px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+		</table>
+		<p>Other Elements in the Activity Diagrams which have to considered</p>
+		<ul class="b">
+			<li>Context which is the scope of the activities carried out</li>
+			<li>Stakeholders are any users that are using the product, this can be human or non-human (other applications)</li>
+			<li>Basic rules and constraints of the companies</li>
+		</ul>
+		<p>Activity Diagrams are useful</p>
+		<ul class="b">
+			<li>as they show how the use cases will achieve the goals</li>
+			<li>shows who is responsible for which activity</li>
+			<li>shows in great detail all the dependencies and alternatives for the activity</li>
+		</ul>
+		<p>However, it does not reveal the messaging between the objects and the timings for each of the activities.</p>
+		<p>An Example of each type of Model, click on the image to enlarge it.</p>
+		<table class="tabletopic">
+			<tr>
+				<th>Activity Diagram</th>
+				<th>Use Case Model</th>
+				<th>Process Model</th>
+				<th>Objects Mapping</th>
+			</tr>
+			<tr>
+				<th>
+					<img src="../img/activityDiagram.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/UseCaseModel.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/ProcessModel.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/objectMapping.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+				</th>
+			</tr>
+		</table>
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext"></div>
+					<img src="../img/activityDiagram.png" style="width:80%">
+				</div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/UseCaseModel.png" style="width:80%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/ProcessModel.png" style="width:80%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/objectMapping.png" style="width:80%">
+		    </div>
+		</div>
+	</div>
+	<h4>Designing Class Diagrams</h4>
+	<p>The purpose of Class Diagram is to get a model with static view of the system.</p>
+	<p>The key feature of the Class Diagram:</p>
+	<ul class="b">
+		<li>Class</li>
+			<ul>
+				<li>Name</li>
+				<li>Attributes which describes the characteristics of the objects</li>
+				<li>Operations which is used to manipulate attributes and to perform other actions</li>
+			</ul>
+		<li>Attributes</li>
+			<ul>
+				<li>Has a type which identifies the format of the attribute can take</li>
+				<li>The attribute can be set to private, public or protected which controls the visibility within the classes</li>
+				<li>Defaults can be set</li>
+			</ul>
+		<li>Operations</li>
+			<ul>
+				<li>Functions defined within a class that manipulate data of the objects of that class</li>
+			</ul>
+		</ul>
+		<p>The attributes have visibility setting which help to protect the attributes and operations</p>
+		<ul class="b">
+			<li>Public (+) – the attributes would be seen in <b>all associated class or package</b></li>
+			<li>Protected (#) – the attributes would be seen in <b>all associated subclasses</b></li>
+			<li>Private (-) – the attributes would be seen in <b>only that particular class</b></li>
+		</ul>
+	<p>Relationship between the classes</p>
+	<ul class="b">
+		<li><b>Association:</b> there is a link between two objects; this would occur if one sends a message to another or if one’s attribute is being used by another</li>
+		<li><b>Multiplicity:</b> a range that indicates how many objects are linked (ranges are for example n…m, 0…1, 0…* etc)</li>
+		<li><b>Generalisation:</b> relationship between a general thing (superclass or parent) and a more specific kind of that thing (subclass of child)</li>
+	</ul>
+	<p>An example of Class diagram for the Library System</p>
+	<img src="../img/ClassDiagram.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+	<p>To document the classes, attributes, operations and relationships Class-Responsibility-Collaborator (CRC) would be created. The CRCs are tailored for the different types.</p>
+	<p>CRC for Book Class</p>
+	<img src="../img/CRC-book.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+	<p>CRC for 'updateAvaCopies’ operation' </p>
+	<img src="../img/CRC-book.update.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+	<h4>Mapping High-Level Behaviour of Objects onto Functional Workflow</h4>
+		<p>Behavioural Modelling </p>
+		<ul class="b">
+			<li>Functional workflow models</li>
+			<ul>
+				<li>describe the dynamic view of a software system</li>
+				<li>there are two types: Sequence and Collaboration</li>
+			</ul>
+			<li>For the Functional workflow input from use case model, activity model and class model would be required</li>
+		</ul>
+		<p>Concepts for Sequence Diagrams</p>
+		<table class="borderTable">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Icon</th>
+			</tr>
+			<tr>
+				<th>Actor</th>
+				<th>a person or system that derives benefits from and is external to the system. It invokes a sequence for sending and/or receiving messages</th>
+				<th><img src="../img/actor.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Object</th>
+				<th>participates sending and receiving messages</th>
+				<th><img src="../img/object.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Lifeline</th>
+				<th>denotes the life of an object during a sequence of interactions</th>
+				<th><img src="../img/lifeline.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Execution Occurrence </th>
+				<th>denotes when an object is actively sending or receiving messages</th>
+				<th><img src="../img/executionOccurrence.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th rowspan="3">Message</th>
+				<th>An operation in the class where an object belongs to or a function call </th>
+				<th><img src="../img/directmessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A self-delegated operation call </th>
+				<th><img src="../img/self-delegated.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>A return with value</th>
+				<th><img src="../img/returnMessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Object destruction</th>
+				<th>“X” denotes a termination of the participation of message passing</th>
+				<th><img src="../img/object-destruction.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Frame</th>
+				<th>“Scope” for sequencing the interactions and focuses on one use case</th>
+				<th><img src="../img/frame.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+		</table>
+		<p>An example of Sequence Diagram</p>
+		<img src="../img/SequenceDiagram.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+		<h4>Constructing Software Systems Architecture</h4>
+		<p>Software Component (modular and cohesive) are executable units of code, designs, specification and tests. They can only be accessed through a published interface and be deployed in several nodes in the hardware architecture.</p>
+		<p>A software component architecture consists of components, ports and connections. Ports and connections form the interfaces between the components.</p>
+		<p>Basic Concept of Component Diagrams</p>
+		<table class="borderTable">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Icon</th>
+			</tr>
+			<tr>
+				<th>Component</th>
+				<th>A physical and replaceable building block of software systems</th>
+				<th><img src="../img/component.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+			</tr>
+			<tr>
+				<th>Interface</th>
+				<th colspan="2">describes a group of operations used or created by components</th>
+			</tr>
+			<tr>
+					<th style="padding-left:20px;">Provided interface</th>
+					<th>the component provides as a service to other components</th>
+					<th><img src="../img/provided.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th style="padding-left:20px;">Required interface</th>
+					<th>The component conforms to when requesting the services from other components</th>
+					<th><img src="../img/required.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>Port</th>
+					<th>
+						An explicit window into an encapsulated component
+							<ul>
+								<li>accepting the specific functions of external components </li>
+								<li>representing a group of messages or calls</li>
+								<li>a port is a property of a component that has an interface as its type</li>
+							</ul>
+					</th>
+					<th><img src="../img/port.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>Part</th>
+					<th>
+						A unit of the implementation of the component
+							<ul>
+								<li>nested within the parent component</li>
+								<li>each part has its distinct functions  </li>
+							</ul>
+					</th>
+					<th><img src="../img/part.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>Connector</th>
+					<th colspan="2">A communication relationship between different parts within the component</th>
+				</tr>
+				<tr>
+						<th style="padding-left:20px;">Delegation connector</th>
+						<th>
+							<ul>
+								<li>to wire internal ports to external ports of the overall component</li>
+								<li>arrow from an internal port pointing to an external port</li>
+							</ul>
+							</th>
+						<th><img src="../img/delegation.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+					</tr>
+					<tr>
+						<th style="padding-left:20px;">Direct connector</th>
+						<th>The connection is tightly coupled</th>
+						<th><img src="../img/direct.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+					</tr>
+					<tr>
+						<th style="padding-left:20px;">Connector by interface</th>
+						<th>both ports have compatible interface</th>
+						<th><img src="../img/interface.png"style="width:250px;padding-left:20px;padding-bottom:20px;"></th>
+					</tr>
+		</table>
+		<p>An example of Compiler components can be seen below </p>
+		<img src="../img/compiler.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+		<p>Another example, where it shows the 'OrderFulfillment' components. Here you can see the use of the different types of connectors </p>
+		<img src="../img/orderFulfillment.png"style="width:500px;padding-left:20px;padding-bottom:20px;">
+	</div>
+
+  <footer>
+    <div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+	<script>
+	function openModal() {
+	  document.getElementById('myModal').style.display = "block";
+	}
+
+	function closeModal() {
+	  document.getElementById('myModal').style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+</body>
+</html>
