@@ -3,9 +3,9 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/foundation.css">
-    <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,91 +15,96 @@
 </head>
 
 <body>
-	<div class="grid-x grid-padding-x">
-		<div class="large-12 medium-12 small-12">
-		<header>
-			<div class= "container">
-				<a href= "Homepage.html">
-					<img src= "../img/logo.png" alt= "logo" class="logo">
-				</a>
-				<nav>
-					<ul>
-						<li><a href= "Homepage.html"> Homepage</a></li>
-						<li><a href= "Modules.html"> Modules</a></li>
-						<li><a href= "Quiz.html"> Quiz</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		</div>
- 	</div>
-
- 	<div class="grid-x grid-padding-x">
-            <div class="large-2 medium-2 small-2">
-              <div class="cell">
-                <p></p>
-              </div>
-            </div>
-            <div class="large-8 medium-8 small-8">
-              <div class="maincell">
-                <h1>Modules</h1>
-								<div class="roundedBorder">
-									<h4>Project Management and System Designs</h4>
-									<table>
-										<tr>
-											<th><a href= "ProjectManagement.html">
-													<img src= "../img/ProjectManagement.png" alt= "Project Management Icon" class="icon"></th>
-												</a>
-											<th><img src= "../img/SystemDesign.png" alt= "System Design Icon" class="icon"></th>
-										</tr>
-										<tr>
-											<th>Project Management</th>
-											<th>System Designs</th>
-										</tr>
-									</table>
-						</div>
-								<div class="roundedBorder">
-									<h4>Computer Applications</h4>
-									<table>
-										<tr>
-									    <th><img src= "../img/DigitalLogicIcon.png" alt= "Digital Logic Icon" class="icon"></th>
-									    <th><img src= "../img/InternetCommunicationIcon.png" alt= "Internet Communication Icon" class="icon"></th>
-									  </tr>
-										<tr>
-									    <th>Digital Logic</th>
-									    <th>Internet Communication</th>
-									  </tr>
-									</table>
-            </div>
-						<div class="roundedBorder">
-							<h4>Databases</h4>
-							<table>
-								<tr>
-									<th><img src= "../img/Databases.png" alt= "Basic Databases Icon" class="icon"></th>
-								</tr>
-								<tr>
-									<th>Basic Databases</th>
-								</tr>
-							</table>
-				</div>
-            <div class="large-2 medium-2 small-2">
-              <div class="cell">
-                <p></p>
-              </div>
-        </div>
-    </div>
-
- 	<div class="grid-x grid-padding-x">
-  	<div class="large-12 medium-12 small-12">
-		<footer>
-			<div class="container">&copy Sharugi Balachandran <span style="float:right">More details</span></div>
-		</footer>
+<!--Sidebar for Module and Topic pages, make sure all the topic pages have the same navigation as this page -->
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
 	</div>
 
-<!--Script for gridsystem -->
-<script src="js/vendor/jquery.js"></script>
-<script src="js/foundation.min.js"></script>
-<script>
-    $(document).foundation();
-</script>
+  <div class= "content">
+  <header>
+      <a href= "Homepage.html">
+        <img src= "../img/logo.png" alt= "logo" class="logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href= "Homepage.html"> Homepage</a></li>
+          <li><a href= "Modules.html"> Modules</a></li>
+          <li><a href= "Quiz.html"> Quiz</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="maincell">
+    <h1>Modules</h1>
+    <div class="roundedBorder">
+      <h4>Project Management and System Designs</h4>
+      <table>
+        <tr>
+          <th><a href= "ProjectManagement.html">
+            <img src= "../img/ProjectManagement.png" alt= "Project Management Icon" class="icon"></th></a>
+            <th><a href= "SystemDesigns.html">
+							<img src= "../img/SystemDesign.png" alt= "System Design Icon" class="icon"></th></a>
+        </tr>
+        <tr>
+          <th><a href= "ProjectManagement.html">
+						Project Management</th></a>
+          <th><a href= "SystemDesigns.html">
+						System Designs</th></a>
+        </tr>
+      </table>
+    </div>
+    <div class="roundedBorder">
+      <h4>Computer Applications</h4>
+      <table>
+        <tr>
+          <th><img src= "../img/DigitalLogicIcon.png" alt= "Digital Logic Icon" class="icon"></th>
+          <th><img src= "../img/InternetCommunicationIcon.png" alt= "Internet Communication Icon" class="icon"></th>
+        </tr>
+        <tr>
+          <th>Digital Logic</th>
+          <th>Internet Communication</th>
+        </tr>
+      </table>
+    </div>
+    <div class="roundedBorder">
+      <h4>Databases</h4>
+      <table>
+        <tr>
+          <th><img src= "../img/Databases.png" alt= "Basic Databases Icon" class="icon"></th>
+        </tr>
+        <tr>
+          <th>Basic Databases</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">(Add &)copy Sharugi Balachandran <span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+
 </body>
+</html>
