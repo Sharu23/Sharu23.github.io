@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+
+	<div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
+      <h4>Project Management Methods</h4>
+      <button class= "section">What is a product? </button>
+      <div class="panel">It is an output of a project, which can be a management product, a specialist product or made up of other products. PRINCE2 distinguishes between management products (which are part of the management or quality process of the project) and specialist products (which are part of the making up the final deliverable). </div>
+      <button class="section">Product Based Planning </button>
+			<div class="panel">
+				<p>This planning would help to define the full scope of the project deliverables, as it considers prerequisite products, quality requirements and dependencies.There are three stages to it, which are: </p>
+	      <ol>
+	        <li>Creating a Product Breakdown Structure (PBS) diagram</li>
+	          <ul>
+	            <li>It is a hierarchy of all the products to the produced under a plan, which has a tree structure moving from a general root to detailed leaves. A root is a single box that summarises the overall project (the end product). </li>
+	            <li>They can be verb-orientated (define according to action) or noun-orientated (all elements are components of each deliverable)</li>
+	          </ul>
+	        <li>Descripting each of the products methodically </li>
+	          <ul>
+	            <li>All significant products in the PBS and every leaf product must have its own product description.</li>
+	            <li>It gives the project team the specification of who must construct the product, and whether to accept it.</li>
+	            <li>This description helps to verify the integrity of the hierarchy in the PBS.</li>
+	            <li>Product descriptions should include:</li>
+	              <ul>
+	                <li><b>Title:</b> a short descriptive name for the product</li>
+	                <li><b>Purpose:</b> why the product is required and the overall goal</li>
+	                <li><b>Composition:</b> are there any sub-products</li>
+	                <li><b>Derivation:</b> where is the source of information coming from</li>
+	                <li><b>Format:</b> what form would the product come in, be presented in </li>
+	                <li><b>Quality / Completion criteria:</b> what is the acceptance criteria for the product.</li>
+	              </ul>
+	            </ul>
+	          <li>Produce a product flow diagram </li>
+	          <ul>
+	            <li>It is a diagram that shows the dependencies between products and any iterations</li>
+	            <li>Gantt chart is an example, where are all the information of the PBS should be included. For scheduling two approaches can be taken: </li>
+	              <ul>
+	                <li>Bottom-up: Work out how long each item will take and then sum it for the total length</li>
+	                <li>Top-down: Divide the total length by the number of item you have and work from that.</li>
+	              </ul>
+	            </ul>
+	          </ol>
+	        <p>The most important part of the business case is the “promise”. These can help with testing as well. </p>
+				</div>
+				<button class="section">Risk Management</button>
+				<div class="panel">
+	        <p>Under Risk Management, there are 5 steps that the PRINCE2 describes:</p>
+	          <ol>
+	            <li><b>Identifying: </b> all the threats that can occur in the project; these can be general ones or specific to the project. </li>
+	            <li><b>Assessing:</b> analysing the probability of the risk occurring and the impact it can have. </li>
+	            <li><b>Planning: </b> having solutions as to how to avoid the risks or solve them once they occur.</li>
+	            <li><b>Implementing:</b> Making notes and registering the risk that occur and altering any changes to the solution or prevention. </li>
+	            <li><b>Communication:</b> informing all the related members of the risks that could or have occurred.</li>
+	          </ol>
+					</div>
+  </div>
+
+	<div class="pagination">
+		<a href="ProjectManagement.html">&laquo;</a>
+	  <a href="ProjectManagement.html">1</a>
+	  <a class="active" href="ProjectManagement_2.html">2</a>
+	  <a href="ProjectManagement_3.html">3</a>
+	  <a href="ProjectManagement_4.html">4</a>
+	  <a href="ProjectManagement_3.html">&raquo;</a>
+	</div>
+
+  <footer>
+    <div class="container">(Add &)copy Sharugi Balachandran <span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+
+	<script>
+	function hamburgerFunction() {
+	    var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+		    sec[i].addEventListener("click", function() {
+		        this.classList.toggle("active");
+		        var panel = this.nextElementSibling;
+		        if (panel.style.display === "block") {
+		            panel.style.display = "none";
+		        } else {
+		            panel.style.display = "block";
+		        }
+		    });
+		}
+	</script>
+
+</body>
+</html>

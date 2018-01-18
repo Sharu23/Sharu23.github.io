@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+
+	<div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
+      <h4>Introducing PRINCE2 </h4>
+      <p>PRINCE2 is a project management paradigm that encompasses the management of all stages and parts of a project, which has 7 principles, 7 themes and 7 processes.</p>
+      <button class="section">7 Principles</button>
+			<div class= "panel">
+				<ol>
+	        <li><b>Continued business justification:</b>	Is the project worth doing and has all the justifications being approved by all the stakeholders? </li>
+	        <li><b>Learn from experience:</b> There are three key ways you can learn</li>
+	          <ul>
+	            <li>At the start from similar projects, or team experience</li>
+	            <li>At the review stage, from how the project is going, any changes that need to be made to the future stages</li>
+	            <li>At the end, from all the knowledge that had been learned and how future projects can be improved</li>
+	          </ul>
+	        <li><b>Defined roles and responsible:</b> It is always important that everyone knows what their role is and that the correct people have been given the right to make decisions </li>
+	        <li><b>Managed by stages:</b> So that the work can be easy to plan and reflected upon </li>
+	        <li><b>Managed by exception:</b> Management decisions should be delegated downwards as far as possible by use of tolerances on six different objectives: Time, Cost, Quality, Scope, Risk, </li>
+	        <li><b>Focus on products:</b> Project should have a definition or purpose which has been clearly stated; this should be thought throughout the project</li>
+	        <li><b>Tailor to suit the project environment:</b> There need to be a balance between ‘robotic’ (just following paperwork with no regard for its application to the project) and ‘heroic’ (charging in with no plan and just doing work with no regard for how it fits in the overall project) work </li>
+	      </ol>
+			</div>
+      <button class="section">7 Themes</button>
+			<div class="panel">
+	      <ol>
+	        <li><b>Business Case:</b> The simplest form of business case contains an output. outcome and benefit </li>
+	        <li><b>Organisation:</b> Stakeholders are key (Business, User and Suppliers)</li>
+	        <li><b>Quality:</b> These include documentations like Quality Planning and Quality Control</li>
+	        <li><b>Plans:</b> These include not just the writing a plan but also assigning resources and scheduling </li>
+	        <li><b>Risk:</b> You be prepared for any risk that may occur, probability Impact Grid can be used and including any rick management strategy to either avoid, prevent or limit the risk’s impact </li>
+	        <li><b>Change:</b> This is about either controlling the change from happening or planning if there is a change</li>
+	        <li><b>Progress:</b> Monitoring if the progress is on track, detecting any risks, identifying any changes and maintaining the business case.</li>
+	      </ol>
+			</div>
+    <button class="section">7 Processes</button>
+		<div class="panel">
+			<ol>
+	      <li><b>Starting up a project:</b> Having the scope and business case defines </li>
+	      <li><b>Initiating a project:</b> All the plans created (including product and quality plans) and updating the Business Case if required </li>
+	      <li><b>Directing a project:</b> Creating your team, authorizing work and making decisions on any issues </li>
+	      <li><b>Controlling a stage:</b> Monitoring progress, ensuring accuracy of the records and raising any risk that may occur </li>
+	      <li><b>Managing product delivery:</b> Follow plan, manage creation of products and complete quality control</li>
+	      <li><b>Managing stage boundaries:</b> Follow and update quality, progress and change plans and update every one of the progress</li>
+	      <li><b>Closing a project:</b> Verify user acceptance, quality control and complete the handover</li>
+	    </ol>
+		</div>
+  </div>
+
+	<div class="pagination">
+		<a href="ProjectManagement_2.html">&laquo;</a>
+		<a href="ProjectManagement.html">1</a>
+		<a href="ProjectManagement_2.html">2</a>
+		<a class="active" href="ProjectManagement_3.html">3</a>
+		<a href="ProjectManagement_4.html">4</a>
+		<a href="ProjectManagement_4.html">&raquo;</a>
+	</div>
+
+  <footer>
+    <div class="container">(Add &)copy Sharugi Balachandran <span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+
+	<script>
+	function hamburgerFunction() {
+	    var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+</body>
+</html>
