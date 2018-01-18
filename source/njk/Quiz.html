@@ -16,8 +16,20 @@
 <body>
 	<header>
 		<div class= "container">
-			<a href= "Homepage.html">
-			<img src= "../img/logo.png" alt= "logo" class="logo">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
 			<nav>
 				<ul>
 					<li><a href= "Homepage.html"> Homepage</a></li>
@@ -26,7 +38,9 @@
 				</ul>
 			</nav>
 		</div>
+		</div>
 	</header>
+	
 	<div class="content">
 		<div class="maincell">
 			<h1>Quiz Time</h1>
@@ -63,6 +77,19 @@
 	<script>
 	function openWinSettings() {
 			window.open("Settings.html");
+	}
+	</script>
+
+	<script>
+	function hamburgerFunction() {
+	    var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
 	}
 	</script>
 </body>

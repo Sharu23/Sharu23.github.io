@@ -13,13 +13,23 @@
 	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
 </head>
 
-<body>
-	<div class="grid-x grid-padding-x">
-		<div class="large-12 medium-12 small-12">
+	<body>
 		<header>
 			<div class= "container">
-				<a href= "Homepage.html">
-				<img src= "../img/logo.png" alt= "logo" class="logo">
+				<table class= "transparent">
+					<tr>
+	          <th>
+							<a href= "Homepage.html">
+							<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+						</th>
+	          <th>
+							<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+						</th>
+	        </tr>
+				</table>
+			</div>
+			<div id="hamburgerDiv" style="display: none;">
+			<div class= "hamburger">
 				<nav>
 					<ul>
 						<li><a href= "Homepage.html"> Homepage</a></li>
@@ -28,40 +38,23 @@
 					</ul>
 				</nav>
 			</div>
-		</header>
-		</div>
- 	</div>
+			</div>
+			</header>
 
- 	<div class="grid-x grid-padding-x">
-            <div class="large-2 medium-2 small-2">
-              <div class="cell">
-                <p></p>
-              </div>
-            </div>
-            <div class="large-8 medium-8 small-8">
-              <div class="maincell">
-                <h1>Introduction</h1>
-								<p>Welcome to Today’s 4 Revision website, through this website you can read upon some of the Computer Science modules and complete a quiz to test your knowledge on the specific modules/ topics.</p>
-								<h5>How is the information structured?</h5>
-								<p>The easiest way to finding the information would be to go to the Modules page; on this page you would see the different modules which are broken down in to Topics. Pick a topic, which you can revise from.</p>
-								<h5>The Quiz</h5>
-								<p>The Quiz is designed to help you to check if you have understood and learned the content, ready for your exam. On the quiz, you can use the default settings or personalise it to your needs. Read the information on the quiz page before you start, so that you understand what is asked of you to do.</p>
-              </div>
-            </div>
-            <div class="large-2 medium-2 small-2">
-              <div class="cell">
-                <p></p>
-              </div>
-        </div>
+			<div class="content">
+				<div class="maincell">
+	        <h1>Introduction</h1>
+					<p>Welcome to Today’s 4 Revision website, through this website you can read upon some of the Computer Science modules and complete a quiz to test your knowledge on the specific modules/ topics.</p>
+					<h5>How is the information structured?</h5>
+					<p>The easiest way to finding the information would be to go to the Modules page; on this page you would see the different modules which are broken down in to Topics. Pick a topic, which you can revise from.</p>
+					<h5>The Quiz</h5>
+					<p>The Quiz is designed to help you to check if you have understood and learned the content, ready for your exam. On the quiz, you can use the default settings or personalise it to your needs. Read the information on the quiz page before you start, so that you understand what is asked of you to do.</p>
+	      </div>
     </div>
 
- 	<div class="grid-x grid-padding-x">
-            <div class="large-12 medium-12 small-12">
 		<footer>
-			<div class="container">&copy Sharugi Balachandran <span style="float:right">More details</span></div>
+			<div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
 		</footer>
-	</div>
-	</div>
 
 <!--Script for gridsystem -->
 <script src="js/vendor/jquery.js"></script>
@@ -69,4 +62,18 @@
 <script>
     $(document).foundation();
 </script>
+
+<script>
+function hamburgerFunction() {
+    var x = document.getElementById("hamburgerDiv");
+
+		if(x.style.display === "none") {
+			x.style.display = "block";
+		}
+		else {
+			x.style.display = "none";
+		}
+}
+</script>
+
 </body>

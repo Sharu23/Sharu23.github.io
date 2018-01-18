@@ -27,200 +27,100 @@
 		</ul>
 	</div>
 
-  <div class= "content">
-  <header>
-      <a href= "Homepage.html">
-        <img src= "../img/logo.png" alt= "logo" class="logo">
-      </a>
-      <nav>
-        <ul>
-          <li><a href= "Homepage.html"> Homepage</a></li>
-          <li><a href= "Modules.html"> Modules</a></li>
-          <li><a href= "Quiz.html"> Quiz</a></li>
-        </ul>
-      </nav>
-  </header>
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
 
   <div class="maincell">
     <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
     <h4>Background information</h4>
-    <h6>What is a project?<h6>
-    <p>A project is infinite with a defined start and finish, it has specific objectives and are made up of multiple different processes that are used to achieve. There are always people involved, who will benefit from the projects outcome.</p>
-    <h6>What is project management?<h6>
-    <p>It is the processes involved in formally defining the language, methods and resources that will be used in completing your project, in a way that ensures there can be no confusion as to what needs to be done and how at any point in the lifetime of the project.</p>
-    <p>Project can fail which can be if it went over the time limit, over budget or has not been completed. These can occur if the project has not been managed or lots of unexpected factors have effected it. </p>
-    <h6>There are some common principles that have to be looked into when thinking about a project. They are:</h6>
-    <ul class="b">
-      <li><b>Work Division:</b> Thinking about all the deliveries that need to be completed along with the final product, this can be for the client or the company you are working for, like quality documentations, or testing documentations.</li>
-      <li><b>Communication Management:</b> Before starting a project always mention how you are going to communicate with each other, especially if it is a newly formed team. It is always advised to have more than one form of communication, so that when the first form fails, you have a back-up. Also mention how often you want to meet-up to give an update. Simple things like acronyms and technical languages should be defined at the start, and throughout the project. </li>
-      <li><b>Time Management:</b> The duration of the individual task and the whole project has to be considered at the start of the project. This should include the plan, reviews and reflections. Gantt chart can be used to present the time line. </li>
-      <li><b>Risk Management: </b>All project would have risks, even if it has been planned well. If you plan the risk that can occur during the project, you can either avoid them or be prepared when the risk has occurred. These risks can be identified from previous projects that are similar to this project; or common risks that have a high change of occurring on every project. When identifying the risk, take a note of what the probability is of it occurring and what the impact of it would be.</li>
-      <li><b>Change Management: </b> A plan is only created for guidance, a project will always need to adapt to the new changes. You will always have to consider how this change can affect timing of the project.</li>
-      <li><b>Organisation Management:</b>You will have to identify stakeholders (anyone who has an interest in the outcome of the project). The stakeholders can be divided into 3 sections: Business, Supplier and User.The project team, which includes everyone from IT to Business. Within the project team individual roles must be identify so that is it clear of what everyone is doing.</li>
-      <li><b>Project Environment:</b>It is what the conditions surround the project, which can be thought as 2 questions:
-      <ul>
-      <li>It is clear <b>what</b> the project is expected to deliver</li>
-      <li>Is it clear <b>how</b> the project will achieve delivery</li>
-      <br><p>An example:</p>
-      <table class "tabletopic">
-        <tr>
-          <th></th>
-          <th></th>
-          <td colspan="2">How</td>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          <td>Clear</td>
-          <td>Unclear</td>
-        </tr>
-        <tr>
-          <th rowspan="2">What</th>
-          <th>Unclear</th>
-          <td>Movie: Goals are not set but know how to make it</td>
-          <td>Lost in the Fog:When you do not know what and how to do something.</td>
-        </tr>
-        <tr>
-          <th>Clear</th>
-          <td>Painting by Numbers:There is no (or little) uncertainty, a clear plan can be created and executed and these types of project are the once that have been delivered many times </td>
-          <td>Quests:The goal is clear but research is required to understand how to do it</td>
-        </tr>
-        </table>
-        </ul>
-        <li><b>The Iron triangle:</b>
-          <ul>
-            <li>The objectives are completed as specified and are accepted as fit for purpose </li>
-            <li>The project is completed on time </li>
-            <li>The project is within the agreed budget</li>
-          </ul>
-          <img src= "../img/irontriangle.png" alt= "The Iron Triangle" width="250px">
-        </li>
-      </ul>
-      <br><br><h4>Project Management Methods</h4>
-      <h6>What is a product? </h6>
-      <p>It is an output of a project, which can be a management product, a specialist product or made up of other products. PRINCE2 distinguishes between management products (which are part of the management or quality process of the project) and specialist products (which are part of the making up the final deliverable). </p>
-      <h6>Product Based Planning </h6>
-      <p>This planning would help to define the full scope of the project deliverables, as it considers prerequisite products, quality requirements and dependencies.There are three stages to it, which are: </p>
-      <ol>
-        <li>Creating a Product Breakdown Structure (PBS) diagram</li>
-          <ul>
-            <li>It is a hierarchy of all the products to the produced under a plan, which has a tree structure moving from a general root to detailed leaves. A root is a single box that summarises the overall project (the end product). </li>
-            <li>They can be verb-orientated (define according to action) or noun-orientated (all elements are components of each deliverable)</li>
-          </ul>
-        <li>Descripting each of the products methodically </li>
-          <ul>
-            <li>All significant products in the PBS and every leaf product must have its own product description.</li>
-            <li>It gives the project team the specification of who must construct the product, and whether to accept it.</li>
-            <li>This description helps to verify the integrity of the hierarchy in the PBS.</li>
-            <li>Product descriptions should include:</li>
-              <ul>
-                <li><b>Title:</b> a short descriptive name for the product</li>
-                <li><b>Purpose:</b> why the product is required and the overall goal</li>
-                <li><b>Composition:</b> are there any sub-products</li>
-                <li><b>Derivation:</b> where is the source of information coming from</li>
-                <li><b>Format:</b> what form would the product come in, be presented in </li>
-                <li><b>Quality / Completion criteria:</b> what is the acceptance criteria for the product.</li>
-              </ul>
-            </ul>
-          <li>Produce a product flow diagram </li>
-          <ul>
-            <li>It is a diagram that shows the dependencies between products and any iterations</li>
-            <li>Gantt chart is an example, where are all the information of the PBS should be included. For scheduling two approaches can be taken: </li>
-              <ul>
-                <li>Bottom-up: Work out how long each item will take and then sum it for the total length</li>
-                <li>Top-down: Divide the total length by the number of item you have and work from that.</li>
-              </ul>
-            </ul>
-          </ol>
-        <p>The most important part of the business case is the “promise”. These can help with testing as well. </p>
-        <p>Under Risk Management, there are 5 steps that the PRINCE2 describes:</p>
-          <ol>
-            <li><b>Identifying: </b> all the threats that can occur in the project; these can be general ones or specific to the project. </li>
-            <li><b>Assessing:</b> analysing the probability of the risk occurring and the impact it can have. </li>
-            <li><b>Planning: </b> having solutions as to how to avoid the risks or solve them once they occur.</li>
-            <li><b>Implementing:</b> Making notes and registering the risk that occur and altering any changes to the solution or prevention. </li>
-            <li><b>Communication:</b> informing all the related members of the risks that could or have occurred.</li>
-          </ol>
-      <br><br><h4>Introducing PRINCE2 </h4>
-      <p>PRINCE2 is a project management paradigm that encompasses the management of all stages and parts of a project, which has 7 principles, 7 themes and 7 processes<p>
-      <p>The 7 Principles are:</p>
-      <ol>
-        <li><b>Continued business justification:</b>	Is the project worth doing and has all the justifications being approved by all the stakeholders? </li>
-        <li><b>Learn from experience:</b> There are three key ways you can learn</li>
-          <ul>
-            <li>At the start from similar projects, or team experience</li>
-            <li>At the review stage, from how the project is going, any changes that need to be made to the future stages</li>
-            <li>At the end, from all the knowledge that had been learned and how future projects can be improved</li>
-          </ul>
-        <li><b>Defined roles and responsible:</b> It is always important that everyone knows what their role is and that the correct people have been given the right to make decisions </li>
-        <li><b>Managed by stages:</b> So that the work can be easy to plan and reflected upon </li>
-        <li><b>Managed by exception:</b> Management decisions should be delegated downwards as far as possible by use of tolerances on six different objectives: Time, Cost, Quality, Scope, Risk, </li>
-        <li><b>Focus on products:</b> Project should have a definition or purpose which has been clearly stated; this should be thought throughout the project</li>
-        <li><b>Tailor to suit the project environment:</b> There need to be a balance between ‘robotic’ (just following paperwork with no regard for its application to the project) and ‘heroic’ (charging in with no plan and just doing work with no regard for how it fits in the overall project) work </li>
-      </ol>
-      <p>The 7 Themes are: <p>
-      <ol>
-        <li><b>Business Case:</b> The simplest form of business case contains an output. outcome and benefit </li>
-        <li><b>Organisation:</b> Stakeholders are key (Business, User and Suppliers)</li>
-        <li><b>Quality:</b> These include documentations like Quality Planning and Quality Control</li>
-        <li><b>Plans:</b> These include not just the writing a plan but also assigning resources and scheduling </li>
-        <li><b>Risk:</b> You be prepared for any risk that may occur, probability Impact Grid can be used and including any rick management strategy to either avoid, prevent or limit the risk’s impact </li>
-        <li><b>Change:</b> This is about either controlling the change from happening or planning if there is a change</li>
-        <li><b>Progress:</b> Monitoring if the progress is on track, detecting any risks, identifying any changes and maintaining the business case.</li>
-      </ol>
-    <p>The 7 Themes processes are: <p>
-    <ol>
-      <li><b>Starting up a project:</b> Having the scope and business case defines </li>
-      <li><b>Initiating a project:</b> All the plans created (including product and quality plans) and updating the Business Case if required </li>
-      <li><b>Directing a project:</b> Creating your team, authorizing work and making decisions on any issues </li>
-      <li><b>Controlling a stage:</b> Monitoring progress, ensuring accuracy of the records and raising any risk that may occur </li>
-      <li><b>Managing product delivery:</b> Follow plan, manage creation of products and complete quality control</li>
-      <li><b>Managing stage boundaries:</b> Follow and update quality, progress and change plans and update every one of the progress</li>
-      <li><b>Closing a project:</b> Verify user acceptance, quality control and complete the handover</li>
-    </ol>
-    <br><br><h4>Agile Project Management</h4>
-    <p>Agile is a philosophy of project management, which is mostly targeted for software development.</p>
-    <p>There are 12 principles for Agile, they are:</p>
-      <ol>
-        <li>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software </li>
-        <li>Welcome changing requirements, even late in development. Agile processes harness change for the customers competitive advantage</li>
-        <li>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale</li>
-        <li>Business people and developers must work together daily throughout the project</li>
-        <li>Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done</li>
-        <li>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation</li>
-        <li>Working software is the primary measure of progress</li>
-        <li>Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely</li>
-        <li>Continuous attention to technical excellence and good design enhances agility</li>
-        <li>Simplicity, the art of maximizing the amount of work not done, is essential</li>
-        <li>The best architectures, requirements, and designs emerge from self-organising teams</li>
-        <li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly</li>
-      </ol>
-      <p>The Three Pillars of Scrum</p>
-        <ol>
-          <li><b>Transparency:</b> At the start of the product, it should be clear who the key stakeholders and team members are; so that any work, decision or work can be allocated correctly.</li>
-          <li><b>Inspection:</b> The process should always be inspected and monitored as it may need to be tailored to your project, this includes checking if the project is on time and that all the tasks are getting completed</li>
-          <li><b>Adaptation:</b> After the inspection, the process has to be adapted for the success of the project. If any delays are identified, adapting the plan and resources according it.</li>
-        </ol>
-      <p> There are some important Scrum Artifacts that have to be created for each Scrum. </p>
-        <ol>
-          <li><b>Product Backlog:</b> An ordered list of items that needs to be in the product; this can be altered during the project by the Product Owner. </li>
-          <li><b>Sprint Backlog:</b> Items selected from the Product Backlog to be completed in this sprint; this is essential all the work that needs to be completed to achieve the sprint goal</li>
-          <li><b>Product Increment:</b> The sum of all product backlog items completed during a sprint and the value of the increments of all previous sprints. At the end of each sprint the increment must be ‘done’.</li>
-        </ol>
-      <p>Scrum Events that is required for each sprint</p>
-      <ol>
-        <li><b>Sprint Planning:</b> deciding what to do and how long it would take for the sprint, sprint goal should also be set.</li>
-        <li><b>Daily Scrum:</b> Everyone in the team MUST attend it; discussing what had been completed and what would be completed. Any road blocks should be raised and solving should be considered outside the meeting.</li>
-        <li><b>Sprint Review:</b> After the sprint has finished, having a meeting to discuss how the sprint is important; this can help with planning the next sprint.</li>
-      </ol>
-      <p>Key Members are required in a Scrum Team for the project to run smoothly, they are:</p>
-        <ul class="b">
-          <li>Product Owner: they would have the control of the product backlog and they are the go to person if for any changes. </li>
-          <li>Development Team: The team that would create the product, they need to be empowered, self-organised and cross functional. </li>
-          <li>Scrum Master: Makes sure that the development team and product owners are aligned; completed their tasks on time and follow up with any issues raised in the daily stand-up.</li>
-        </ul>
-      <p>Scrum is ideal with a smaller team. Scrum would mostly work with team of 3-9 people and two management positions, however this can be scaled up when there is a larger team or project involved. The only different would be that the project would be split into smaller project. Each project would be considered as an individual project and the scrum master would have to communicate with each other to see the progress of the overall project, there would be a project manager involved who would manage the scrum masters.</p>
-  </div>
+    <button class= "section">What is a project?</button>
+    <div class= "panel">A project is infinite with a defined start and finish, it has specific objectives and are made up of multiple different processes that are used to achieve. There are always people involved, who will benefit from the projects outcome.</div>
+    <button class= "section">What is project management?</button>
+    <div class="panel"><p>It is the processes involved in formally defining the language, methods and resources that will be used in completing your project, in a way that ensures there can be no confusion as to what needs to be done and how at any point in the lifetime of the project.</p>
+    <p>Project can fail which can be if it went over the time limit, over budget or has not been completed. These can occur if the project has not been managed or lots of unexpected factors have effected it. </p></div>
+		<button class="section">Common Principles</button>
+		<div class= "panel">
+			<p>There are some common principles that have to be looked into when thinking about a project. They are:</p>
+	    <ul class="b">
+	      <li><b>Work Division:</b> Thinking about all the deliveries that need to be completed along with the final product, this can be for the client or the company you are working for, like quality documentations, or testing documentations.</li>
+	      <br><li><b>Communication Management:</b> Before starting a project always mention how you are going to communicate with each other, especially if it is a newly formed team. It is always advised to have more than one form of communication, so that when the first form fails, you have a back-up. Also mention how often you want to meet-up to give an update. Simple things like acronyms and technical languages should be defined at the start, and throughout the project. </li>
+	      <br><li><b>Time Management:</b> The duration of the individual task and the whole project has to be considered at the start of the project. This should include the plan, reviews and reflections. Gantt chart can be used to present the time line. </li>
+	      <br><li><b>Risk Management: </b>All project would have risks, even if it has been planned well. If you plan the risk that can occur during the project, you can either avoid them or be prepared when the risk has occurred. These risks can be identified from previous projects that are similar to this project; or common risks that have a high change of occurring on every project. When identifying the risk, take a note of what the probability is of it occurring and what the impact of it would be.</li>
+	     	<br><li><b>Change Management: </b> A plan is only created for guidance, a project will always need to adapt to the new changes. You will always have to consider how this change can affect timing of the project.</li>
+	      <br><li><b>Organisation Management:</b>You will have to identify stakeholders (anyone who has an interest in the outcome of the project). The stakeholders can be divided into 3 sections: Business, Supplier and User.The project team, which includes everyone from IT to Business. Within the project team individual roles must be identify so that is it clear of what everyone is doing.</li>
+	      <br><li><b>Project Environment:</b>It is what the conditions surround the project, which can be thought as 2 questions:
+	      <ul>
+	      <li>It is clear <b>what</b> the project is expected to deliver</li>
+	      <li>Is it clear <b>how</b> the project will achieve delivery</li>
+	      <br><p class= "mobile">An example:</p>
+	      <table class= "tabletopic">
+	        <tr>
+	          <th></th>
+	          <th></th>
+	          <td colspan="2">How</td>
+	        </tr>
+	        <tr>
+	          <th></th>
+	          <th></th>
+	          <td>Clear</td>
+	          <td>Unclear</td>
+	        </tr>
+	        <tr>
+	          <th rowspan="2">What</th>
+	          <th>Unclear</th>
+	          <td>Movie: Goals are not set but know how to make it</td>
+	          <td>Lost in the Fog:When you do not know what and how to do something.</td>
+	        </tr>
+	        <tr>
+	          <th>Clear</th>
+	          <td>Painting by Numbers:There is no (or little) uncertainty, a clear plan can be created and executed and these types of project are the once that have been delivered many times </td>
+	          <td>Quests:The goal is clear but research is required to understand how to do it</td>
+	        </tr>
+	        </table>
+	        </ul>
+	        <li><b>The Iron triangle:</b>
+	          <ul>
+	            <li>The objectives are completed as specified and are accepted as fit for purpose </li>
+	            <li>The project is completed on time </li>
+	            <li>The project is within the agreed budget</li><br>
+	          </ul>
+	          <img src= "../img/irontriangle.png" alt= "The Iron Triangle" width="250px">
+	        </li>
+	      </ul>
+  	</div>
+	</div>
+	<div class="pagination">
+		<a class= "disabled">&laquo;</a>
+		<a class="active" href="ProjectManagement.html">1</a>
+	  <a href="ProjectManagement_2.html">2</a>
+	  <a href="ProjectManagement_3.html">3</a>
+	  <a href="ProjectManagement_4.html">4</a>
+	  <a href="ProjectManagement_2.html">&raquo;</a>
+	</div>
 
   <footer>
     <div class="container">(Add &)copy Sharugi Balachandran <span style="float:right">More details</span></div>
@@ -241,6 +141,36 @@
           });
       })();
   </script>
+
+	<script>
+	function hamburgerFunction() {
+	    var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+		    sec[i].addEventListener("click", function() {
+		        this.classList.toggle("active");
+		        var panel = this.nextElementSibling;
+		        if (panel.style.display === "block") {
+		            panel.style.display = "none";
+		        } else {
+		            panel.style.display = "block";
+		        }
+		    });
+		}
+	</script>
 
 </body>
 </html>
