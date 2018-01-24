@@ -196,12 +196,28 @@ table th, tr{
 	padding: 0 18px;
 }
 
-.tabletopic {
+.tabletopicMobile {
 	display: none;
 }
 
 .mobile {
 	display: none;
+}
+
+.tabletopic th{    ONLY DISPLAY ON TABLETS OR DESKTOP
+	background-color: #FAFAFA;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-weight: normal;
+}
+
+th a {
+	color: black;
+}
+
+th a:hover {
+	color: #E14658;
 }
 
 .pagination a {
@@ -315,7 +331,7 @@ li.b{
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: black;
   margin: auto;
   padding: 0;
   width: 90%;
@@ -341,6 +357,7 @@ li.b{
 
 .mySlides {
   display: none;
+	background-color: black;
 }
 
 .cursor {
@@ -389,21 +406,6 @@ img.hover-shadow {
     cursor: pointer;
 }
 
-/*.tabletopic th{    ONLY DISPLAY ON TABLETS OR DESKTOP
-	background-color: #FAFAFA;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	text-align: left;
-	font-weight: normal;
-}
-
-th a {
-	color: black;
-}
-
-th a:hover {
-	color: #E14658;
-}*/
 
 
 

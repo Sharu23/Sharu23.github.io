@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
+    <h4>Developing Activity Diagram</h4>
+		<button class="section">Activity Diagram</button>
+		<div class="panel">
+	    <p>Activity in reality would be the business process that establishing the steps to creating the product.</p>
+	    <p>Representation of a Process</p>
+			<!--<img src="../img/process.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			<div id="myModal" class="modal">
+
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/process.png" style="width:80%">
+					</div>
+				</div>
+			</div>-->
+			<img src= "../img/process.png" alt= "Representation of a Process" style="height:300px;padding-left:20px;padding-bottom:20px;">
+			<p><br>Detailing activities in the Process</p>
+	    <img src= "../img/detailedProcess.png" alt= "Detailing activities in the Process" style="height:300px;padding-left:20px;padding-bottom:20px;">
+			<p><br>Activity Diagrams are designed so that the behavioural steps involved in a process that produce and consume artefact and information can be represented.</p>
+			<p>They are created for the views of ‘as-is’ and ‘to-be’ business processes</p>
+		</div>
+		<button class="section">Activity Diagram Notations</button>
+		<div class="panel">
+			<p>Notations of Activity Diagrams:</p>
+			<table class="tabletopic">
+				<tr>
+					<th>An <b>Activity</b> node will contain a set of actions and be labelled by its name  </th>
+				</tr>
+				<tr>
+					<th><img src= "../img/activityName.png" alt= "Activity Node Notation" style="height:60px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>control flow</b> shows a sequence of execution</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/ControlFlow.png" alt= "Control Flow Node Notation" style="width:100px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>An <b>initial-activity</b> node will show the start of the set of activities</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/initial.png" alt= "Initial Activity Node Notation" style="height:30px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>finish-activity</b> node will stop the specific control flow</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/finish.png" alt= "Finish Activity Node Notation" style="height:30px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th><b>Decision</b> node will be used to ensure the activity flows through one path controlled by conditions</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/decision.png" alt= "Decision Node Notation" style="width:350px; padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>merge</b> node will be used to bring back together different decision paths</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/merge.png" alt= "Merge Node Notation" style="width:150px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>fork</b> node will be used to split behaviour into a set of parallel or concurrent flows of activity</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/fork.png" alt= "Fork Node Notation" style="width:80px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>join</b> node will be used to bring back together a set of parallel of concurrent flows of activities</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/join.png" alt= "Join Node Notation" style="width:80px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+				<tr>
+					<th>A <b>swimlane</b> will be used to break up an activity diagram into rows and columns to assign the individual activity to the responsible role of a stakeholder who executes the activities.</th>
+				</tr>
+				<tr>
+					<th><img src= "../img/swimlane.png" alt= "Swimlane Node Notation" style="width:200px;padding-left:20px;padding-bottom:20px;"></th>
+				</tr>
+			</table>
+		</div>
+		<button class="section">Other Information about Activity Diagrams</button>
+		<div class="panel">
+			<p>Other Elements in the Activity Diagrams which have to considered</p>
+			<ul class="b">
+				<li>Context which is the scope of the activities carried out</li>
+				<li>Stakeholders are any users that are using the product, this can be human or non-human (other applications)</li>
+				<li>Basic rules and constraints of the companies</li>
+			</ul>
+			<p>Activity Diagrams are useful</p>
+			<ul class="b">
+				<li>as they show how the use cases will achieve the goals</li>
+				<li>shows who is responsible for which activity</li>
+				<li>shows in great detail all the dependencies and alternatives for the activity</li>
+			</ul>
+			<p>However, it does not reveal the messaging between the objects and the timings for each of the activities.</p>
+		</div>
+		<button class="section">Other types of Model</button>
+		<div class="panel">
+		<p>An Example of each type of Model, <b>click on the image to enlarge it</b>.</p>
+		<table class="tabletopic">
+			<tr>
+				<th>Activity Diagram</th>
+				<th>Use Case Model</th>
+				<th>Process Model</th>
+				<th>Objects Mapping</th>
+			</tr>
+			<tr>
+				<th>
+					<img src="../img/activityDiagram.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/UseCaseModel.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/ProcessModel.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+				</th>
+				<th>
+					<img src="../img/objectMapping.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+				</th>
+			</tr>
+		</table>
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext"></div>
+					<img src="../img/activityDiagram.png" style="width:80%">
+				</div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/UseCaseModel.png" style="width:80%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/ProcessModel.png" style="width:80%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext"></div>
+		      <img src="../img/objectMapping.png" style="width:80%">
+		    </div>
+			</div>
+			</div>
+		 </div>
+	</div>
+
+	<div class="pagination">
+		<a href="SystemDesigns_2.html">&laquo;</a>
+		<a href="SystemDesigns.html">1</a>
+		<a href="SystemDesigns_2.html">2</a>
+		<a class="active" href="SystemDesignss_3.html">3</a>
+		<a href="SystemDesigns_4.html">4</a>
+		<a href="SystemDesigns_5.html">5</a>
+		<a href="SystemDesigns_6.html">6</a>
+		<a href="SystemDesigns_4.html">&raquo;</a>
+	</div>
+
+  <footer>
+    <div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+  <script type="text/javascript">
+    //script for the side bar, opens and closes when the "arrow" image is clicked on
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+
+
+	<script>
+	function openModal() {
+	  document.getElementById('myModal').style.display = "block";
+	}
+
+	function closeModal() {
+	  document.getElementById('myModal').style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+
+	}
+	</script>
+
+	<script>
+	function hamburgerFunction() {
+			var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+</body>
+</html>
