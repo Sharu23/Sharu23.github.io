@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
+		<h4>Mapping High-Level Behaviour of Objects onto Functional Workflow</h4>
+			<button class="section">Behavioural Modelling </button>
+			<div class="panel">
+				<ul class="b">
+					<li>Functional workflow models</li>
+					<ul>
+						<li>describe the dynamic view of a software system</li>
+						<li>there are two types: Sequence and Collaboration</li>
+					</ul>
+					<li>For the Functional workflow input from use case model, activity model and class model would be required</li>
+				</ul>
+			</div>
+			<button class="section">Sequence Diagrams</button>
+			<div class="panel">
+			<p>Concepts for Sequence Diagrams</p>
+				<table class="borderTable">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Icon</th>
+					</tr>
+					<tr>
+						<th>Actor</th>
+						<th>a person or system that derives benefits from and is external to the system. It invokes a sequence for sending and/or receiving messages</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+							<!--<img
+							src="../img/actor.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Object</th>
+						<th>participates sending and receiving messages</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<!--<img src="../img/object.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Lifeline</th>
+						<th>denotes the life of an object during a sequence of interactions</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<!--<img src="../img/lifeline.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Execution Occurrence </th>
+						<th>denotes when an object is actively sending or receiving messages</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<!--<img src="../img/executionOccurrence.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th rowspan="3">Message</th>
+						<th>An operation in the class where an object belongs to or a function call </th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+							<!--<img src="../img/directmessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>A self-delegated operation call </th>
+						<th>
+								<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+							<!--<img src="../img/self-delegated.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>A return with value</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+							<!--<img src="../img/returnMessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>-->
+					</tr>
+					<tr>
+						<th>Object destruction</th>
+						<th>“X” denotes a termination of the participation of message passing</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+							<!--<img src="../img/object-destruction.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Frame</th>
+						<th>“Scope” for sequencing the interactions and focuses on one use case</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+						 <!--<img src="../img/frame.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+				</table>
+			</div>
+
+			<button class="section">Sequence Diagram Example</button>
+			<div class="panel">
+				<p>An example of Sequence Diagram</p>
+				<img src="../img/SequenceDiagram.png" style="width:200px" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+				<!--<img src="../img/SequenceDiagram.png"style="width:500px;padding-left:20px;padding-bottom:20px;">-->
+			</div>
+		</div>
+
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/actor.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/object.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/lifeline.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/executionOccurrence.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/directmessage.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/self-delegated.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/returnMessage.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/object-destruction.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/frame.png" style="width:80%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../img/SequenceDiagram.png" style="width:80%">
+					</div>
+
+				</div>
+			</div>
+
+			<div class="pagination">
+				<a href="SystemDesigns_4.html">&laquo;</a>
+				<a href="SystemDesigns.html">1</a>
+				<a href="SystemDesigns_2.html">2</a>
+				<a href="SystemDesignss_3.html">3</a>
+				<a href="SystemDesigns_4.html">4</a>
+				<a class="active" href="SystemDesigns_5.html">5</a>
+				<a href="SystemDesigns_6.html">6</a>
+				<a href="SystemDesigns_6.html">&raquo;</a>
+			</div>
+
+  <footer>
+    <div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+	<script>
+	function openModal() {
+	  document.getElementById('myModal').style.display = "block";
+	}
+
+	function closeModal() {
+	  document.getElementById('myModal').style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+	<script>
+	function hamburgerFunction() {
+			var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+</body>
+</html>

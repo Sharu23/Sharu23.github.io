@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
+		<h4>Constructing Software Systems Architecture</h4>
+		<button class="section">Software Component</button>
+		<div class="panel">
+			<p>Software Component (modular and cohesive) are executable units of code, designs, specification and tests. They can only be accessed through a published interface and be deployed in several nodes in the hardware architecture.</p>
+			<p>A software component architecture consists of components, ports and connections. Ports and connections form the interfaces between the components.</p>
+		</div>
+		<button class="section">Basic Concept of Component Diagrams</button>
+		<div class="panel">
+			<table class="borderTable">
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Icon</th>
+				</tr>
+				<tr>
+					<th>Component</th>
+					<th>A physical and replaceable building block of software systems</th>
+					<th>
+						<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						<!--<img src="../img/component.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+					</th>
+				</tr>
+				<tr>
+					<th>Interface</th>
+					<th colspan="2">describes a group of operations used or created by components</th>
+				</tr>
+				<tr>
+						<th style="padding-left:20px;">Provided interface</th>
+						<th>the component provides as a service to other components</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<!--<img src="../img/provided.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th style="padding-left:20px;">Required interface</th>
+						<th>The component conforms to when requesting the services from other components</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<!--<img src="../img/required.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Port</th>
+						<th>
+							An explicit window into an encapsulated component
+								<ul>
+									<li>accepting the specific functions of external components </li>
+									<li>representing a group of messages or calls</li>
+									<li>a port is a property of a component that has an interface as its type</li>
+								</ul>
+						</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<!--<img src="../img/port.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Part</th>
+						<th>
+							A unit of the implementation of the component
+								<ul>
+									<li>nested within the parent component</li>
+									<li>each part has its distinct functions  </li>
+								</ul>
+						</th>
+						<th>
+							<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+							<!--<img src="../img/part.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Connector</th>
+						<th colspan="2">A communication relationship between different parts within the component</th>
+					</tr>
+					<tr>
+							<th style="padding-left:20px;">Delegation connector</th>
+							<th>
+								<ul>
+									<li>to wire internal ports to external ports of the overall component</li>
+									<li>arrow from an internal port pointing to an external port</li>
+								</ul>
+								</th>
+							<th>
+								<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+								<!--<img src="../img/delegation.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+						<tr>
+							<th style="padding-left:20px;">Direct connector</th>
+							<th>The connection is tightly coupled</th>
+							<th>
+								<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+								<!--<img src="../img/direct.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+						<tr>
+							<th style="padding-left:20px;">Connector by interface</th>
+							<th>both ports have compatible interface</th>
+							<th>
+								<img src="../img/tableIcon.png" style="width:200px" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+								<!--<img src="../img/interface.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+			</table>
+		</div>
+		<button class="section">Compiler components example</button>
+		<div class="panel">
+			<p>An example of Compiler components can be seen below </p>
+			<img src="../img/compiler.png" style="width:200px" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+			<!--<img src="../img/compiler.png"style="width:500px;padding-left:20px;padding-bottom:20px;">-->
+		</div>
+		<button class="section">'OrderFulfillment' components example</button>
+		<div class="panel">
+			<p>Another example, where it shows the 'OrderFulfillment' components. Here you can see the use of the different types of connectors </p>
+			<img src="../img/orderFulfillment.png" style="width:200px" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+			<!--<img src="../img/orderFulfillment.png"style="width:500px;padding-left:20px;padding-bottom:20px;">-->
+		</div>
+	</div>
+
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/component.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/provided.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/required.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/port.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/part.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/delegation.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/direct.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/interface.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/compiler.png" style="width:80%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext"></div>
+				<img src="../img/orderFulfillment.png" style="width:80%">
+			</div>
+
+		</div>
+	</div>
+
+	<div class="pagination">
+		<a href="SystemDesigns_5.html">&laquo;</a>
+		<a href="SystemDesigns.html">1</a>
+		<a href="SystemDesigns_2.html">2</a>
+		<a href="SystemDesignss_3.html">3</a>
+		<a href="SystemDesigns_4.html">4</a>
+		<a href="SystemDesigns_5.html">5</a>
+		<a class="active" href="SystemDesigns_6.html">6</a>
+		<a class="disabled">&raquo;</a>
+	</div>
+
+  <footer>
+    <div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+	<script>
+	function openModal() {
+	  document.getElementById('myModal').style.display = "block";
+	}
+
+	function closeModal() {
+	  document.getElementById('myModal').style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+	<script>
+	function hamburgerFunction() {
+			var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+</body>
+</html>

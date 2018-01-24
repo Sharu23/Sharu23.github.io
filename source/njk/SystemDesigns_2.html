@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/foundation.css">
+  <script src="js/vendor/modernizr.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+</head>
+
+<body>
+  <div class="sidebar">
+		<a href="#" class= "nav-toggle-btn"></a>
+		<ul>
+			<li>Project Management and System Designs</li>
+			<ul>
+				<li><a href="ProjectManagement.html">Project Management</a></li>
+				<li><a href="SystemDesigns.html">System Designs</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<header>
+		<div class= "container">
+			<table class= "transparent">
+				<tr>
+					<th>
+						<a href= "Homepage.html">
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+  <div class="maincell">
+    <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
+    <h4>Developing Use Case Diagrams</h4>
+		<button class="section">Use Case</button>
+		<div class="panel">
+			<p>Use Case is a scenario (task) that conveys a software system interactions with the end user (actor) or another system by performing the functions (gaining input and output) for achieving the specific business goal in the domain context</p>
+	    <p>There are 2 levels for the Use Cases:</p>
+	    <ul class="b">
+	      <li>Business use cases (technology independent) which provides the information of</li>
+	      <ul>
+	        <li><b>what</b> functions (services) are performed in a business domain context</li>
+	        <li>and <b>how</b> a business service being carried out is designed with Activity Diagrams</li>
+	      </ul>
+	      <li>System use cases (technology related) which provides the information of</li>
+	        <ul>
+	          <li><b>what</b> functions (services) performed in a software system context </li>
+	          <li>and <b>how </b>the functional workflow being carried out in an application is designed with Sequence Diagrams</li>
+	        </ul>
+	      </ul>
+			</div>
+			<button class="section">Software Systems Requirements</button>
+			<div class="panel">
+	      <p>Software Systems Requirements are key and include:</p>
+	      <ul class="b">
+	        <li>Functions requirements specifies the behaviour of a software system.</li>
+	        <li>Non-Functional aspects generally describe the non-functional requirements terms.</li>
+	      </ul>
+			</div>
+			<button class="section">Use Case Diagram</button>
+			<div class="panel">
+	       <p>Use Case Diagrams</p>
+	      	<ul class="b">
+	          <li>The system boundary defines the scope of the system, what the system does but not how it does it.</li>
+	          <li>Use-cases describes a set of sequences of actions, which include variants that the system performs to yield an observable value to an actor</li>
+	          <li>Actor represents the role that someone might be playing (not a particular individual). These are external entities that has an interest in interacting with the system</li>
+	          <li>Interaction is a form of interaction between the actor and a use case.</li>
+          <img src= "../img/UseCaseDiagram.png" alt= "Use Case Diagram">
+				</div>
+				<button class="section">Use Case Description</button>
+				<div class="panel">
+	        <p>Below a Use Case Description is presented. There are explanations of what to include for each of the titles.</p>
+	        <img src= "../img/UseCaseDescription.png" alt= "Use Case Description" style="padding-left:90px;padding-bottom:20px;">
+				</div>
+				<button class="section">Relationship notation for Use Case Diagram</button>
+				<div class="panel">
+	        <p>Below are the different types of relationship notation that can be used in a Use Case diagram</p>
+	        <table class="tabletopic">
+	          <tr>
+	            <th>1. Association </th>
+	          </tr>
+	          <tr>
+	            <th><img src= "../img/association.png" alt= "Association" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+	          </tr>
+	          <tr>
+	            <th>2. Include: can only occur between two use cases </th>
+	          </tr>
+	          <tr>
+	            <th><img src= "../img/include.png" alt= "Include" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+	          </tr>
+	          <tr>
+	            <th>3. Extent: can only occur between two use cases </th>
+	          </tr>
+	          <tr>
+	            <th><img src= "../img/extend.png" alt= "Extend" style="height:100px;padding-left:20px;padding-bottom:20px;"></th>
+	          </tr>
+	          <tr>
+	            <th>4. Generalisation  </th>
+	          </tr>
+	          <tr>
+	            <th><img src= "../img/generalisation.png" alt= "Generalisation" style="height:200px;padding-left:20px;padding-bottom:20px;"></th>
+	          </tr>
+	        </table>
+				</div>
+	</div>
+
+	<div class="pagination">
+		<a href="SystemDesigns.html">&laquo;</a>
+		<a href="SystemDesigns.html">1</a>
+		<a class="active" href="SystemDesigns_2.html">2</a>
+		<a href="SystemDesignss_3.html">3</a>
+		<a href="SystemDesigns_4.html">4</a>
+		<a href="SystemDesigns_5.html">5</a>
+		<a href="SystemDesigns_6.html">6</a>
+		<a href="SystemDesigns_3.html">&raquo;</a>
+	</div>
+
+  <footer>
+    <div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
+  </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+	<script>
+	function openModal() {
+	  document.getElementById('myModal').style.display = "block";
+	}
+
+	function closeModal() {
+	  document.getElementById('myModal').style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+	<script>
+	function hamburgerFunction() {
+			var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+</body>
+</html>
