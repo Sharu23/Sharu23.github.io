@@ -36,7 +36,16 @@
 						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
 					</th>
 					<th>
+						<div class="tablet">
 						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+						</div>
+						<nav class="mobile">
+							<ul>
+								<li><a href= "Homepage.html"> Homepage</a></li>
+								<li><a href= "Modules.html"> Modules</a></li>
+								<li><a href= "Quiz.html"> Quiz</a></li>
+							</ul>
+						</nav>
 					</th>
 				</tr>
 			</table>
@@ -53,6 +62,7 @@
 		</div>
 		</div>
 		</header>
+
 
   <div class="maincell">
     <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
@@ -105,7 +115,7 @@
 		<a href="ProjectManagement_2.html">&laquo;</a>
 		<a href="ProjectManagement.html">1</a>
 		<a href="ProjectManagement_2.html">2</a>
-		<a class="active" href="ProjectManagement_3.html">3</a>
+		<a class="activePagination" href="ProjectManagement_3.html">3</a>
 		<a href="ProjectManagement_4.html">4</a>
 		<a href="ProjectManagement_4.html">&raquo;</a>
 	</div>
@@ -149,7 +159,7 @@
 
 		for (i = 0; i < sec.length; i++) {
 				sec[i].addEventListener("click", function() {
-						this.classList.toggle("active");
+						this.classList.toggle("activeSection");
 						var panel = this.nextElementSibling;
 						if (panel.style.display === "block") {
 								panel.style.display = "none";

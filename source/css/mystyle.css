@@ -1,3 +1,4 @@
+/* General styling and header / footer */
 body {
 	margin: 0;
 	/*background-size: 100%;*/
@@ -12,18 +13,9 @@ body {
 	margin: 0 auto;
 }
 
-.transparent th, tr, td {
-	background-color: #3F3250;
-	padding-top: 10px;
-	margin-left: 10px;
-	border: 1px solid #3F3250;
-	margin-bottom:0px;
-	padding-bottom:0px;
-}
-
 header {
   background: #3F3250;
-  margin-bottom: 10px; /*Has to be the same as the .cell margin-bottom*/
+  margin-bottom: 10px;
 }
 
 header::after {
@@ -35,6 +27,40 @@ header::after {
   bottom: 0;
 }
 
+/* Styling for header table, so that logo and menu can be positioned */
+.transparent th, tr, td {
+	background-color: #3F3250;
+	padding-top: 10px;
+	margin-left: 10px;
+	border: 1px solid #3F3250;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+/* Logo in the header*/
+.logo {
+  float: left;
+  padding: 10px;
+  height: 60px;
+}
+
+/*Title icon*/
+.icon {
+  width: 40px;
+  float: centre;
+}
+
+footer {
+	background: #3F3250;
+	padding-right: 10px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 15px;
+}
+
+/*----------------------------------------*/
+
+/* Styling for navigation (hamburger menu)*/
 nav {
   float: centre;
 }
@@ -46,8 +72,6 @@ nav ul {
 }
 
 nav li {
-  /* display: inline-block; NEEDED FOR THE DESKTOP VIEW
-  margin-left: 70px; */
   padding-bottom: 10px;
   position: relative;
 	margin-left: auto;
@@ -61,21 +85,20 @@ nav a {
   font-size: 14px;
 }
 
+/* For mobile viewfont colour changes */
 nav a:hover {
   color: #E14658;
 }
 
+/* Styling for the humburger icon for mobile view*/
 .hamburger {
 	text-align: center;
 	list-style-type: none;
 }
 
-.logo {
-  float: left;
-  padding: 10px;
-  height: 60px;
-}
+/*----------------------------------------*/
 
+/* Mainsection of the pages */
 .maincell {
   background-color: #FAFAFA;
 	padding-bottom: 10px;
@@ -84,6 +107,10 @@ nav a:hover {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+/*----------------------------------------*/
+
+/*Module and Topic page sidebar*/
 
 .sidebar {
 	position: fixed;
@@ -146,7 +173,11 @@ nav a:hover {
 		transform: translate3d(200px, 0, 0);
 }
 
-.roundedBorder { /*Styling for the Modules Page*/
+
+/*----------------------------------------*/
+
+/*Styling for the Modules Page*/
+.roundedBorder {
     border-radius: 25px;
     border: 4px solid #E14658;
     padding: 20px;
@@ -158,6 +189,8 @@ nav a:hover {
 		margin-bottom: 8px;
 }
 
+/*----------------------------------------*/
+
 table th, tr{
 	background-color: #FAFAFA;
 	border-style: none;
@@ -165,12 +198,17 @@ table th, tr{
 	table-layout: fixed;
 }
 
+/*For Icon*/
 .Topicicon {
 	float: right;
 	height: 40px;
 	padding-top: 5px;
 	padding-right: 10px;
 }
+
+/*----------------------------------------*/
+
+/*Styling for the calapsing of the information*/
 .section {
 	background-color: #FAFAFA;
 	color: #444;
@@ -185,7 +223,7 @@ table th, tr{
 	margin: 10px;
 }
 
-.active, .section:hover {
+.activeSection, .section:hover {
 	color:#E14658;
 	font-weight: bold;
 }
@@ -196,29 +234,22 @@ table th, tr{
 	padding: 0 18px;
 }
 
-.tabletopicMobile {
-	display: none;
-}
 
+/*----------------------------------------*/
+
+/*disabling information that are hard to be displayed on mobile*/
 .mobile {
 	display: none;
 }
 
-.tabletopic th{    ONLY DISPLAY ON TABLETS OR DESKTOP
-	background-color: #FAFAFA;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	text-align: left;
-	font-weight: normal;
+/*disabling tables that are hard to be displayed on mobile*/
+.tabletopic{
+	display: none;
 }
 
-th a {
-	color: black;
-}
+/*----------------------------------------*/
 
-th a:hover {
-	color: #E14658;
-}
+/*paging the Topic pages*/
 
 .pagination a {
 	background-color: #3F3250;
@@ -228,12 +259,12 @@ th a:hover {
 	transition: background-color .3s;
 }
 
-.pagination a.active {
+.pagination a.activePagination {
   background-color: #E14658;
   color: white;
 }
 
-.pagination a:hover:not(.active) {
+.pagination a:hover:not(.activePagination) {
 	background-color: #FAFAFA;
 	color: black;
 }
@@ -244,32 +275,14 @@ th a:hover {
 	pointer-events: none;
 }
 
+/*----------------------------------------*/
 
-
-
-
-
-
-
-
-footer {
-	background: #3F3250;
-	padding-right: 10px;
-	color: #ffffff;
-	text-align: center;
-	font-size: 15px;
-}
-.icon {
-  width: 80px;
-  float: centre;
-}
-
-
-
-
+/*Formating the line height*/
 br.small{
 	line-height: 2.5;
 }
+
+/*Format for the list*/
 ul.b{
 	list-style-type: circle;
 	padding-left: 10px;
@@ -279,6 +292,9 @@ li.b{
 	padding-left: 5px;
 }
 
+/*----------------------------------------*/
+
+/* Table with border*/
 .borderTable {
 	border-collapse: collapse;
 	margin-left: 10px;
@@ -296,9 +312,10 @@ li.b{
 }
 
 
-
+/*----------------------------------------*/
 
 /* Styling for the pop-up images*/
+
 .row > .column {
   padding: 0 8px;
 }
@@ -392,6 +409,11 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+
+/*----------------------------------------*/
+
+/* Style for Quiz button*/
 .Quizbutton {
     background-color: #E14658;
     border: none;
@@ -407,30 +429,124 @@ img.hover-shadow {
 }
 
 
+/*----------------------------------------------------*/
 
+/* Elemets that only need to be displayed on tablets and on mobiles*/
+@media only screen and (min-width:635px){
 
-/*nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #E14658;
+h1 {
+	font-size: 10px;
+}
+	.tablet{
+		display: none;
+	}
 
-  position: absolute;
-  bottom: 0;
-  width: 0%;
+	.mobile {
+	display: inline-block;
+	}
 
-  transition: all ease-in-out 250ms;
+/*----------------------------------------*/
+
+/*Navigation styling*/
+
+	nav {
+		float: right;
+	}
+
+	nav li {
+		display: inline-block;
+		margin-left: 70px;
+	}
+
+	nav a:hover {
+	  color: white;
+	}
+
+	nav a::before {
+	  content: '';
+	  display: block;
+	  height: 5px;
+	  background-color: #E14658;
+
+	  position: absolute;
+	  bottom: 0;
+	  width: 0%;
+
+	  transition: all ease-in-out 250ms;
+	}
+
+	nav a:hover::before {
+	  width: 100%;
+	}
+
+	.active{
+		color: #000000;
+		content: '';
+		display: block;
+		height: 5px;
+		background-color: #E14658;
+		position: fixed;
+	}
+
+/*----------------------------------------*/
+
+/*Main cell formating*/
+.maincell {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-nav a:hover::before {
-  width: 100%;
+/*header table format */
+
+.transparent {
+	margin-bottom: 5px;
+}
+.transparent th, tr, td {
+	padding-top: 10px;
+	padding-bottom: 2px;
 }
 
-.active{
-	color: #000000;
-	content: '';
-	display: block;
-	height: 5px;
-	background-color: #E14658;
-	position: fixed;
-}*/
+/*----------------------------------------*/
+
+	.icon {
+	  width: 50px;
+	  float: centre;
+	}
+
+	.roundedBorder {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+	}
+
+/*----------------------------------------*/
+
+	.tabletopic {
+		display:table-cell;
+		background-color: #FAFAFA;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		text-align: left;
+		font-weight: normal;
+	}
+
+	.tabletopic tr,td{
+	 border: 1px solid black;
+}
+
+
+
+
+/*----------------------------------------------------*/
+
+/*Styling for desktops*/
+@media only screen and (min-width:800px){
+
+
+
+
+
+
+}
