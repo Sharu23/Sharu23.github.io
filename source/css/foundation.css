@@ -2256,7 +2256,8 @@ h1, .h1 {
   background: #E14658;
   margin-left:auto;
   margin-left: auto;
-  width: 100%}
+  width: 100%;
+  padding-bottom: 5px;}
 
 h2, .h2 {
   font-size: 1.25rem;
