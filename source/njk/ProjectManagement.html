@@ -36,7 +36,16 @@
 						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
 					</th>
 					<th>
+						<div class="tablet">
 						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+						</div>
+						<nav class="mobile">
+							<ul>
+								<li><a href= "Homepage.html"> Homepage</a></li>
+								<li><a href= "Modules.html"> Modules</a></li>
+								<li><a href= "Quiz.html"> Quiz</a></li>
+							</ul>
+						</nav>
 					</th>
 				</tr>
 			</table>
@@ -53,6 +62,7 @@
 		</div>
 		</div>
 		</header>
+
 
   <div class="maincell">
     <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
@@ -76,32 +86,33 @@
 	      <ul>
 	      <li>It is clear <b>what</b> the project is expected to deliver</li>
 	      <li>Is it clear <b>how</b> the project will achieve delivery</li>
+				</ul>
 	      <br><p class= "mobile">An example:</p>
-	      <table class= "tabletopic">
-	        <tr>
-	          <th></th>
-	          <th></th>
-	          <td colspan="2">How</td>
-	        </tr>
-	        <tr>
-	          <th></th>
-	          <th></th>
-	          <td>Clear</td>
-	          <td>Unclear</td>
-	        </tr>
-	        <tr>
-	          <th rowspan="2">What</th>
-	          <th>Unclear</th>
-	          <td>Movie: Goals are not set but know how to make it</td>
-	          <td>Lost in the Fog:When you do not know what and how to do something.</td>
-	        </tr>
-	        <tr>
-	          <th>Clear</th>
-	          <td>Painting by Numbers:There is no (or little) uncertainty, a clear plan can be created and executed and these types of project are the once that have been delivered many times </td>
-	          <td>Quests:The goal is clear but research is required to understand how to do it</td>
-	        </tr>
-	        </table>
-	        </ul>
+				<table class="tabletopic">
+					<tr style="border-style:none" >
+						<td style="border-style:none"></td>
+						<td style="border-style:none"></td>
+						<td colspan="2" style="text-align:center;">How</td>
+					</tr>
+					<tr style="border-top-style:none;border-left-width: 0px;">
+						<td style="border-style:none" style="border-left-style:none"></td>
+						<td style="border-style:none"></td>
+						<td style="text-align:center;" style="width:50%">Clear</td>
+						<td style="text-align:center;" style="width:50">Unclear</td>
+					</tr>
+					<tr>
+						<td rowspan="2">What</td>
+						<td>Unclear</td>
+						<td style="width:50%">Movie: Goals are not set but know how to make it</td>
+						<td style="width:50%">Lost in the Fog:When you do not know what and how to do something</td>
+					</tr>
+					<tr>
+						<td>Clear</td>
+						<td style="width:50%">Painting by Numbers:There is no (or little) uncertainty, a clear plan can be created and executed and these types of project are the once that have been delivered many times</td>
+						<td style="width:50%">Quests:The goal is clear but research is required to understand how to do it</td>
+					</tr>
+				</table>
+
 	        <li><b>The Iron triangle:</b>
 	          <ul>
 	            <li>The objectives are completed as specified and are accepted as fit for purpose </li>
@@ -115,7 +126,7 @@
 	</div>
 	<div class="pagination">
 		<a class= "disabled">&laquo;</a>
-		<a class="active" href="ProjectManagement.html">1</a>
+		<a class="activePagination" href="ProjectManagement.html">1</a>
 	  <a href="ProjectManagement_2.html">2</a>
 	  <a href="ProjectManagement_3.html">3</a>
 	  <a href="ProjectManagement_4.html">4</a>
@@ -161,7 +172,7 @@
 
 		for (i = 0; i < sec.length; i++) {
 		    sec[i].addEventListener("click", function() {
-		        this.classList.toggle("active");
+		        this.classList.toggle("activeSection");
 		        var panel = this.nextElementSibling;
 		        if (panel.style.display === "block") {
 		            panel.style.display = "none";

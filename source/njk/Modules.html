@@ -32,14 +32,23 @@
 			<div class= "container">
 				<table class= "transparent">
 					<tr>
-						<th>
+	          <th>
 							<a href= "Homepage.html">
 							<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
 						</th>
-						<th>
+	          <th>
+							<div class="tablet">
 							<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+							</div>
+							<nav class="mobile">
+								<ul>
+									<li><a href= "Homepage.html"> Homepage</a></li>
+									<li><a href= "Modules.html"> Modules</a></li>
+									<li><a href= "Quiz.html"> Quiz</a></li>
+								</ul>
+							</nav>
 						</th>
-					</tr>
+	        </tr>
 				</table>
 			</div>
 			<div id="hamburgerDiv" style="display: none;">
@@ -53,7 +62,8 @@
 				</nav>
 			</div>
 			</div>
-		</header>
+			</header>
+
 
   <div class="maincell">
     <h1>Modules</h1>
@@ -61,15 +71,15 @@
       <h4>Project Management and System Designs</h4>
       <table>
         <tr>
-          <th><a href= "ProjectManagement.html">
+          <th style="width:50%"><a href= "ProjectManagement.html">
             <img src= "../img/ProjectManagement.png" alt= "Project Management Icon" class="icon"></th></a>
-            <th><a href= "SystemDesigns.html">
+            <th style="width:50%"><a href= "SystemDesigns.html">
 							<img src= "../img/SystemDesign.png" alt= "System Design Icon" class="icon"></th></a>
         </tr>
         <tr>
-          <th><a href= "ProjectManagement.html">
+          <th style="width:50%"><a href= "ProjectManagement.html">
 						Project Management</th></a>
-          <th><a href= "SystemDesigns.html">
+          <th style="width:50%"><a href= "SystemDesigns.html">
 						System Designs</th></a>
         </tr>
       </table>
@@ -78,12 +88,12 @@
       <h4>Computer Applications</h4>
       <table>
         <tr>
-          <th><img src= "../img/DigitalLogicIcon.png" alt= "Digital Logic Icon" class="icon"></th>
-          <th><img src= "../img/InternetCommunicationIcon.png" alt= "Internet Communication Icon" class="icon"></th>
+          <th style="width:50%"><img src= "../img/DigitalLogicIcon.png" alt= "Digital Logic Icon" class="icon"></th>
+          <th style="width:50%"><img src= "../img/InternetCommunicationIcon.png" alt= "Internet Communication Icon" class="icon"></th>
         </tr>
         <tr>
-          <th>Digital Logic</th>
-          <th>Internet Communication</th>
+          <th style="width:50%">Digital Logic</th>
+          <th style="width:50%">Internet Communication</th>
         </tr>
       </table>
     </div>
@@ -101,7 +111,7 @@
   </div>
 
   <footer>
-    <div class="container">(Add &)copy Sharugi Balachandran <span style="float:right">More details</span></div>
+    <div class="container">&copy; Sharugi Balachandran <span style="float:right">More details</span></div>
   </footer>
   </div>
 
