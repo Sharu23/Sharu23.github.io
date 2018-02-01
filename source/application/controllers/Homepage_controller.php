@@ -3,6 +3,6 @@
 class Homepage_Controller extends CI_Controller{
     publicfunction index(){
 
-        $this->load->view('Homepage')''
+        $this->load->view('index')''
     }
 }
