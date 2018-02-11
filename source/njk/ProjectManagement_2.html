@@ -3,9 +3,7 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/normalize.css"> <!--Foundation style sheet -->
-  <link rel="stylesheet" href="../css/foundation.css">
-  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/foundation.css"><!--Foundation style sheet -->
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,7 +115,36 @@
 	            <li><b>Communication:</b> informing all the related members of the risks that could or have occurred.</li>
 	          </ol>
 					</div>
-  </div>
+
+					<!-- Recap Test Section-->
+					<button class="section">Recap</button>
+					<div class= "panel">
+
+					<form id="recap">
+					<fieldset>
+					<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+					<br><h6> 1) According to PRINCE2, how many steps are there in Risk Management? </h6>
+					<label for="3"><input type="radio" name="question1" value="0" id="3" onclick="radioQu1()"> 3</label>
+					<label for="5"><input type="radio" name="question1" value="1" id="5" onclick="radioQu1()"> 5 </label>
+					<label for="7"><input type="radio" name="question1" value="0" id="7" onclick="radioQu1()"> 7</label>
+					<label for="10"><input type="radio" name="question1" value="0" id="10" onclick="radioQu1()"> 10</label><br>
+
+					<h6> 2) Product Breakdown Structure can be written in two orientation, what are they? </h6>
+					<label for="verb"><input type="radio" name="question2" value="0" id="verb" onclick="radioQu2()"> Verb-orientated only</label>
+					<label for="noun"><input type="radio" name="question2" value="0" id="noun" onclick="radioQu2()"> noun-orientated only</label>
+					<label for="noun_verb"><input type="radio" name="question2" value="1" id="noun_verb" onclick="radioQu2()"> noun and verb-orientated</label>
+					<label for="none"><input type="radio" name="question2" value="0" id="none" onclick="radioQu2()"> none of the above</label>
+
+					<br>
+					<p><span id="check"></span></p>
+					<p><span id="score"></span></p>
+					<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+					<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+					</fieldset>
+					</form>
+					</div>
+
+			</div>
 
 	<!-- Section of the pagination -->
 	<div class="pagination">
@@ -181,6 +208,31 @@
 		        }
 		    });
 		}
+	</script>
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+	  result = question1 + question2;
+	  output = "Out of 2 marks you got " + result;
+	  document.getElementById("score").innerHTML = output;
+	}
+	</script>
+
+	<script>
+	function refresh() {
+	  location.reload();
+	}
 	</script>
 
 </body>

@@ -2,42 +2,449 @@
 <html class="no-js" lang="en">
 
 <head>
-	<link href= "../css/mystyle.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/foundation.css">
-    <script src="js/vendor/modernizr.js"></script>
+	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
+  <link rel="stylesheet" href="../css/foundation.css"> <!--Foundation style sheet -->
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"></link>
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Today's 4 Revision</title>
-	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32">
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32"> <!--Simplified logo for the title section -->
 </head>
 
 <body>
 	<header>
 		<div class= "container">
-			<a href= "Homepage.html">
-			<img src= "../img/logo.png" alt= "logo" class="logo">
+			<table class= "transparent"> <!-- To positions the logo and menu in the same row -->
+				<tr>
+					<th>
+						<a href= "index.html"> <!-- Logo linking to the homepage -->
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<div class="tablet"> <!-- If mobile view humburger icon appearing, otherwise the menu appearing -->
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+						</div>
+						<nav class="mobile">
+							<ul>
+								<li><a href= "index.html"> Homepage</a></li>
+								<li><a href= "Modules.html"> Modules</a></li>
+								<li><a href= "Quiz.html"> Quiz</a></li>
+							</ul>
+						</nav>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;"> <!-- If humburger icon appears these menu should appear -->
+		<div class= "hamburger">
 			<nav>
 				<ul>
-					<li><a href= "Homepage.html"> Homepage</a></li>
+					<li><a href= "index.html"> Homepage</a></li>
 					<li><a href= "Modules.html"> Modules</a></li>
-					<li><a href= "../application/views/question_page.php"> Quiz</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
 				</ul>
 			</nav>
 		</div>
-	</header>
-	<div class="content">
-		<div class="maincell">
-			<h1>Introduction <img src="../img/logo.png" alt= "logo" class="icon"></h1>
-			<h5>Title</h5>
-			<p >Sample text for all the pages</p>
 		</div>
+		</header>
+
+		<!--Sidebar for Module and Topic pages, make sure all the topic pages have the same navigation as this page -->
+		<div class="sidebar">
+			<a href="#" class= "nav-toggle-btn"></a>
+			<ul>
+				<li>Project Management and System Designs</li>
+				<ul>
+					<li><a href="ProjectManagement.html">Project Management</a></li>
+					<li><a href="SystemDesigns.html">System Designs</a></li>
+				</ul>
+			</ul>
+		</div>
+
+	<!--<h1> Can You Match the objects with the correct person? </h1>
+
+        <span><button id="ref_butn">Start Over </button><b> Score </b><b id="score"> 0</b></span>-->
+
+		<h6> 2) Drag and drop the items into the correct columns. </h6>
+		  <span><b> Score </b><b id="score"> 0</b></span>
+
+	<div id="container">
+	   <div style="display:inline" id="pillar" class="droppable pillar">Three Pillars of Scrum</div>
+	   <div style="display:inline" id="artifacts" class="droppable artifacts">Scrum Artifacts</div>
+	   <div style="display:inline" id="events" class="droppable events">Scrum Events</div>
 	</div>
 
-	<footer>
-		<div class="container">&copy Sharugi Balachandran;<span style="float:right">More details</span></div>
-	</footer>
+	<div style="display:inline" id="transparency" class="draggable pillar">Transparency</div>
+	<div style="display:inline" id="review" class="draggable events">Sprint Review</div>
+	<div  style="display:inline"  id="increment" class="draggable artifacts">Product Increment</div>
+	<div style="display:inline"  id="backlog" class="draggable artifacts">Product Backlog</div>
+	<div style="display:inline"  id="adaptation" class="draggable pillar">Adaptation</div>
+	<div style="display:inline"  id="inspection" class="draggable pillar">Inspection</div>
+	<div style="display:inline" id="planning" class="draggable events">Sprint Planning</div>
+	<div style="display:inline" id="scrum" class="draggable events">Daily Scrum</div>
+	<div style="display:inline" id="sprint" class="draggable artifacts">Sprint Backlog</div>
+
+
+
+
+	<!-- Script for the sidebar, when the side-nav has to be activated -->
+
+  <script type="text/javascript">
+
+      (function() {
+
+          var bodyEl = $('body'),
+              navToggleBtn = bodyEl.find('.nav-toggle-btn');
+
+          navToggleBtn.on('click', function(e) {
+              bodyEl.toggleClass('active-nav');
+              e.preventDefault();
+          });
+      })();
+  </script>
+
+	<!--Script for the humburger menu, when the menu should appear and disappear-->
+	<script>
+	function hamburgerFunction() {
+	    var x = document.getElementById("hamburgerDiv");
+
+			if(x.style.display === "none") {
+				x.style.display = "block";
+			}
+			else {
+				x.style.display = "none";
+			}
+	}
+	</script>
+
+	<!--Script for the collapsation of the sections, when it should be closed and opened-->
+	<script>
+		var sec = document.getElementsByClassName("section");
+		var i;
+
+		for (i = 0; i < sec.length; i++) {
+				sec[i].addEventListener("click", function() {
+						this.classList.toggle("activeSection");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+								panel.style.display = "none";
+						} else {
+								panel.style.display = "block";
+						}
+				});
+		}
+	</script>
+
+	<!--<script>
+	$(document).ready(function () {
+	    $('.event').on("dragstart", function (event) {
+	        var dt = event.originalEvent.dataTransfer;
+	        dt.setData('Text', $(this).attr('id'));
+	    });
+	    $('table td').on("dragenter dragover drop", function (event) {
+	        event.preventDefault();
+	        if (event.type === 'drop') {
+	            var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
+	            de = $('#' + data).detach();
+	            de.appendTo($(this));
+
+	        };
+	    });
+	})
+</script> CLASSS NEED TO CHANGE BACK TO EVENTS -->
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+	var question3 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+
+
+
+		result = question1 + question2 + question3;
+		output = "Your score is " + result;
+		document.getElementById("score").innerHTML = output;
+
+	}
+	</script>
+
+	<script>
+	function refresh() {
+		location.reload();
+	}
+	</script>
+
+
+<script type="text/javascript">
+//added to make .draggable class draggable
+$(".draggable").draggable();
+
+
+//stores the id of the element that is being dragged
+var dragging;
+
+//stores the score
+var score = 0;
+
+
+
+//store the number of game pieces
+//you can add a different class like .game-pieces
+//if you don't want it to include other draggable elements
+//besides the game pieces
+var numOfGamePieces = $(".draggable").length;
+
+
+					 /*on dragstart event*/
+					 $(".draggable").on("dragstart",function(){
+
+							//get the id of the element being dragged
+							dragging = $(this).attr("id");
+
+
+					});//end on dragstart event
+
+
+
+							//draggable on stop event
+							$( ".draggable").draggable({
+
+stop: function(event,ui) {//begin stop function
+
+		//if the score is equal to the number of game pieces
+		 if(score === numOfGamePieces){//begin if then
+
+
+					 //let the user know they won
+					 alert("You Won!");
+
+
+			}//end if then
+
+
+
+
+}//end stop function
+});//end dragable stop event
+
+
+
+
+
+
+
+
+
+
+
+
+	 //fire event when an element is dropped the #farmer id
+	 //replace the id below with what your are trying to drop the elements on
+ $("#pillar").droppable({//begin droppable event
+ drop: function(event,ui) {//begin drop function
+
+
+
+		 switch(dragging){//begin switch case
+
+				 case "transparency":
+
+						 //increment the score
+						score++;
+
+						 //disable drag and drop
+						$("#" + dragging).unbind();
+
+						//diplay the score
+						$("#score").html(score);
+
+
+						 break;
+
+				 case "adaptation":
+
+
+
+						 //increment the score
+						score++;
+
+						//diplay the score
+						$("#score").html(score);
+
+						//remove class draggable
+						 $("#" + dragging).unbind();
+
+						 break;
+
+				 case "inspection":
+
+						 //increment the score
+						score++;
+
+						//diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+
+		 }//end switch case
+
+
+
+
+	}//end drop function
+	});//end droppable event
+
+
+
+
+$("#artifacts").droppable({//begin droppable event
+ drop: function(event,ui) {//begin drop function
+
+
+
+		 switch(dragging){//begin switch case
+
+				 case "increment":
+
+						 //increment the score
+						score++;
+
+						//diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+				 case "backlog":
+
+						 //increment the score
+						score++;
+
+						 //diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+				 case "sprint":
+
+						 //increment the score
+						score++;
+
+						 //diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+
+
+		 }//end switch case
+
+
+
+	}//end drop function
+	});//end droppable event
+
+
+
+ $("#events").droppable({//begin droppable event
+ drop: function(event,ui) {//begin drop function
+
+
+
+		 switch(dragging){//begin switch case
+
+				 case "review":
+
+						 //increment the score
+						score++;
+
+						 //diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+
+						 break;
+
+				 case "planning":
+
+						 //increment the score
+						score++;
+
+						 //diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+				 case "scrum":
+
+						 //increment the score
+						score++;
+
+						 //diplay the score
+						$("#score").html(score);
+
+						//disable dragging on this element
+						 $("#" + dragging).unbind();
+
+						 break;
+
+
+		 }//end switch case
+
+
+
+	}//end drop function
+	});//end droppable event
+
+
+	//begin #ref_button on click event
+	$("#ref_butn").on("click",function(){//begin on click event
+
+		//refresh the browser window therefore restarting
+		//the game parameter set to true so the cache is not used
+		window.location.reload(true);
+
+	});//end on click event
+
+
+
+
+</script>
+
+
+
+
+
 
 </body>
+</html>

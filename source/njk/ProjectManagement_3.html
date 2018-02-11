@@ -3,9 +3,7 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/normalize.css"> <!--Foundation style sheet -->
-  <link rel="stylesheet" href="../css/foundation.css">
-  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/foundation.css"><!--Foundation style sheet -->
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,6 +107,32 @@
 	      <li><b>Closing a project:</b> Verify user acceptance, quality control and complete the handover</li>
 	    </ol>
 		</div>
+
+		<!-- Recap Test Section-->
+		<button class="section">Recap</button>
+		<div class= "panel">
+
+		<form id="recap">
+		<fieldset>
+		<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+		<br><h6> 1) Under which category would Risk come under? </h6>
+		<label for="principles"><input type="radio" name="question1" value="0" id="principles" onclick="radioQu1()"> Principles</label>
+		<label for="themes"><input type="radio" name="question1" value="1" id="themes" onclick="radioQu1()"> Themes</label>
+		<label for="processes"><input type="radio" name="question1" value="0" id="processes" onclick="radioQu1()"> Processes</label><br>
+
+		<h6> 2) Defining roles and responsibles, come under which category? </h6>
+		<label for="principles1"><input type="radio" name="question2" value="1" id="principles1" onclick="radioQu2()"> Principles</label>
+		<label for="themes1"><input type="radio" name="question2" value="0" id="themes1" onclick="radioQu2()"> Themes</label>
+		<label for="processes1"><input type="radio" name="question2" value="0" id="processes1" onclick="radioQu2()"> Processes</label>
+
+		<br>
+		<p><span id="score"></span></p>
+		<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+		</fieldset>
+		</form>
+		</div>
+
   </div>
 
 	<!-- Section of the pagination -->
@@ -172,6 +196,31 @@
 						}
 				});
 		}
+	</script>
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result(button) {
+		result = question1 + question2;
+		output = "Out of 2 marks you got " + result;
+		document.getElementById("score").innerHTML = output;
+	}
+	</script>
+
+	<script>
+	function refresh() {
+		location.reload();
+	}
 	</script>
 
 </body>

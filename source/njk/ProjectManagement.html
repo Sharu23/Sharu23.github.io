@@ -3,9 +3,7 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/normalize.css"> <!--Foundation style sheet -->
-  <link rel="stylesheet" href="../css/foundation.css">
-  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/foundation.css"><!--Foundation style sheet -->
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +88,7 @@
 				</ul>
 					<!-- This table will not appear in the mobile view -->
 	      <br><p class= "mobile">An example:</p>
-				<table class="tabletopic">
+				<table class="mobile">
 					<tr style="border-style:none" >
 						<td style="border-style:none"></td>
 						<td style="border-style:none"></td>
@@ -125,6 +123,29 @@
 	        </li>
 	      </ul>
   	</div>
+
+		<!-- Recap Test Section-->
+		<button class="section">Recap</button>
+		<div class= "panel">
+
+			<form id="recap">
+			<fieldset>
+			<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+			<br><h6> 1) Is time management part of the Common Principles? </h6>
+			<label for="yes"><input type="radio" name="question1" value="1" id="yes" onclick="radio()"> Yes</label>
+			<label for="no"><input type="radio" name="question1" value="0" id="no" onclick="radio()"> No </label><br>
+
+			<h6> 2) When does a project fail? </h6>
+			<label for="on_time"><input type="checkbox" name="question2" value="wrong" style="padding-left=10px" id="on_time" onclick="checkbox()"> When finished on time</label>
+			<label for="over_bugdet"><input type="checkbox" name="question2" value="right" id="over_bugdet" onclick="checkbox()"> When over the budget</label>
+			<label for="over_time_limit"><input type="checkbox" name="question2" value="right" id="over_time_limit" onclick="checkbox()"> When over the time limit</label>
+			<label for="well_planned"><input type="checkbox" name="question2" value="wrong" id="well_planned" onclick="checkbox()"> When it has been well planned</label><br>
+			<p><span id="score"></span></p>
+			<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+			<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+			</fieldset>
+				</form>
+		</div>
 	</div>
 
 	<!-- Section of the pagination -->
@@ -145,6 +166,8 @@
 
 	<!-- Script for the sidebar, when the side-nav has to be activated -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" scr="../js/recap.js"></script>
+
   <script type="text/javascript">
 
       (function() {
@@ -191,5 +214,48 @@
 		}
 	</script>
 
+	<script>
+		var question1 = 0;
+		var question2 = 0;
+
+		function radio(){
+		  question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+		}
+
+		function checkbox(){
+		  var checkboxes = document.getElementsByName("question2");
+		  var checkboxChecked = 0;
+
+		  question2 = 0;
+
+		  for (var i = 0; i < checkboxes.length; i++){
+		    if(checkboxes[i].checked && (checkboxes[i].value === "wrong"))
+		    {
+		      question2 = 0; break;
+		    }
+		    if(checkboxes[i].checked && (checkboxes[i].value === "right"))
+		    {
+		      checkboxChecked += 1;
+		      if(checkboxChecked.length === 2)
+		      {
+		        question2 = 1;
+		      }
+		    }
+		  }
+
+		}
+
+		function result() {
+		  result = question1 + question2;
+		  output = "Out of 2 marks you got " + result;
+		  document.getElementById("score").innerHTML = output;
+		}
+		</script>
+
+		<script>
+		function refresh(){
+		  location.reload();
+		}
+	</script>
 </body>
 </html>
