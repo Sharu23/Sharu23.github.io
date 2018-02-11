@@ -101,13 +101,15 @@
 	          <li>The system boundary defines the scope of the system, what the system does but not how it does it.</li>
 	          <li>Use-cases describes a set of sequences of actions, which include variants that the system performs to yield an observable value to an actor</li>
 	          <li>Actor represents the role that someone might be playing (not a particular individual). These are external entities that has an interest in interacting with the system</li>
-	          <li>Interaction is a form of interaction between the actor and a use case.</li>
-          <img src= "../img/UseCaseDiagram.png" alt= "Use Case Diagram">
+	          <li>Interaction is a form of interaction between the actor and a use case.</li><br>
+					<img src="../img/UseCaseDiagram.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"><br>
+        	<!--<img src= "../img/UseCaseDiagram.png" alt= "Use Case Diagram">-->
 				</div>
 				<button class="section">Use Case Description</button>
 				<div class="panel">
-	        <p>Below a Use Case Description is presented. There are explanations of what to include for each of the titles.</p>
-	        <img src= "../img/UseCaseDescription.png" alt= "Use Case Description" style="padding-left:90px;padding-bottom:20px;">
+	        <p>Below a Use Case Description is presented. There are explanations of what to include for each of the titles.</p><br>
+					<img src="../img/UseCaseDescription.png" style="width:450px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"><br><br>
+					<!--<img src= "../img/UseCaseDescription.png" alt= "Use Case Description" style="padding-left:90px;padding-bottom:20px;">-->
 				</div>
 				<button class="section">Relationship notation for Use Case Diagram</button>
 				<div class="panel">
@@ -117,28 +119,67 @@
 	            <th>1. Association </th>
 	          </tr>
 	          <tr>
-	            <td><img src= "../img/association.png" alt= "Association" style="height:100px;padding-left:20px;padding-bottom:20px;"></td>
+	            <td><img src="../img/association.png" alt= "Association" style="width:250px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></td>
 	          </tr>
 	          <tr>
 	            <th>2. Include: can only occur between two use cases </th>
 	          </tr>
 	          <tr>
-	            <td><img src= "../img/include.png" alt= "Include" style="height:100px;padding-left:20px;padding-bottom:20px;"></td>
+	            <td><img src="../img/include.png" alt= "Association" style="width:250px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></td>
 	          </tr>
 	          <tr>
 	            <th>3. Extent: can only occur between two use cases </th>
 	          </tr>
 	          <tr>
-	            <td><img src= "../img/extend.png" alt= "Extend" style="height:100px;padding-left:20px;padding-bottom:20px;"></td>
+	            <td><img src="../img/extend.png" alt= "Association" style="width:250px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></td>
 	          </tr>
 	          <tr>
 	            <th>4. Generalisation  </th>
 	          </tr>
 	          <tr>
-	            <td><img src= "../img/generalisation.png" alt= "Generalisation" style="height:200px;padding-left:20px;padding-bottom:20px;"></td>
+	            <td><img src="../img/generalisation.png" alt= "Association" style="width:200px;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></td>
 	          </tr>
 	        </table>
 				</div>
+
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/UseCaseDiagram.png" style="width:50%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/UseCaseDescription.png" style="width:70%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/association.png" style="width:70%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/include.png" style="width:70%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/extend.png" style="width:70%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../img/generalisation.png" style="width:50%">
+						</div>
+
+					</div>
+				</div>
+
 	</div>
 
 	<!-- Section of the pagination -->
