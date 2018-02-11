@@ -191,13 +191,6 @@ nav a:hover {
 
 /*----------------------------------------*/
 
-table th, tr{
-	background-color: #FAFAFA;
-	border-style: none;
-	border-color:  #FAFAFA;
-	table-layout: fixed;
-}
-
 /*For Icon*/
 .Topicicon {
 	float: right;
@@ -232,7 +225,8 @@ table th, tr{
 .panel {
 	display: none;
 	background-color: #FAFAFA;
-	padding: 0 18px;
+	padding-left: 18px;
+	padding-right: 36px;
 }
 
 
@@ -243,10 +237,26 @@ table th, tr{
 	display: none;
 }
 
-/*disabling tables that are hard to be displayed on mobile*/
-.tabletopic{
-	display: none;
+/*format for the topic tables*/
+.tabletopic {
+	display:table-cell;
+	background-color: #FAFAFA;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-weight: normal;
 }
+
+.tabletopic tr, td {
+ border: 1px solid black;
+	background-color: #fafafa;
+}
+
+.tabletopic th {
+	border: 1px solid black;
+	background-color: #e1e1e1;
+}
+
 
 /*----------------------------------------*/
 
@@ -429,6 +439,32 @@ img.hover-shadow {
     cursor: pointer;
 }
 
+/* Style for dragable Table in the recap section*/
+
+.titles{
+	display: inline-block;
+	font-weight: bold;
+	height: 200px;
+	width: 300px;
+	padding-right: 60px;
+	border: 1px solid black;
+	padding-left: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+.items {
+	display: inline-block;
+	background-color: #e1e1e1;
+	color: black;
+	text-align: center;
+	padding:7px;
+	margin-bottom:5px;
+	border: 0px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
 
 /*----------------------------------------------------*/
 
@@ -522,19 +558,16 @@ h1 {
 		margin-bottom: 15px;
 	}
 
-/*----------------------------------------*/
-
-	.tabletopic {
-		display:table-cell;
-		background-color: #FAFAFA;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		text-align: left;
-		font-weight: normal;
+	.moduleTable td, tr, th{
+		background-color: #fafafa;
+		border: 1px solid #fafafa;
 	}
 
-	.tabletopic tr,td{
-	 border: 1px solid black;
+/*----------------------------------------*/
+
+.tabletopic {
+	width: 1000px;
+	padding-left: 10px;
 }
 
 /*----------------------------------------*/

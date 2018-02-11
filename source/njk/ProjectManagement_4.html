@@ -3,9 +3,11 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/normalize.css"> <!--Foundation style sheet -->
-  <link rel="stylesheet" href="../css/foundation.css">
-  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/foundation.css"> <!--Foundation style sheet -->
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"></link>
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +124,58 @@
         </ul>
       <p>Scrum is ideal with a smaller team. Scrum would mostly work with team of 3-9 people and two management positions, however this can be scaled up when there is a larger team or project involved. The only different would be that the project would be split into smaller project. Each project would be considered as an individual project and the scrum master would have to communicate with each other to see the progress of the overall project, there would be a project manager involved who would manage the scrum masters.</p>
 		</div>
-  </div>
+
+		<!-- Recap Test Section-->
+		<button class="section">Recap</button>
+		<div class= "panel">
+
+		<form id="recap">
+		<fieldset>
+		<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+		<br><h6> 1) As part of the Agile principles, reflection is considered. This is statement true or false?</h6>
+		<label for="true"><input type="radio" name="question1" value="1" id="true" onclick="radioQu1()"> True</label>
+		<label for="false"><input type="radio" name="question1" value="0" id="false" onclick="radioQu1()"> False</label><br>
+
+		<!--Question only viewable on mobile -->
+		<div class="tablet">
+			<h6> 2) What is the role of a Scrum Master? </h6>
+			<label for="aligned"><input type="radio" name="question2" value="1" id="aligned" onclick="radioQu2()"> Making sure that the development team and product owners are aligned</label>
+			<label for="implementing"><input type="radio" name="question2" value="0" id="implementing" onclick="radioQu2()"> Implementing the product</label>
+			<label for="backlog"><input type="radio" name="question2" value="0" id="backlog" onclick="radioQu2()"> Creating the backlog and maintaining it</label>
+			<label for="approving"><input type="radio" name="question2" value="0" id="approving" onclick="radioQu2()"> Approving any changes in the product</label>
+	</div>
+
+		<!--Dragable table for the recap section - not displayed on mobile phones -->
+		<div class="mobile">
+			<h6> 2) Drag and drop the items into the correct columns. </h6>
+
+			<div id="container">
+				 <div id="pillar" class="droppable pillar titles">Three Pillars of Scrum</div>
+				 <div id="artifacts" class="droppable artifacts titles">Scrum Artifacts</div>
+				 <div id="events" class="droppable events titles">Scrum Events</div>
+			</div>
+
+			<div id="transparency" class="draggable pillar items">Transparency</div>
+			<div id="review" class="draggable events items">Sprint Review</div>
+			<div id="increment" class="draggable artifacts items">Product Increment</div>
+			<div id="productBacklog" class="draggable artifacts items">Product Backlog</div>
+			<div id="adaptation" class="draggable pillar items">Adaptation</div>
+			<div id="inspection" class="draggable pillar items">Inspection</div>
+			<div id="planning" class="draggable events items">Sprint Planning</div>
+			<div id="scrum" class="draggable events items">Daily Scrum</div>
+			<div id="sprint" class="draggable artifacts items">Sprint Backlog</div>
+		</div>
+
+
+		<br><br>
+		<p><span id="score"></span></p>
+		<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+		</fieldset>
+		</form>
+
+  	</div>
+	</div>
 
 	<!-- Section of the pagination -->
 	<div class="pagination">
@@ -138,10 +191,9 @@
   <footer>
     <div class="container">&copy; Sharugi Balachandran <span style="float:right">More details</span></div>
   </footer>
-  </div>
 
 	<!-- Script for the sidebar, when the side-nav has to be activated -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
   <script type="text/javascript">
 
       (function() {
@@ -188,5 +240,242 @@
 		}
 	</script>
 
+	<!--<script>
+	$(document).ready(function () {
+	    $('.event').on("dragstart", function (event) {
+	        var dt = event.originalEvent.dataTransfer;
+	        dt.setData('Text', $(this).attr('id'));
+	    });
+	    $('table td').on("dragenter dragover drop", function (event) {
+	        event.preventDefault();
+	        if (event.type === 'drop') {
+	            var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
+	            de = $('#' + data).detach();
+	            de.appendTo($(this));
+
+	        };
+	    });
+	})
+</script> CLASSS NEED TO CHANGE BACK TO EVENTS -->
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+	var question3 = 0;
+	var dragging; //stores the id of the element that is being dragged
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+
+		result = question1 + question2 + question3;
+		output = "Out of 10 marks you got " + result;
+		document.getElementById("score").innerHTML = output;
+
+	}
+
+	</script>
+
+	<script>
+	//added to make .draggable class draggable
+	$(".draggable").draggable();
+
+
+
+
+	//store the number of game pieces
+	//you can add a different class like .game-pieces
+	//if you don't want it to include other draggable elements
+	//besides the game pieces
+	var numOfGamePieces = $(".draggable").length;
+
+
+						 /*on dragstart event*/
+						 $(".draggable").on("dragstart",function(){
+
+								//get the id of the element being dragged
+								dragging = $(this).attr("id");
+
+
+						});//end on dragstart event
+
+
+
+								//draggable on stop event
+								$( ".draggable").draggable({
+
+	stop: function(event,ui) {//begin stop function
+			//WHEN CHECK BUTTON IS CLICKED
+	}//end stop function
+	});//end dragable stop event
+
+		 //fire event when an element is dropped the #farmer id
+		 //replace the id below with what your are trying to drop the elements on
+	 $("#pillar").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "transparency":
+
+							 //increment the score
+							question3++;
+
+							 //disable drag and drop
+							$("#" + dragging).unbind();
+
+							 break;
+
+					 case "adaptation":
+
+							 //increment the score
+							question3++;
+
+							//remove class draggable
+							 $("#" + dragging).unbind();
+
+							 break;
+
+					 case "inspection":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+
+
+			 }//end switch case
+
+
+
+
+		}//end drop function
+		});//end droppable event
+
+
+
+
+	$("#artifacts").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "increment":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+
+						case "productBacklog":
+
+  							 //increment the score
+  							question3++;
+
+  							//disable dragging on this element
+  							 $("#" + dragging).unbind();
+
+  							 break;
+
+					 case "sprint":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+
+
+
+			 }//end switch case
+
+
+
+		}//end drop function
+		});//end droppable event
+
+
+
+	 $("#events").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "review":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+
+							 break;
+
+					 case "planning":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+
+					 case "scrum":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+
+
+			 }//end switch case
+
+
+
+		}//end drop function
+		});//end droppable event
+
+
+		//begin #ref_button on click event
+		$("#ref_butn").on("click",function(){//begin on click event
+
+			//refresh the browser window therefore restarting
+			//the game parameter set to true so the cache is not used
+			window.location.reload(true);
+
+		});//end on click event
+
+	</script>
+
+	<script>
+	function refresh() {
+		location.reload();
+	}
+	</script>
 </body>
 </html>
