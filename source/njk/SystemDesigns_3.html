@@ -3,9 +3,11 @@
 
 <head>
 	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/normalize.css"> <!--Foundation style sheet -->
-  <link rel="stylesheet" href="../css/foundation.css">
-  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="../css/foundation.css"> <!--Foundation style sheet -->
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"></link>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 	<meta charset= "UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,16 +171,16 @@
 			</tr>
 			<tr>
 				<td>
-					<img src="../img/activityDiagram.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+					<img src="../img/activityDiagram.png" style="width:350px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 				</td>
 				<td>
-					<img src="../img/UseCaseModel.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+					<img src="../img/UseCaseModel.png" style="width:350px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 				</td>
 				<td>
-					<img src="../img/ProcessModel.png" style="width:200px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+					<img src="../img/ProcessModel.png" style="width:350px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
 				</td>
 				<td>
-					<img src="../img/objectMapping.png" style="width:200px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+					<img src="../img/objectMapping.png" style="width:350px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
 				</td>
 			</tr>
 		</table>
@@ -218,6 +220,60 @@
 				 </div>
 			 </div>
 			 </div>
+
+			 <!-- Recap Test Section-->
+			 <button class="section">Recap</button>
+			 <div class= "panel">
+
+			 <form id="recap">
+			 <fieldset>
+			 <h3> Answer the following questions to check if you have understood the information on this page. </h3>
+			 <br><h6> 1) Why are Activity Diagrams useful? Select the answer that is incorrect. </h6>
+			 <label for="goals"><input type="radio" name="question1" value="0" id="goals" onclick="radioQu1()">It shows how the use cases will achieve the goals</label>
+			 <label for="objects"><input type="radio" name="question1" value="1" id="objects" onclick="radioQu1()">It shows the messaging between the objects</label>
+			 <label for="responsible"><input type="radio" name="question1" value="0" id="responsible" onclick="radioQu1()">It will show who is responsible for which activity</label>
+			 <label for="dependencies"><input type="radio" name="question1" value="0" id="dependencies" onclick="radioQu1()">It will show, in great details, all the dependencies and alternatives for the activity</label><br><br>
+
+			 <div class="tablet">
+				 <h6> 2) What is the purpose of a control flow?  </h6>
+				 <label for="sequence"><input type="radio" name="question2" value="1" id="sequence" onclick="radioQu2()"> To show the sequence of execution</label>
+				 <label for="start"><input type="radio" name="question2" value="0" id="start" onclick="radioQu2()"> To show the start and end of a flow</label>
+				 <label for="control"><input type="radio" name="question2" value="0" id="control" onclick="radioQu2()"> To show the controls of the project</label>
+				 <label for="end"><input type="radio" name="question2" value="0" id="end" onclick="radioQu2()"> To end of the flow</label>
+		 	</div>
+
+			<div class="mobile">
+				 <h6> 2) Drag and drop the corrects into the correct box.</h6>
+
+				 	<div style="position:relative;width:100%; height:400px; background-color:#DDDDDD;margin-left:5px">
+							<img src="../img/processQu.png" class="QuestionImage">
+						 <div id="context" class="droppable context quBox"style="top:5%;left:3%;"></div>
+						 <div id="goal" class="droppable goal quBox"style="top:5%;left:33%;"></div>
+						 <div id="output" class="droppable output quBox"style="top:40%;left:72%;"></div>
+						 <div id="constraint" class="droppable constraint quBox"style="top:80%;left:50%;"></div>
+						 <div id="stakeholder" class="droppable stakeholder quBox"style="top:80%;left:20%;"></div>
+						 <div id="input" class="droppable input quBox"style="top:40%;left:3%;"></div>
+					</div>
+
+					<div style="padding-top:50px;margin-left:10px;">
+						<div id="output_ans" class="draggable output item_ans" style="background-color:rgb(153, 204, 255)">Output</div>
+						<div id="stakeholders_ans" class="draggable stakeholder item_ans" style="background-color:rgb(255, 255, 153)">Stakeholders</div>
+						<div id="constraints_ans" class="draggable constraint item_ans" style="padding-top:5px; background-color:rgb(255, 204, 255)">Constraints,<br> Rules</div>
+						<div id="context_ans" class="draggable context item_ans" style="background-color:rgb(0, 0, 204); color:white;">Context</div>
+						<div id="goals_ans" class="draggable goal item_ans" style="background-color:rgb(102, 255, 153)">Goals</div>
+						<div id="input_ans" class="draggable input item_ans" style="background-color:rgb(204, 204, 255)">Input</div>
+					</div>
+
+
+				 <br>
+				 <p><span id="check"></span></p>
+				 <p><span id="score"></span></p>
+				 <button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+				 <button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+				 </fieldset>
+				 </form>
+			 </div>
+
 	</div>
 
 	<!-- Section of the pagination -->
@@ -238,8 +294,8 @@
   </footer>
   </div>
 
+
 	<!-- Script for the sidebar, when the side-nav has to be activated -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript">
     //script for the side bar, opens and closes when the "arrow" image is clicked on
       (function() {
@@ -284,7 +340,6 @@
 	      dots[i].className = dots[i].className.replace(" active", "");
 	  }
 	  slides[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " active";
 
 	}
 	</script>
@@ -319,6 +374,226 @@
 						}
 				});
 		}
+	</script>
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+	var question3 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+		result = question1 + question2 + question3;
+		output = "Out of 7 marks you got " + result;
+		document.getElementById("score").innerHTML = output;
+	}
+	</script>
+
+	<script>
+	function refresh(){
+		location.reload();
+	}
+	</script>
+
+	<script>
+	//added to make .draggable class draggable
+	$(".draggable").draggable();
+
+
+
+
+	//store the number of game pieces
+	//you can add a different class like .game-pieces
+	//if you don't want it to include other draggable elements
+	//besides the game pieces
+	var numOfGamePieces = $(".draggable").length;
+
+
+						 /*on dragstart event*/
+						 $(".draggable").on("dragstart",function(){
+
+								//get the id of the element being dragged
+								dragging = $(this).attr("id");
+
+
+						});//end on dragstart event
+
+
+
+								//draggable on stop event
+								$( ".draggable").draggable({
+
+	stop: function(event,ui) {//begin stop function
+			//WHEN CHECK BUTTON IS CLICKED
+	}//end stop function
+	});//end dragable stop event
+
+		 //fire event when an element is dropped the #farmer id
+		 //replace the id below with what your are trying to drop the elements on
+	 $("#context").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "context_ans":
+
+							 //increment the score
+							question3++;
+
+							 //disable drag and drop
+							$("#" + dragging).unbind();
+
+							 break;
+
+			 }//end switch case
+
+		}//end drop function
+		});//end droppable event
+
+
+	$("#goal").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "goals_ans":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+							 break;
+			 }//end switch case
+
+
+
+		}//end drop function
+		});//end droppable event
+
+
+
+	 $("#output").droppable({//begin droppable event
+	 drop: function(event,ui) {//begin drop function
+
+
+
+			 switch(dragging){//begin switch case
+
+					 case "output_ans":
+
+							 //increment the score
+							question3++;
+
+							//disable dragging on this element
+							 $("#" + dragging).unbind();
+
+
+							 break;
+
+			 }//end switch case
+
+
+
+		}//end drop function
+		});//end droppable event
+
+		$("#constraint").droppable({//begin droppable event
+		drop: function(event,ui) {//begin drop function
+
+
+
+				switch(dragging){//begin switch case
+
+						case "constraints_ans":
+
+								//increment the score
+							 question3++;
+
+							 //disable dragging on this element
+								$("#" + dragging).unbind();
+
+
+								break;
+
+				}//end switch case
+
+
+
+		 }//end drop function
+		 });//end droppable event
+
+		 $("#stakeholder").droppable({//begin droppable event
+		 drop: function(event,ui) {//begin drop function
+
+
+
+				 switch(dragging){//begin switch case
+
+						 case "stakeholders_ans":
+
+								 //increment the score
+								question3++;
+
+								//disable dragging on this element
+								 $("#" + dragging).unbind();
+
+
+								 break;
+
+				 }//end switch case
+
+
+
+			}//end drop function
+			});//end droppable event
+
+			$("#input").droppable({//begin droppable event
+			drop: function(event,ui) {//begin drop function
+
+
+
+					switch(dragging){//begin switch case
+
+							case "input_ans":
+
+									//increment the score
+								 question3++;
+
+								 //disable dragging on this element
+									$("#" + dragging).unbind();
+
+
+									break;
+
+					}//end switch case
+
+
+
+			 }//end drop function
+			 });//end droppable event
+
+		//begin #ref_button on click event
+		$("#ref_butn").on("click",function(){//begin on click event
+
+			//refresh the browser window therefore restarting
+			//the game parameter set to true so the cache is not used
+			window.location.reload(true);
+
+		});//end on click event
+
 	</script>
 
 </body>

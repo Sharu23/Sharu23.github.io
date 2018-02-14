@@ -465,7 +465,6 @@ img.hover-shadow {
 	cursor: pointer;
 }
 
-
 /*----------------------------------------------------*/
 
 /* Elemets that only need to be displayed on tablets and on mobiles*/
@@ -577,6 +576,39 @@ h1 {
 	height: 40px;
 }
 
+ .quBox {
+		z-index:2;
+    border: 1px solid black;
+		position: absolute;
+		width:130px;
+		height:70px;
+}
+
+.QuestionImage {
+	width:98%;
+	position: absolute;
+	top:10px;
+	left:10px;
+	z-index:1;
+	margin-top:40px;
+}
+
+.item_ans {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+	padding-left:15px;
+	padding-right: 15px;
+	padding-top: 17px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+	border: 0px solid black;
+	cursor: pointer;
+	z-index: 3;
+	height: 60px;
+}
 
 
 

@@ -240,24 +240,6 @@
 		}
 	</script>
 
-	<!--<script>
-	$(document).ready(function () {
-	    $('.event').on("dragstart", function (event) {
-	        var dt = event.originalEvent.dataTransfer;
-	        dt.setData('Text', $(this).attr('id'));
-	    });
-	    $('table td').on("dragenter dragover drop", function (event) {
-	        event.preventDefault();
-	        if (event.type === 'drop') {
-	            var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
-	            de = $('#' + data).detach();
-	            de.appendTo($(this));
-
-	        };
-	    });
-	})
-</script> CLASSS NEED TO CHANGE BACK TO EVENTS -->
-
 	<script>
 	var question1 = 0;
 	var question2 = 0;
@@ -290,9 +272,6 @@
 
 
 	//store the number of game pieces
-	//you can add a different class like .game-pieces
-	//if you don't want it to include other draggable elements
-	//besides the game pieces
 	var numOfGamePieces = $(".draggable").length;
 
 
@@ -315,8 +294,7 @@
 	}//end stop function
 	});//end dragable stop event
 
-		 //fire event when an element is dropped the #farmer id
-		 //replace the id below with what your are trying to drop the elements on
+
 	 $("#pillar").droppable({//begin droppable event
 	 drop: function(event,ui) {//begin drop function
 
