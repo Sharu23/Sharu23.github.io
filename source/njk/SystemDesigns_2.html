@@ -180,6 +180,34 @@
 					</div>
 				</div>
 
+				<!-- Recap Test Section-->
+				<button class="section">Recap</button>
+				<div class= "panel">
+
+				<form id="recap">
+				<fieldset>
+				<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+				<br><h6> 1) What does the functions requirements specify? </h6>
+				<label for="what"><input type="radio" name="question1" value="0" id="what" onclick="radioQu1()">What the software system contains</label>
+				<label for="behaviour"><input type="radio" name="question1" value="1" id="behaviour" onclick="radioQu1()">The behaviour of the software system</label>
+				<label for="non-functional"><input type="radio" name="question1" value="0" id="non-functional" onclick="radioQu1()">The non-functional aspects of the software system</label>
+				<label for="requirements"><input type="radio" name="question1" value="0" id="requirements" onclick="radioQu1()">The requirements of the system</label><br><br>
+
+				<h6> 2) How many types of Use Case are there? And what are they called? </h6>
+				<label for="3"><input type="radio" name="question2" value="0" id="3" onclick="radioQu2()"> 3: Functional, Business and System</label>
+				<label for="1:B"><input type="radio" name="question2" value="0" id="1:B" onclick="radioQu2()"> 1: Business</label>
+				<label for="2"><input type="radio" name="question2" value="1" id="2" onclick="radioQu2()"> 2: System and Business</label>
+				<label for="1:S"><input type="radio" name="question2" value="0" id="1:S" onclick="radioQu2()"> 1: System</label>
+
+				<br>
+				<p><span id="check"></span></p>
+				<p><span id="score"></span></p>
+				<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+				<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+				</fieldset>
+				</form>
+				</div>
+
 	</div>
 
 	<!-- Section of the pagination -->
@@ -256,6 +284,25 @@
 	}
 	</script>
 
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+		result = question1 + question2;
+		output = "Out of 2 marks you got " + result;
+		document.getElementById("score").innerHTML = output;
+	}
+	</script>
+
 	<!--Script for the humburger menu, when the menu should appear and disappear-->
 	<script>
 	function hamburgerFunction() {
@@ -288,5 +335,10 @@
 		}
 	</script>
 
+	<script>
+	function refresh(){
+		location.reload();
+	}
+	</script>
 </body>
 </html>

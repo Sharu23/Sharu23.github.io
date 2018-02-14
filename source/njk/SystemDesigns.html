@@ -145,6 +145,33 @@
 	        </ul>
 	    </ul>
 		</div>
+
+		<!-- Recap Test Section-->
+		<button class="section">Recap</button>
+		<div class= "panel">
+
+		<form id="recap">
+		<fieldset>
+		<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+		<br><h6> 1) If the objectives at the start have been identified correctly, there would be no other issues? </h6>
+		<label for="yes"><input type="radio" name="question1" value="0" id="yes" onclick="radioQu1()">Yes, that is true.</label>
+		<label for="no"><input type="radio" name="question1" value="1" id="no" onclick="radioQu1()">No, there still needs to be good communication.</label><br><br>
+
+		<h6> 2) What is a little mudole known as? </h6>
+		<label for="feature"><input type="radio" name="question2" value="0" id="feature" onclick="radioQu2()"> feature</label>
+		<label for="branch"><input type="radio" name="question2" value="0" id="branch" onclick="radioQu2()"> branch</label>
+		<label for="function"><input type="radio" name="question2" value="0" id="function" onclick="radioQu2()"> function</label>
+		<label for="object"><input type="radio" name="question2" value="1" id="object" onclick="radioQu2()"> object</label>
+
+		<br>
+		<p><span id="check"></span></p>
+		<p><span id="score"></span></p>
+		<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+		</fieldset>
+		</form>
+		</div>
+
 	</div>
 
 	<!-- Section of the pagination -->
@@ -218,6 +245,31 @@
 	  slides[slideIndex-1].style.display = "block";
 	  dots[slideIndex-1].className += " active";
 	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+	<script>
+	var question1 = 0;
+	var question2 = 0;
+
+	function radioQu1() {
+		question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+	}
+
+	function radioQu2() {
+		question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+	}
+
+	function result() {
+		result = question1 + question2;
+		output = "Out of 2 marks you got " + result;
+		document.getElementById("score").innerHTML = output;
+	}
+	</script>
+
+	<script>
+	function refresh(){
+		location.reload();
 	}
 	</script>
 
