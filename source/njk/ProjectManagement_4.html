@@ -169,7 +169,7 @@
 
 		<br><br>
 		<p><span id="score"></span></p>
-		<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+		<button id="check_button" class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
 		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
 		</fieldset>
 		</form>
@@ -256,6 +256,16 @@
 
 	function result() {
 
+		document.getElementById("review").style.cursor = "context-menu";
+		document.getElementById("productBacklog").style.cursor = "context-menu";
+		document.getElementById("increment").style.cursor = "context-menu";
+		document.getElementById("adaptation").style.cursor = "context-menu";
+		document.getElementById("inspection").style.cursor = "context-menu";
+		document.getElementById("planning").style.cursor = "context-menu";
+		document.getElementById("scrum").style.cursor = "context-menu";
+		document.getElementById("sprint").style.cursor = "context-menu";
+		document.getElementById("transparency").style.cursor = "context-menu";
+		
 		result = question1 + question2 + question3;
 		output = "Out of 10 marks you got " + result;
 		document.getElementById("score").innerHTML = output;
@@ -268,185 +278,30 @@
 	//added to make .draggable class draggable
 	$(".draggable").draggable();
 
-
-
-
-	//store the number of game pieces
-	var numOfGamePieces = $(".draggable").length;
-
-
 						 /*on dragstart event*/
 						 $(".draggable").on("dragstart",function(){
 
 								//get the id of the element being dragged
 								dragging = $(this).attr("id");
 
-
 						});//end on dragstart event
 
 
+						//draggable on stop event
+						$( ".draggable").draggable({
 
-								//draggable on stop event
-								$( ".draggable").draggable({
+					stop: function(event,ui) {//begin stop function
+						document.getElementById("check_button").addEventListener("click",function(){
+							$( ".draggable").unbind();
 
-	stop: function(event,ui) {//begin stop function
-			//WHEN CHECK BUTTON IS CLICKED
-	}//end stop function
-	});//end dragable stop event
 
+						});
 
-	 $("#pillar").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
 
+					}//end stop function
+					});//end dragable stop event
 
 
-			 switch(dragging){//begin switch case
-
-					 case "transparency":
-
-							 //increment the score
-							question3++;
-
-							 //disable drag and drop
-							$("#" + dragging).unbind();
-
-							 break;
-
-					 case "adaptation":
-
-							 //increment the score
-							question3++;
-
-							//remove class draggable
-							 $("#" + dragging).unbind();
-
-							 break;
-
-					 case "inspection":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-
-			 }//end switch case
-
-
-
-
-		}//end drop function
-		});//end droppable event
-
-
-
-
-	$("#artifacts").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
-
-
-
-			 switch(dragging){//begin switch case
-
-					 case "increment":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-						case "productBacklog":
-
-  							 //increment the score
-  							question3++;
-
-  							//disable dragging on this element
-  							 $("#" + dragging).unbind();
-
-  							 break;
-
-					 case "sprint":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-
-
-			 }//end switch case
-
-
-
-		}//end drop function
-		});//end droppable event
-
-
-
-	 $("#events").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
-
-
-
-			 switch(dragging){//begin switch case
-
-					 case "review":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-
-							 break;
-
-					 case "planning":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-					 case "scrum":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-
-			 }//end switch case
-
-
-
-		}//end drop function
-		});//end droppable event
-
-
-		//begin #ref_button on click event
-		$("#ref_butn").on("click",function(){//begin on click event
-
-			//refresh the browser window therefore restarting
-			//the game parameter set to true so the cache is not used
-			window.location.reload(true);
-
-		});//end on click event
 
 	</script>
 
