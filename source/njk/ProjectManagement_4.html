@@ -155,21 +155,24 @@
 				 <div id="events" class="droppable events titles">Scrum Events</div>
 			</div>
 
-			<div id="transparency" class="draggable pillar items">Transparency</div>
-			<div id="review" class="draggable events items">Sprint Review</div>
-			<div id="increment" class="draggable artifacts items">Product Increment</div>
-			<div id="productBacklog" class="draggable artifacts items">Product Backlog</div>
-			<div id="adaptation" class="draggable pillar items">Adaptation</div>
-			<div id="inspection" class="draggable pillar items">Inspection</div>
-			<div id="planning" class="draggable events items">Sprint Planning</div>
-			<div id="scrum" class="draggable events items">Daily Scrum</div>
-			<div id="sprint" class="draggable artifacts items">Sprint Backlog</div>
+			<div name="transparency" id="transparencyID" class="draggable pillar items">Transparency</div>
+			<div name="review" id="reviewID" class="draggable events items">Sprint Review</div>
+			<div name="increment" id="incrementID" class="draggable artifacts items">Product Increment</div>
+			<div name="productBacklog" id="productBacklogID" class="draggable artifacts items">Product Backlog</div>
+			<div name="adaptation" id="adaptationID" class="draggable pillar items">Adaptation</div>
+			<div name="inspection" id="inspectionID" class="draggable pillar items">Inspection</div>
+			<div name="planning" id="planningID" class="draggable events items">Sprint Planning</div>
+			<div name="scrum" id="scrumID" class="draggable events items">Daily Scrum</div>
+			<div name="sprint" id="sprintID" class="draggable artifacts items">Sprint Backlog</div>
 		</div>
 
 
 		<br><br>
+
+		<p><span id="test1"></span></p>
+		<p><span id="test2"></span></p>
 		<p><span id="score"></span></p>
-		<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+		<button id="check_button" class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
 		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
 		</fieldset>
 		</form>
@@ -256,6 +259,55 @@
 
 	function result() {
 
+		document.getElementById("reviewID").style.cursor = "context-menu";
+		document.getElementById("productBacklogID").style.cursor = "context-menu";
+		document.getElementById("incrementID").style.cursor = "context-menu";
+		document.getElementById("adaptationID").style.cursor = "context-menu";
+		document.getElementById("inspectionID").style.cursor = "context-menu";
+		document.getElementById("planningID").style.cursor = "context-menu";
+		document.getElementById("scrumID").style.cursor = "context-menu";
+		document.getElementById("sprintID").style.cursor = "context-menu";
+		document.getElementById("transparencyID").style.cursor = "context-menu";
+
+
+		if(document.getElementById("transparencyID").getAttribute("name") === 'pillar')
+		{
+			question3++;
+		}
+		if(document.getElementById("reviewID").getAttribute("name") === 'events')
+		{
+			question3++;
+		}
+		if(document.getElementById("incrementID").getAttribute("name") === 'artifacts')
+		{
+			question3++;
+		}
+		if(document.getElementById("productBacklogID").getAttribute("name") === 'artifacts')
+		{
+			question3++;
+		}
+		if(document.getElementById("adaptationID").getAttribute("name") === 'pillar')
+		{
+			question3++;
+		}
+		if(document.getElementById("inspectionID").getAttribute("name") === 'pillar')
+		{
+			question3++;
+		}
+		if(document.getElementById("planningID").getAttribute("name") === 'events')
+		{
+			question3++;
+		}
+		if(document.getElementById("scrumID").getAttribute("name") === 'events')
+		{
+			question3++;
+		}
+		if(document.getElementById("sprintID").getAttribute("name") === 'artifacts')
+		{
+			question3++;
+		}
+
+
 		result = question1 + question2 + question3;
 		output = "Out of 10 marks you got " + result;
 		document.getElementById("score").innerHTML = output;
@@ -268,185 +320,199 @@
 	//added to make .draggable class draggable
 	$(".draggable").draggable();
 
-
-
-
-	//store the number of game pieces
-	var numOfGamePieces = $(".draggable").length;
-
-
 						 /*on dragstart event*/
 						 $(".draggable").on("dragstart",function(){
 
 								//get the id of the element being dragged
 								dragging = $(this).attr("id");
 
-
 						});//end on dragstart event
 
 
+						//draggable on stop event
+						$( ".draggable").draggable({
 
-								//draggable on stop event
-								$( ".draggable").draggable({
-
-	stop: function(event,ui) {//begin stop function
-			//WHEN CHECK BUTTON IS CLICKED
-	}//end stop function
-	});//end dragable stop event
+					stop: function(event,ui) {//begin stop function
+						document.getElementById("check_button").addEventListener("click",function(){
+							$( ".draggable").unbind();
 
 
-	 $("#pillar").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
+						});
 
-
-
-			 switch(dragging){//begin switch case
-
-					 case "transparency":
-
-							 //increment the score
-							question3++;
-
-							 //disable drag and drop
-							$("#" + dragging).unbind();
-
-							 break;
-
-					 case "adaptation":
-
-							 //increment the score
-							question3++;
-
-							//remove class draggable
-							 $("#" + dragging).unbind();
-
-							 break;
-
-					 case "inspection":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-
-			 }//end switch case
-
-
-
-
-		}//end drop function
-		});//end droppable event
-
-
-
-
-	$("#artifacts").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
-
-
+					}//end stop function
+					});//end dragable stop event
+			$("#pillar").droppable({//begin droppable event
+			 drop: function(event,ui) {//begin drop function
 
 			 switch(dragging){//begin switch case
+				 	case "transparencyID":
+				 		$("#transparencyID").attr("name", "pillar");
 
-					 case "increment":
+						break;
 
-							 //increment the score
-							question3++;
+					case "reviewID":
+						$("#reviewID").attr("name", "pillar");
 
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
+						break;
 
-							 break;
+					case "incrementID":
+						 $("#incrementID").attr("name", "pillar");
 
-						case "productBacklog":
+						 break;
 
-  							 //increment the score
-  							question3++;
+					case "productBacklogID":
+					 	$("#productBacklogID").attr("name", "pillar");
 
-  							//disable dragging on this element
-  							 $("#" + dragging).unbind();
+						break;
 
-  							 break;
+					case "adaptationID":
+						$("#adaptationID").attr("name", "pillar");
 
-					 case "sprint":
+						break;
 
-							 //increment the score
-							question3++;
+					case "inspectionID":
+						$("#inspectionID").attr("name", "pillar");
 
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
+						break;
 
-							 break;
+					case "planningID":
+						 $("#planningID").attr("name", "pillar");
 
+						 break;
 
+					case "scrumID":
+						$("#scrumID").attr("name", "pillar");
 
-			 }//end switch case
+						break;
 
+					case "sprintID":
+						$("#sprintID").attr("name", "pillar");
 
+						break;
 
-		}//end drop function
-		});//end droppable event
-
-
-
-	 $("#events").droppable({//begin droppable event
-	 drop: function(event,ui) {//begin drop function
-
-
-
-			 switch(dragging){//begin switch case
-
-					 case "review":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-
-							 break;
-
-					 case "planning":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-					 case "scrum":
-
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
-							 break;
-
-
-			 }//end switch case
+				}
 
 
 
-		}//end drop function
-		});//end droppable event
 
 
-		//begin #ref_button on click event
-		$("#ref_butn").on("click",function(){//begin on click event
+				}//end drop function
+				});//end droppable event
 
-			//refresh the browser window therefore restarting
-			//the game parameter set to true so the cache is not used
-			window.location.reload(true);
 
-		});//end on click event
+
+
+			$("#artifacts").droppable({//begin droppable event
+			 drop: function(event,ui) {//begin drop function
+
+				 switch(dragging){//begin switch case
+  				 	case "transparencyID":
+  				 		$("#transparencyID").attr("name", "artifacts");
+
+  						break;
+
+  					case "reviewID":
+  						$("#reviewID").attr("name", "artifacts");
+
+  						break;
+
+  					case "incrementID":
+  						 $("#incrementID").attr("name", "artifacts");
+
+  						 break;
+
+  					case "productBacklogID":
+  					 	$("#productBacklogID").attr("name", "artifacts");
+
+  						break;
+
+  					case "adaptationID":
+  						$("#adaptationID").attr("name", "artifacts");
+
+  						break;
+
+  					case "inspectionID":
+  						$("#inspectionID").attr("name", "artifacts");
+
+  						break;
+
+  					case "planningID":
+  						 $("#planningID").attr("name", "artifacts");
+
+  						 break;
+
+  					case "scrumID":
+  						$("#scrumID").attr("name", "artifacts");
+
+  						break;
+
+  					case "sprintID":
+  						$("#sprintID").attr("name", "artifacts");
+
+  						break;
+
+  				}
+
+
+				}//end drop function
+				});//end droppable event
+
+
+
+			 $("#events").droppable({//begin droppable event
+			 drop: function(event,ui) {//begin drop function
+
+				 switch(dragging){//begin switch case
+  				 	case "transparencyID":
+  				 		$("#transparencyID").attr("name", "events");
+
+  						break;
+
+  					case "reviewID":
+  						$("#reviewID").attr("name", "events");
+
+  						break;
+
+  					case "incrementID":
+  						 $("#incrementID").attr("name", "events");
+
+  						 break;
+
+  					case "productBacklogID":
+  					 	$("#productBacklogID").attr("name", "events");
+
+  						break;
+
+  					case "adaptationID":
+  						$("#adaptationID").attr("name", "events");
+
+  						break;
+
+  					case "inspectionID":
+  						$("#inspectionID").attr("name", "events");
+
+  						break;
+
+  					case "planningID":
+  						 $("#planningID").attr("name", "events");
+
+  						 break;
+
+  					case "scrumID":
+  						$("#scrumID").attr("name", "events");
+
+  						break;
+
+  					case "sprintID":
+  						$("#sprintID").attr("name", "events");
+
+  						break;
+
+  				}
+
+				}//end drop function
+				});//end droppable event
+
 
 	</script>
 

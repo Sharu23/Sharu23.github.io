@@ -390,6 +390,13 @@
 	}
 
 	function result() {
+		document.getElementById("output_ans").style.cursor = "context-menu";
+		document.getElementById("stakeholders_ans").style.cursor = "context-menu";
+		document.getElementById("constraints_ans").style.cursor = "context-menu";
+		document.getElementById("context_ans").style.cursor = "context-menu";
+		document.getElementById("goals_ans").style.cursor = "context-menu";
+		document.getElementById("input_ans").style.cursor = "context-menu";
+
 		result = question1 + question2 + question3;
 		output = "Out of 7 marks you got " + result;
 		document.getElementById("score").innerHTML = output;
