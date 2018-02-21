@@ -185,7 +185,6 @@
 			<img src="../img/orderFulfillment.png" style="width:450px" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"> <br><br>
 			<!--<img src="../img/orderFulfillment.png"style="width:500px;padding-left:20px;padding-bottom:20px;">-->
 		</div>
-	</div>
 
 
 	<div id="myModal" class="modal">
@@ -241,8 +240,35 @@
 				<div class="numbertext"></div>
 				<img src="../img/orderFulfillment.png" style="width:80%">
 			</div>
-
 		</div>
+	</div>
+
+		<!-- Recap Test Section-->
+		<button class="section">Recap</button>
+		<div class= "panel">
+
+			<form id="recap">
+			<fieldset>
+			<h3> Answer the following questions to check if you have understood the information on this page. </h3>
+			<br><h6> 1) Which of the following image represents a 'part' of an Component Diagram? </h6>
+			<label for="component"><input type="radio" name="question1" value="0" id="component" onclick="radio()"><img src="../img/component.png" style="height:100px"></label><br>
+			<label for="port"><input type="radio" name="question1" value="0" id="port" onclick="radio()"><img src="../img/port.png" style="height:150px"> </label><br>
+			<label for="part"><input type="radio" name="question1" value="1" id="part" onclick="radio()"><img src="../img/part.png" style="height:100px"> </label><br>
+			<label for="required"><input type="radio" name="question1" value="0" id="required" onclick="radio()"><img src="../img/required.png" style="height:100px"> </label><br><br>
+
+			<h6> 2) What does a software component architecture consist of? </h6>
+			<label for="Components"><input type="checkbox" name="question2" value="right" style="padding-left=10px" id="Components" onclick="checkbox()"> Components</label>
+			<label for="Ports"><input type="checkbox" name="question2" value="right" id="Ports" onclick="checkbox()"> Ports</label>
+			<label for="Connections"><input type="checkbox" name="question2" value="right" id="Connections" onclick="checkbox()"> Connections</label>
+			<label for="Nodes"><input type="checkbox" name="question2" value="wrong" id="Nodes" onclick="checkbox()"> Nodes</label><br>
+
+			<p><span id="score"></span></p>
+			<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+			<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+			</fieldset>
+				</form>
+		</div>
+
 	</div>
 
 
@@ -349,6 +375,50 @@
 								panel.style.display = "block";
 						}
 				});
+		}
+	</script>
+
+	<script>
+		var question1 = 0;
+		var question2 = 0;
+
+		function radio(){
+			question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+		}
+
+		function checkbox(){
+			var checkboxes = document.getElementsByName("question2");
+			var checkboxChecked = 0;
+
+			question2 = 0;
+
+			for (var i = 0; i < checkboxes.length; i++){
+				if(checkboxes[i].checked && (checkboxes[i].value === "wrong"))
+				{
+					question2 = 0; break;
+				}
+				if(checkboxes[i].checked && (checkboxes[i].value === "right"))
+				{
+					checkboxChecked += 1;
+					if(checkboxChecked === 3)
+					{
+						question2 = 1;
+					}
+				}
+			}
+
+		}
+
+		function result() {
+			result = question1 + question2;
+			output = "Out of 2 marks you got " + result;
+			document.getElementById("score").innerHTML = output;
+		}
+		</script>
+
+		<script>
+		function refresh(){
+			location.reload();
 		}
 	</script>
 

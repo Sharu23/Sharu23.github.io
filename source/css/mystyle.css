@@ -585,6 +585,15 @@ h1 {
 		height:70px;
 }
 
+.correctquBox {
+	z-index:2;
+	border: 1px solid #00b200;
+	position: absolute;
+	width:130px;
+	height:70px;
+
+}
+
 .QuestionImage {
 	width:98%;
 	position: absolute;

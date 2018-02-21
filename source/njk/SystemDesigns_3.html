@@ -247,6 +247,7 @@
 
 				 	<div style="position:relative;width:100%; height:400px; background-color:#DDDDDD;margin-left:5px">
 							<img src="../img/processQu.png" class="QuestionImage">
+
 						 <div id="context" class="droppable context quBox"style="top:5%;left:3%;"></div>
 						 <div id="goal" class="droppable goal quBox"style="top:5%;left:33%;"></div>
 						 <div id="output" class="droppable output quBox"style="top:40%;left:72%;"></div>
@@ -256,19 +257,19 @@
 					</div>
 
 					<div style="padding-top:50px;margin-left:10px;">
-						<div id="output_ans" class="draggable output item_ans" style="background-color:rgb(153, 204, 255)">Output</div>
-						<div id="stakeholders_ans" class="draggable stakeholder item_ans" style="background-color:rgb(255, 255, 153)">Stakeholders</div>
-						<div id="constraints_ans" class="draggable constraint item_ans" style="padding-top:5px; background-color:rgb(255, 204, 255)">Constraints,<br> Rules</div>
-						<div id="context_ans" class="draggable context item_ans" style="background-color:rgb(0, 0, 204); color:white;">Context</div>
-						<div id="goals_ans" class="draggable goal item_ans" style="background-color:rgb(102, 255, 153)">Goals</div>
-						<div id="input_ans" class="draggable input item_ans" style="background-color:rgb(204, 204, 255)">Input</div>
+						<div name= "output_ans" id="outputID" class="draggable output item_ans" style="background-color:rgb(153, 204, 255)">Output</div>
+						<div name= "stakeholders_ans" id="stakeholdersID" class="draggable stakeholder item_ans" style="background-color:rgb(255, 255, 153)">Stakeholders</div>
+						<div name= "constraints_ans" id="constraintsID" class="draggable constraint item_ans" style="padding-top:5px; background-color:rgb(255, 204, 255)">Constraints,<br> Rules</div>
+						<div name= "context_ans" id="contextID" class="draggable context item_ans" style="background-color:rgb(0, 0, 204); color:white;">Context</div>
+						<div name= "goals_ans" id="goalsID" class="draggable goal item_ans" style="background-color:rgb(102, 255, 153)">Goals</div>
+						<div name= "input_ans" id="inputID" class="draggable input item_ans" style="background-color:rgb(204, 204, 255)">Input</div>
 					</div>
 
 
 				 <br>
-				 <p><span id="check"></span></p>
+				 <p><span id="TEST"></span></p>
 				 <p><span id="score"></span></p>
-				 <button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
+				 <button id="check_button" class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
 				 <button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
 				 </fieldset>
 				 </form>
@@ -390,12 +391,39 @@
 	}
 
 	function result() {
-		document.getElementById("output_ans").style.cursor = "context-menu";
-		document.getElementById("stakeholders_ans").style.cursor = "context-menu";
-		document.getElementById("constraints_ans").style.cursor = "context-menu";
-		document.getElementById("context_ans").style.cursor = "context-menu";
-		document.getElementById("goals_ans").style.cursor = "context-menu";
-		document.getElementById("input_ans").style.cursor = "context-menu";
+
+		document.getElementById("outputID").style.cursor = "context-menu";
+		document.getElementById("stakeholdersID").style.cursor = "context-menu";
+		document.getElementById("constraintsID").style.cursor = "context-menu";
+		document.getElementById("contextID").style.cursor = "context-menu";
+		document.getElementById("goalsID").style.cursor = "context-menu";
+		document.getElementById("inputID").style.cursor = "context-menu";
+
+		if(document.getElementById("outputID").getAttribute("name") === 'output')
+		{
+			question3++;
+				$('#quBox div').removeClass('quBox').addClass('correctquBox');
+		}
+		if(document.getElementById("stakeholdersID").getAttribute("name") === 'stakeholder')
+		{
+			question3++;
+		}
+		if(document.getElementById("constraintsID").getAttribute("name") === 'constraint')
+		{
+			question3++;
+		}
+		if(document.getElementById("contextID").getAttribute("name") === 'context')
+		{
+			question3++;
+		}
+		if(document.getElementById("goalsID").getAttribute("name") === 'goal')
+		{
+			question3++;
+		}
+		if(document.getElementById("inputID").getAttribute("name") === 'input')
+		{
+			question3++;
+		}
 
 		result = question1 + question2 + question3;
 		output = "Out of 7 marks you got " + result;
@@ -413,16 +441,6 @@
 	//added to make .draggable class draggable
 	$(".draggable").draggable();
 
-
-
-
-	//store the number of game pieces
-	//you can add a different class like .game-pieces
-	//if you don't want it to include other draggable elements
-	//besides the game pieces
-	var numOfGamePieces = $(".draggable").length;
-
-
 						 /*on dragstart event*/
 						 $(".draggable").on("dragstart",function(){
 
@@ -437,13 +455,16 @@
 								//draggable on stop event
 								$( ".draggable").draggable({
 
-	stop: function(event,ui) {//begin stop function
-			//WHEN CHECK BUTTON IS CLICKED
+							stop: function(event,ui) {//begin stop function
+								document.getElementById("check_button").addEventListener("click",function(){
+									$( ".draggable").unbind();
+
+								});
+
 	}//end stop function
 	});//end dragable stop event
 
-		 //fire event when an element is dropped the #farmer id
-		 //replace the id below with what your are trying to drop the elements on
+
 	 $("#context").droppable({//begin droppable event
 	 drop: function(event,ui) {//begin drop function
 
@@ -451,13 +472,8 @@
 
 			 switch(dragging){//begin switch case
 
-					 case "context_ans":
-
-							 //increment the score
-							question3++;
-
-							 //disable drag and drop
-							$("#" + dragging).unbind();
+					 case "contextID":
+					 	$("#contextID").attr("name", "context");
 
 							 break;
 
@@ -474,13 +490,9 @@
 
 			 switch(dragging){//begin switch case
 
-					 case "goals_ans":
+					 case "goalsID":
 
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
+							 $("#goalsID").attr("name", "goal");
 
 							 break;
 			 }//end switch case
@@ -499,14 +511,9 @@
 
 			 switch(dragging){//begin switch case
 
-					 case "output_ans":
+					 case "outputID":
 
-							 //increment the score
-							question3++;
-
-							//disable dragging on this element
-							 $("#" + dragging).unbind();
-
+							 $("#outputID").attr("name", "output");
 
 							 break;
 
@@ -524,14 +531,9 @@
 
 				switch(dragging){//begin switch case
 
-						case "constraints_ans":
+						case "constraintsID":
 
-								//increment the score
-							 question3++;
-
-							 //disable dragging on this element
-								$("#" + dragging).unbind();
-
+								$("#constraintsID").attr("name", "constraint");
 
 								break;
 
@@ -549,14 +551,9 @@
 
 				 switch(dragging){//begin switch case
 
-						 case "stakeholders_ans":
+						 case "stakeholdersID":
 
-								 //increment the score
-								question3++;
-
-								//disable dragging on this element
-								 $("#" + dragging).unbind();
-
+								 $("#stakeholdersID").attr("name", "stakeholder");
 
 								 break;
 
@@ -574,14 +571,9 @@
 
 					switch(dragging){//begin switch case
 
-							case "input_ans":
+							case "inputID":
 
-									//increment the score
-								 question3++;
-
-								 //disable dragging on this element
-									$("#" + dragging).unbind();
-
+									 $("#inputID").attr("name", "input");
 
 									break;
 
@@ -591,15 +583,6 @@
 
 			 }//end drop function
 			 });//end droppable event
-
-		//begin #ref_button on click event
-		$("#ref_butn").on("click",function(){//begin on click event
-
-			//refresh the browser window therefore restarting
-			//the game parameter set to true so the cache is not used
-			window.location.reload(true);
-
-		});//end on click event
 
 	</script>
 
