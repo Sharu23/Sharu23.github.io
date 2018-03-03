@@ -2,7 +2,8 @@
 <html class="no-js" lang="en">
 
 <head>
-	<link href= "http://localhost/source/user_guide/_static/css/mystyle.css" rel="stylesheet"> <!-- MY styling sheet -->
+	<link rel="stylesheet" href="../_static/css/mystyle.css" type="text/css" />
+	<!--<link href= "../_styles/mystyle.css" rel="stylesheet"> --><!-- MY styling sheet -->
     <link href="http://localhost/source/user_guide/_static/css/foundation.css" rel="stylesheet"> <!-- foundations styling sheet -->
 
 	<meta charset= "UTF-8">
@@ -27,7 +28,7 @@
 							</div>
 							<nav class="mobile">
 								<ul>
-									<li><a href= "http://localhost/source/index.php/Welcome"> Homepage</a></li>
+									<li><a href= "http://localhost/source/application/index.php/Welcome"> Homepage</a></li>
 									<li><a href= "http://localhost/source/index.php/ModulesController"> Modules</a></li>
 									<li><a href= "http://localhost/source/index.php/QuizController"> Quiz</a></li>
 								</ul>

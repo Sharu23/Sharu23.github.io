@@ -13,7 +13,7 @@
 				<input class="Quizbutton" type="button" value="Start Quiz" onclick="openWinQuizQus()">
 			</form>-->
 
-			<form method="" action="http://localhost/source/index.php/Questions/quizdisplay">
+			<form method="" action="http://localhost/source/index.php/QuestionsController/questions">
 				<input type="submit" value="Start Quiz" class="Quizbutton">
 			</form>
 
