@@ -1,6 +1,6 @@
-<?php include_once('header.php'); ?>
+<?php include 'header.php';?>
 
-<?php include_once('sidebar.php'); ?>
+<?php include 'sidebar.php';?>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
   <div class="maincell">
@@ -102,16 +102,15 @@
 	<!-- Section of the pagination -->
 	<div class="pagination">
 		<a class= "disabled">&laquo;</a>
-		<a class="activePagination" href="ProjectManagement.html">1</a>
-	  <a href="ProjectManagement_2.html">2</a>
-	  <a href="ProjectManagement_3.html">3</a>
-	  <a href="ProjectManagement_4.html">4</a>
-	  <a href="ProjectManagement_2.html">&raquo;</a>
+		<a class="activePagination" href="<?php echo base_url();?>ProjectController">1</a>
+	  <a href="<?php echo base_url();?>ProjectController2">2</a>
+	  <a href="<?php echo base_url();?>ProjectController3">3</a>
+	  <a href="<?php echo base_url();?>ProjectController4">4</a>
+	  <a href="<?php echo base_url();?>ProjectController2">&raquo;</a>
 	</div>
 
 	<!-- Footer of the page -->
-	<?php include_once('footer.php'); ?>
-  </div>
+  <?php include 'footer.php';?>
 
 	<!-- Script for open and closing image maodel-->
 	<script>

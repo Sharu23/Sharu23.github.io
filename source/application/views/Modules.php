@@ -1,6 +1,6 @@
-<?php include_once('header.php'); ?>
+<?php include 'header.php';?>
 
-<?php include_once('sidebar.php'); ?>
+<?php include 'sidebar.php';?>
 
   <!-- Main information section, rounded bordered style -->
   <div class="maincell">
@@ -9,15 +9,15 @@
       <h4>Project Management and System Designs</h4>
       <table class="moduleTable">
         <tr>
-          <th style="width:50%"><a href= "ProjectManagement.html">
+          <th style="width:50%"><a href= "<?php echo base_url();?>ProjectController">
             <img src= "../img/ProjectManagement.png" alt= "Project Management Icon" class="icon"></th></a>
-            <th style="width:50%"><a href= "SystemDesigns.html">
+            <th style="width:50%"><a href= "<?php echo base_url();?>SystemController">
 							<img src= "../img/SystemDesign.png" alt= "System Design Icon" class="icon"></th></a>
         </tr>
         <tr>
-          <th style="width:50%"><a href= "ProjectManagement.html">
+          <th style="width:50%"><a href= "<?php echo base_url();?>ProjectController">
 						Project Management</th></a>
-          <th style="width:50%"><a href= "SystemDesigns.html">
+          <th style="width:50%"><a href= "<?php echo base_url();?>SystemController">
 						System Designs</th></a>
         </tr>
       </table>
@@ -48,4 +48,7 @@
     </div>
   </div>
 
-<?php include_once('footer.php'); ?>
+<?php include 'footer.php';?>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
-<?php include_once('header.php'); ?>
+<?php include 'header.php';?>
 
-<?php include_once('sidebar.php'); ?>
+<?php include 'sidebar.php';?>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
   <div class="maincell">
@@ -115,18 +115,18 @@
 
 			<!-- Section of the pagination -->
 			<div class="pagination">
-				<a href="SystemDesigns_3.html">&laquo;</a>
-				<a href="SystemDesigns.html">1</a>
-				<a href="SystemDesigns_2.html">2</a>
-				<a href="SystemDesigns_3.html">3</a>
-				<a class="activePagination" href="SystemDesigns_4.html">4</a>
-				<a href="SystemDesigns_5.html">5</a>
-				<a href="SystemDesigns_6.html">6</a>
-				<a href="SystemDesigns_5.html">&raquo;</a>
+				<a href="<?php echo base_url();?>SystemController3">&laquo;</a>
+				<a href="<?php echo base_url();?>SystemController">1</a>
+				<a href="<?php echo base_url();?>SystemController2">2</a>
+				<a href="<?php echo base_url();?>SystemController3">3</a>
+				<a class="activePagination" href="<?php echo base_url();?>SystemController4">4</a>
+				<a href="<?php echo base_url();?>SystemController5">5</a>
+				<a href="<?php echo base_url();?>SystemController6">6</a>
+				<a href="<?php echo base_url();?>SystemController5">&raquo;</a>
 			</div>
 
 	<!-- Footer of the page -->
-  <?php include_once('footer.php'); ?>
+  <?php include 'footer.php';?>
   </div>
 
 	<!-- Script for open and closing image maodel-->

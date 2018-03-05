@@ -1,6 +1,6 @@
-<?php include_once('header.php'); ?>
+<?php include 'header.php';?>
 
-<?php include_once('sidebar.php'); ?>
+<?php include 'sidebar.php';?>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
   <div class="maincell">
@@ -88,15 +88,16 @@
 
 	<!-- Section of the pagination -->
 	<div class="pagination">
-		<a href="ProjectManagement.html">&laquo;</a>
-	  <a href="ProjectManagement.html">1</a>
-	  <a class="activePagination" href="ProjectManagement_2.html">2</a>
-	  <a href="ProjectManagement_3.html">3</a>
-	  <a href="ProjectManagement_4.html">4</a>
-	  <a href="ProjectManagement_3.html">&raquo;</a>
+		<a href="<?php echo base_url();?>ProjectController">&laquo;</a>
+	  <a href="<?php echo base_url();?>ProjectController">1</a>
+	  <a class="activePagination" href="<?php echo base_url();?>ProjectController2">2</a>
+	  <a href="<?php echo base_url();?>ProjectController3">3</a>
+	  <a href="<?php echo base_url();?>ProjectController4">4</a>
+	  <a href="<?php echo base_url();?>ProjectController3">&raquo;</a>
 	</div>
 
-<?php include_once('footer.php'); ?>
+	<!-- Footer of the page -->
+	<?php include 'footer.php';?>
 
 	<!--Script for the collapsation of the sections, when it should be closed and opened-->
 	<script>
@@ -116,6 +117,7 @@
 		}
 	</script>
 
+	<!--Checking and scoring of recap test-->
 	<script>
 	var question1 = 0;
 	var question2 = 0;

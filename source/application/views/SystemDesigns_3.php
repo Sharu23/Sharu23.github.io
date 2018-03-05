@@ -1,6 +1,70 @@
-<?php include_once('header.php'); ?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-<?php include_once('sidebar.php'); ?>
+<head>
+	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
+  <link rel="stylesheet" href="../css/foundation.css"> <!--Foundation style sheet -->
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"></link>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+	<meta charset= "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Today's 4 Revision</title>
+	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32"> <!--Simplified logo for the title section -->
+</head>
+
+<body>
+	<!--Main menu -->
+	<header>
+		<div class= "container">
+			<table class= "transparent"> <!-- To positions the logo and menu in the same row -->
+				<tr>
+					<th>
+						<a href= "index.html">  <!-- Logo linking to the homepage -->
+						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
+					</th>
+					<th>
+						<div class="tablet">  <!-- If mobile view humburger icon appearing, otherwise the menu appearing -->
+						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
+						</div>
+						<nav class="mobile">
+							<ul>
+								<li><a href= "index.html"> Homepage</a></li>
+								<li><a href= "Modules.html"> Modules</a></li>
+								<li><a href= "Quiz.html"> Quiz</a></li>
+							</ul>
+						</nav>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div id="hamburgerDiv" style="display: none;">  <!-- If humburger icon appears these menu should appear -->
+		<div class= "hamburger">
+			<nav>
+				<ul>
+					<li><a href= "index.html"> Homepage</a></li>
+					<li><a href= "Modules.html"> Modules</a></li>
+					<li><a href= "Quiz.html"> Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		</header>
+
+		<!--Sidebar for Module and Topic pages, make sure all the topic pages have the same navigation as this page -->
+		<div class="sidebar">
+			<a href="#" class= "nav-toggle-btn"></a>
+			<ul>
+				<li>Project Management and System Designs</li>
+				<ul>
+					<li><a href="ProjectManagement.html">Project Management</a></li>
+					<li><a href="SystemDesigns.html">System Designs</a></li>
+				</ul>
+			</ul>
+		</div>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
   <div class="maincell">
@@ -215,20 +279,20 @@
 
 	<!-- Section of the pagination -->
 	<div class="pagination">
-		<a href="SystemDesigns_2.html">&laquo;</a>
-		<a href="SystemDesigns.html">1</a>
-		<a href="SystemDesigns_2.html">2</a>
-		<a class="activePagination" href="SystemDesigns_3.html">3</a>
-		<a href="SystemDesigns_4.html">4</a>
-		<a href="SystemDesigns_5.html">5</a>
-		<a href="SystemDesigns_6.html">6</a>
-		<a href="SystemDesigns_4.html">&raquo;</a>
+		<a href="<?php echo base_url();?>SystemController2">&laquo;</a>
+		<a href="<?php echo base_url();?>SystemController">1</a>
+		<a href="<?php echo base_url();?>SystemController2">2</a>
+		<a class="activePagination" href="<?php echo base_url();?>SystemController3">3</a>
+		<a href="<?php echo base_url();?>SystemController4">4</a>
+		<a href="<?php echo base_url();?>SystemController5">5</a>
+		<a href="<?php echo base_url();?>SystemController6">6</a>
+		<a href="<?php echo base_url();?>SystemController4">&raquo;</a>
 	</div>
 
 	<!-- Footer of the page -->
-<?php include_once('footer.php'); ?>
-  </div>
+  <?php include 'footer.php';?>
 
+  </div>
 
 	<!-- Script for open and closing image maodel-->
 	<script>

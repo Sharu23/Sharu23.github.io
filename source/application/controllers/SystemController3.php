@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ModulesController extends CI_Controller {
+class SystemController3 extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Modules');
+		$this->load->view('SystemDesigns_3');
 	}
 }
