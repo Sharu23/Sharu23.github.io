@@ -443,7 +443,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../img/background_image.png");
+  /*background-image: url("../img/background_image.png");*/
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #7a7391;

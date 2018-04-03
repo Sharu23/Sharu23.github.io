@@ -142,15 +142,6 @@
 
 		<?php
 
-		//Got this page
-		//include($pagination);
-		//Display this into it
-
-
-
-
-
-
 
 		for ($x = 0; $x <=$limit-1; $x++)
 		{
@@ -162,8 +153,11 @@
 			shuffle($ans_array);
 
 			include 'Question_display.php';
+
+			$x = $counter;
 		}
 		?>
 
 	<?=$pagination?>
+
 	<?php include 'footer.php';?>
