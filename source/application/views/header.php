@@ -18,7 +18,7 @@
 				<table class= "transparent"> <!-- To positions the logo and menu in the same row -->
 					<tr>
 	          <th>
-							<a href= "index.html"> <!-- Logo linking to the homepage -->
+							<a href= "<?php echo base_url();?>Welcome"> <!-- Logo linking to the homepage -->
 							<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
 						</th>
 	          <th>

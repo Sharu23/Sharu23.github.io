@@ -11,11 +11,11 @@
   </div>
 
   <!-- Script for the sidebar, when the side-nav has to be activated -->
-  <script type="text/javascript">
+  <script>
 
       (function() {
 
-          var bodyEl = $('body'),
+          var bodyEl = $('maincell'),
               navToggleBtn = bodyEl.find('.nav-toggle-btn');
 
           navToggleBtn.on('click', function(e) {

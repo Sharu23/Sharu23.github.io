@@ -13,7 +13,9 @@
 		</div>
 		<button class="section">Basic Concept of Component Diagrams</button>
 		<div class="panel">
-			<table class="borderTable">
+
+      <!--table that will appear on mobile -->
+			<table class="borderTable tablet">
 				<tr>
 					<th>Name</th>
 					<th>Description</th>
@@ -110,6 +112,108 @@
 							</th>
 						</tr>
 			</table>
+
+      <!--table that will appear on tablet -->
+      <table class="borderTable mobile">
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Icon</th>
+				</tr>
+				<tr>
+					<th>Component</th>
+					<th>A physical and replaceable building block of software systems</th>
+					<th>
+						<img src="../img/component.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						<!--<img src="../img/component.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+					</th>
+				</tr>
+				<tr>
+					<th>Interface</th>
+					<th colspan="2">describes a group of operations used or created by components</th>
+				</tr>
+				<tr>
+						<th style="padding-left:20px;">Provided interface</th>
+						<th>the component provides as a service to other components</th>
+						<th>
+							<img src="../img/provided.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<!--<img src="../img/provided.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th style="padding-left:20px;">Required interface</th>
+						<th>The component conforms to when requesting the services from other components</th>
+						<th>
+							<img src="../img/required.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<!--<img src="../img/required.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Port</th>
+						<th>
+							An explicit window into an encapsulated component
+								<ul>
+									<li>accepting the specific functions of external components </li>
+									<li>representing a group of messages or calls</li>
+									<li>a port is a property of a component that has an interface as its type</li>
+								</ul>
+						</th>
+						<th>
+							<img src="../img/port.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<!--<img src="../img/port.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Part</th>
+						<th>
+							A unit of the implementation of the component
+								<ul>
+									<li>nested within the parent component</li>
+									<li>each part has its distinct functions  </li>
+								</ul>
+						</th>
+						<th>
+							<img src="../img/part.png" style="width:200px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+							<!--<img src="../img/part.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+						</th>
+					</tr>
+					<tr>
+						<th>Connector</th>
+						<th colspan="2">A communication relationship between different parts within the component</th>
+					</tr>
+					<tr>
+							<th style="padding-left:20px;">Delegation connector</th>
+							<th>
+								<ul>
+									<li>to wire internal ports to external ports of the overall component</li>
+									<li>arrow from an internal port pointing to an external port</li>
+								</ul>
+								</th>
+							<th>
+								<img src="../img/delegation.png" style="width:200px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+								<!--<img src="../img/delegation.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+						<tr>
+							<th style="padding-left:20px;">Direct connector</th>
+							<th>The connection is tightly coupled</th>
+							<th>
+								<img src="../img/direct.png" style="width:200px" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+								<!--<img src="../img/direct.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+						<tr>
+							<th style="padding-left:20px;">Connector by interface</th>
+							<th>both ports have compatible interface</th>
+							<th>
+								<img src="../img/interface.png" style="width:200px" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+								<!--<img src="../img/interface.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+							</th>
+						</tr>
+			</table>
+
+
+
 		</div>
 		<button class="section">Compiler components example</button>
 		<div class="panel">
@@ -131,42 +235,42 @@
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/component.png" style="width:80%">
+				<img src="../img/component.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/provided.png" style="width:80%">
+				<img src="../img/provided.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/required.png" style="width:80%">
+				<img src="../img/required.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/port.png" style="width:80%">
+				<img src="../img/port.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/part.png" style="width:80%">
+				<img src="../img/part.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/delegation.png" style="width:80%">
+				<img src="../img/delegation.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/direct.png" style="width:80%">
+				<img src="../img/direct.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext"></div>
-				<img src="../img/interface.png" style="width:80%">
+				<img src="../img/interface.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">

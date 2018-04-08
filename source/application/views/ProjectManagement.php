@@ -62,6 +62,16 @@
 	          <img src="../img/irontriangle.png" alt= "The Iron Triangle" style="width:250px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 	        </li>
 	      </ul>
+        <br><br>
+
+        <table style="border:0px";>
+          <tr style="border:0px">
+            <td style="border:0px"><p style="font-size:20px; color:#E14658;">This video summaries the information. Use this video to recap the information.</p></td>
+            <td style="border:0px"><video width="100%" controls><source src="../img/Common Principle_website.mp4" type="video/mp4"></video></td>
+          </tr>
+        </table>
+
+
 
 				<div id="myModal" class="modal">
 					<span class="close cursor" onclick="closeModal()">&times;</span>

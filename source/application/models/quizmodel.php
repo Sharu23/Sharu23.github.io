@@ -6,12 +6,13 @@ class quizmodel extends CI_Model {
   {
     $this->db->select("RowID, ModuleID, TopicID, Question, choice1, choice2, choice3, CorrectAnswer, Hint, Explanation");
     $this->db->from("multiple_choice_quiz");
-    $this->db->order_by("RowID","RANDOM");
     $this->db->limit(10);
 
     $query = $this->db->get();
 
-    return $query->result();
+    $GLOBALS['questionSaved'] = $query->result();
+
+    return $GLOBALS['questionSaved'];
 
     $num_data_returned = $query->num_rows;
 

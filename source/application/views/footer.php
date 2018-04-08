@@ -1,6 +1,6 @@
 <!-- Footer of the page -->
 <footer>
-  <div class="container">&copy; Sharugi Balachandran<span style="float:right">More details</span></div>
+  <div class="container">&copy; Sharugi Balachandran<span style="float:right;"><a style="color:white;text-decoration:underline;" href= "<?php echo base_url();?>MoreDetailsController">More details</a></span></div>
 </footer>
 
 <!--Script for the humburger menu, when the menu should appear and disappear-->
@@ -17,4 +17,6 @@ function hamburgerFunction() {
 }
 </script>
 
+
 </body>
+</html>

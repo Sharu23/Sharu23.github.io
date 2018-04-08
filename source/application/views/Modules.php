@@ -6,7 +6,7 @@
   <div class="maincell">
     <h1>Modules</h1>
     <div class="roundedBorder">
-      <h4>Project Management and System Designs</h4>
+      <h4 style="padding-bottom:10px">Project Management and System Designs</h4>
       <table class="moduleTable">
         <tr>
           <th style="width:50%"><a href= "<?php echo base_url();?>ProjectController">
@@ -23,7 +23,7 @@
       </table>
     </div>
     <div class="roundedBorder">
-      <h4>Computer Applications</h4>
+      <h4 style="padding-bottom:10px">Computer Applications</h4>
       <table>
         <tr>
           <th style="width:50%"><img src= "../img/DigitalLogicIcon.png" alt= "Digital Logic Icon" class="icon"></th>
@@ -36,19 +36,18 @@
       </table>
     </div>
     <div class="roundedBorder">
-      <h4>Databases</h4>
+      <h4 style="padding-bottom:10px">Databases</h4>
       <table>
         <tr>
           <th><img src= "../img/Databases.png" alt= "Basic Databases Icon" class="icon"></th>
+          <th></th>
         </tr>
         <tr>
-          <th>Basic Databases</th>
+          <th style="width:50%">Basic Databases</th>
+          <th style="width:50%"></th>
         </tr>
       </table>
     </div>
   </div>
 
 <?php include 'footer.php';?>
-
-</body>
-</html>

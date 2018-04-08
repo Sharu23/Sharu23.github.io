@@ -443,10 +443,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /*background-image: url("../img/background_image.png");*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #7a7391;
+  background-image: url("../img/background_image2.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  background-color: #ebe8f7;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
@@ -2204,7 +2204,7 @@ td {
 
 p {
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 20px;
   line-height: auto;
   text-rendering: optimizeLegibility;
   padding-left: 10px;
@@ -2246,13 +2246,12 @@ h6, .h6 {
     color: #cacaca; }
 
 h1, .h1 {
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.4;
   padding-left: 10px;
   color: #ffffff;
-  border-width: 10px;
-  border-color: white;
-  border-style: solid;
+  border-radius: 20px;
+  border: 10px solid white;
   background: #E14658;
   margin-left:auto;
   margin-left: auto;
@@ -2281,7 +2280,7 @@ h4, .h4 {
   padding-left: 15px; }
 
 h5, .h5 {
-  font-size: 1.0625rem;
+  font-size: 25px;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -2300,7 +2299,7 @@ h6, .h6 {
 
 @media print, screen and (min-width: 40em) {
   h1, .h1 {
-    font-size: 2rem; }
+    font-size: 30px; }
   h2, .h2 {
     font-size: 2.5rem; }
   h3, .h3 {
@@ -2308,17 +2307,17 @@ h6, .h6 {
   h4, .h4 {
     font-size: 1.25rem; }
   h5, .h5 {
-    font-size: 1rem; }
+    font-size: 22px; }
   h6, .h6 {
     font-size: 1rem; } }
 
 a {
   line-height: inherit;
-  color: #1779ba;
+  color: black;
   text-decoration: none;
   cursor: pointer; }
   a:hover, a:focus {
-    color: #1468a0; }
+    color: #E14658; }
   a img {
     border: 0; }
 

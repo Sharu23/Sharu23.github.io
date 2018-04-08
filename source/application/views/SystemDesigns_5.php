@@ -20,7 +20,9 @@
 			<button class="section">Sequence Diagrams</button>
 			<div class="panel">
 			<p>Concepts for Sequence Diagrams</p>
-				<table class="borderTable">
+
+        <!--Table that is for mobile -->
+				<table class="borderTable tablet" >
 					<tr>
 						<th>Name</th>
 						<th>Description</th>
@@ -97,14 +99,87 @@
 						</th>
 					</tr>
 				</table>
+
+        <!--Table that is for tablet -->
+        <table class="borderTable mobile" >
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Icon</th>
+          </tr>
+          <tr>
+            <th>Actor</th>
+            <th>a person or system that derives benefits from and is external to the system. It invokes a sequence for sending and/or receiving messages</th>
+            <th>
+              <img src="../img/actor.png" style="width:200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+              <!--<img
+              src="../img/actor.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>Object</th>
+            <th>participates sending and receiving messages</th>
+            <th>
+              <img src="../img/object.png" style="width:200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+              <!--<img src="../img/object.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>Lifeline</th>
+            <th>denotes the life of an object during a sequence of interactions</th>
+            <th>
+              <img src="../img/lifeline.png" style="width:200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+              <!--<img src="../img/lifeline.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>Execution Occurrence </th>
+            <th>denotes when an object is actively sending or receiving messages</th>
+            <th>
+              <img src="../img/executionOccurrence.png" style="width:200px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+              <!--<img src="../img/executionOccurrence.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th rowspan="3">Message</th>
+            <th>An operation in the class where an object belongs to or a function call </th>
+            <th>
+              <img src="../img/directmessage.png" style="width:200px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+              <!--<img src="../img/directmessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>A self-delegated operation call </th>
+            <th>
+                <img src="../img/self-delegated.png" style="width:200px" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+              <!--<img src="../img/self-delegated.png"style="height:100px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>A return with value</th>
+            <th>
+              <img src="../img/returnMessage.png" style="width:200px" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+              <!--<img src="../img/returnMessage.png"style="height:100px;padding-left:20px;padding-bottom:20px;"></th>-->
+          </tr>
+          <tr>
+            <th>Object destruction</th>
+            <th>“X” denotes a termination of the participation of message passing</th>
+            <th>
+              <img src="../img/object-destruction.png" style="width:200px" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+              <!--<img src="../img/object-destruction.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+          <tr>
+            <th>Frame</th>
+            <th>“Scope” for sequencing the interactions and focuses on one use case</th>
+            <th>
+              <img src="../img/frame.png" style="width:200px" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+             <!--<img src="../img/frame.png"style="width:250px;padding-left:20px;padding-bottom:20px;">-->
+            </th>
+          </tr>
+        </table>
 			</div>
 
-			<button class="section">Sequence Diagram Example</button>
-			<div class="panel">
-				<p>An example of Sequence Diagram</p>
-				<img src="../img/SequenceDiagram.png" style="width:450px" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"><br><br>
-				<!--<img src="../img/SequenceDiagram.png"style="width:500px;padding-left:20px;padding-bottom:20px;">-->
-			</div>
 
 			<div id="myModal" class="modal">
 				<span class="close cursor" onclick="closeModal()">&times;</span>
@@ -112,52 +187,52 @@
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/actor.png" style="width:80%">
+						<img src="../img/actor.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/object.png" style="width:80%">
+						<img src="../img/object.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/lifeline.png" style="width:80%">
+						<img src="../img/lifeline.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/executionOccurrence.png" style="width:80%">
+						<img src="../img/executionOccurrence.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/directmessage.png" style="width:80%">
+						<img src="../img/directmessage.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/self-delegated.png" style="width:80%">
+						<img src="../img/self-delegated.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/returnMessage.png" style="width:80%">
+						<img src="../img/returnMessage.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/object-destruction.png" style="width:80%">
+						<img src="../img/object-destruction.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/frame.png" style="width:80%">
+						<img src="../img/frame.png" style="width:30%">
 					</div>
 
 					<div class="mySlides">
 						<div class="numbertext"></div>
-						<img src="../img/SequenceDiagram.png" style="width:80%">
+						<img src="../img/SequenceDiagram.png" style="width:30%">
 					</div>
 
 				</div>
