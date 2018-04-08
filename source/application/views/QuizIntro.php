@@ -15,14 +15,6 @@
 			<input class="Quizbutton" type="button" value="Start Quiz" onclick="openWinStart()">
 		</form>
 
-		<br>
-		<h5>Personalise the Test</h5>
-		<p>This quiz can be personalised to your needs.<br class="small">
-		You can choose to change the number of questions; which modules or topics you want to revise and which type of questions you want to answer.<br class="small">
-		<form>
-			<input class="Quizbutton" type="button" value="Personalise Quiz" onclick="openWinSettings()">
-		</form>
-		</p>
 	</div>
 </div>
 

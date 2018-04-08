@@ -17,6 +17,22 @@ function hamburgerFunction() {
 }
 </script>
 
+<script>
+function sidebar()
+{
+	var s = document.getElementById("sidebarID");
+
+	if(s.style.display === "none"){
+		s.style.display = "block";
+	}
+	else {
+		{
+			s.style.display = "none";
+		}
+	}
+}
+</script>
+
 
 </body>
 </html>

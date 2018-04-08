@@ -1,9 +1,23 @@
 <?php include 'header.php';?>
 
-<?php include 'sidebar.php';?>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
-  <div class="maincell">
+  <img style="position:absolute; width:50px;" src="../img/arrow.png" alt="sidebar" onclick="sidebar()">
+
+
+  <div class="maincell" id="maincellID"> <!-- Main content for this page -->
+
+  	<div id="sidebarID" style="display:none;">
+  		<div class="sidebar">
+  			<nav>
+  				<ul>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ProjectController">&times;</a></li>
+  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
+  				</ul>
+  			</nav>
+  		</div>
+  	</div>
     <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
     <h4>Background information</h4>
     <button class= "section">What is a project?</button>

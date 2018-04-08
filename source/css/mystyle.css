@@ -117,9 +117,9 @@ nav a:hover {
 	z-index: 1000;
 	top: 0;
 	bottom: 0;
-	width: 200px;
+	width: 300px;
 	padding-top: 80px;
-	padding-left: 10px;
+	padding-left: 40px;
 	background-color: #22252c;
 	transform: translate3d(-200px, 0, 0);
 	transition: transform 0.4s ease;
@@ -152,7 +152,7 @@ nav a:hover {
   padding-right: 10px;
 }
 .sidebar a:hover {
-    color: #E14658;
+    color: white;
 }
 
 .nav-toggle-btn {
@@ -171,6 +171,31 @@ nav a:hover {
 }
 .active-nav .content {
 		transform: translate3d(200px, 0, 0);
+}
+
+.cross {
+
+	float:right;
+	padding-bottom:20px;
+	font-size:30px;
+	transition: none;
+}
+
+.cross a:hover {
+	transition: none;
+
+}
+
+.cross a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #22252c;
+
+	position: absolute;
+	bottom: 0;
+	width: 0%;
+
 }
 
 

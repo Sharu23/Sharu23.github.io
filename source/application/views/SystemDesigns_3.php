@@ -1,73 +1,23 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<?php include 'header.php';?>
 
-<head>
-	<link href= "../css/mystyle.css" rel="stylesheet"> <!--My stylesheet -->
-  <link rel="stylesheet" href="../css/foundation.css"> <!--Foundation style sheet -->
-
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"></link>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-	<meta charset= "UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Today's 4 Revision</title>
-	<link rel="icon" type="image/png" href="../img/Icon.png"/ sizes="32x32"> <!--Simplified logo for the title section -->
-</head>
-
-<body>
-	<!--Main menu -->
-	<header>
-		<div class= "container">
-			<table class= "transparent"> <!-- To positions the logo and menu in the same row -->
-				<tr>
-					<th>
-						<a href= "index.html">  <!-- Logo linking to the homepage -->
-						<img src= "../img/logo.png" alt= "logo" class="logo" align="left">
-					</th>
-					<th>
-						<div class="tablet">  <!-- If mobile view humburger icon appearing, otherwise the menu appearing -->
-						<img src= "../img/hamburger.png" alt= "hamburger" height="20" width="20" align="right" onclick="hamburgerFunction()">
-						</div>
-						<nav class="mobile">
-							<ul>
-								<li><a href= "index.html"> Homepage</a></li>
-								<li><a href= "Modules.html"> Modules</a></li>
-								<li><a href= "Quiz.html"> Quiz</a></li>
-							</ul>
-						</nav>
-					</th>
-				</tr>
-			</table>
-		</div>
-		<div id="hamburgerDiv" style="display: none;">  <!-- If humburger icon appears these menu should appear -->
-		<div class= "hamburger">
-			<nav>
-				<ul>
-					<li><a href= "index.html"> Homepage</a></li>
-					<li><a href= "Modules.html"> Modules</a></li>
-					<li><a href= "Quiz.html"> Quiz</a></li>
-				</ul>
-			</nav>
-		</div>
-		</div>
-		</header>
-
-		<!--Sidebar for Module and Topic pages, make sure all the topic pages have the same navigation as this page -->
-		<div class="sidebar">
-			<a href="#" class= "nav-toggle-btn"></a>
-			<ul>
-				<li>Project Management and System Designs</li>
-				<ul>
-					<li><a href="ProjectManagement.html">Project Management</a></li>
-					<li><a href="SystemDesigns.html">System Designs</a></li>
-				</ul>
-			</ul>
-		</div>
 
 	<!-- Main information section. This contains text, tables and images. The information have been callapsed so that it would be easier to read. Each topic have been divied into pages -->
-  <div class="maincell">
+  <img style="position:absolute; width:50px;" src="../img/arrow.png" alt="sidebar" onclick="sidebar()">
+
+
+  <div class="maincell" id="maincellID"> <!-- Main content for this page -->
+
+  	<div id="sidebarID" style="display:none;">
+  		<div class="sidebar">
+  			<nav>
+  				<ul>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController3">&times;</a></li>
+  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
+  				</ul>
+  			</nav>
+  		</div>
+  	</div>
     <h1>System Designs<img src="../img/SystemDesign_white.png" alt= "System Design Icon" class="Topicicon"></h1>
     <h4>Developing Activity Diagram</h4>
 

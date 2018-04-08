@@ -1,9 +1,23 @@
 <?php include 'header.php';?>
 
-<?php include 'sidebar.php';?>
-
   <!-- Main information section, rounded bordered style -->
-  <div class="maincell">
+  <img style="position:absolute; width:50px;" src="../img/arrow.png" alt="sidebar" onclick="sidebar()">
+
+
+  <div class="maincell" id="maincellID"> <!-- Main content for this page -->
+
+  	<div id="sidebarID" style="display:none;">
+  		<div class="sidebar">
+  			<nav>
+  				<ul>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ModulesController">&times;</a></li>
+  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
+  				</ul>
+  			</nav>
+  		</div>
+  	</div>
+
     <h1>Modules</h1>
     <div class="roundedBorder">
       <h4 style="padding-bottom:10px">Project Management and System Designs</h4>

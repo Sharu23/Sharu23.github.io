@@ -1,6 +1,6 @@
 <!--Sidebar for Module and Topic pages, make sure all the topic pages have the same navigation as this page -->
   <div class="sidebar">
-    <a href="#" class= "nav-toggle-btn"></a>
+    <a href="" class= "nav-toggle-btn"></a>
     <ul>
       <li>Project Management and System Designs</li>
       <ul>
@@ -15,7 +15,7 @@
 
       (function() {
 
-          var bodyEl = $('maincell'),
+          var bodyEl = $('body'),
               navToggleBtn = bodyEl.find('.nav-toggle-btn');
 
           navToggleBtn.on('click', function(e) {
