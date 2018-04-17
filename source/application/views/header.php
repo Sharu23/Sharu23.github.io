@@ -37,7 +37,7 @@
 				</table>
 			</div>
 			<div id="hamburgerDiv" style="display: none;"> <!-- If humburger icon appears these menu should appear -->
-			<div class= "hamburger">
+			<div class= "hamburger tablet">
 				<nav>
 					<ul>
 						<li><a href= "<?php echo base_url();?>Welcome"> Homepage</a></li>

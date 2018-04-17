@@ -12,22 +12,24 @@
 
 
     <div class="roundedBorder" style="padding-left:10px; margin-bottom:30px;">
-		<p style="font-size:20px"><b><?php echo $row->RowID ?>. <?=$row->Question?></b></p>
+		<p style="font-size:18px"><b><?php echo $row->RowID ?>. <?=$row->Question?></b></p>
 
     <div style="padding-left:20px">
-  		<label for="label_<?=$row->RowID?>_1"><p style="font-size:18px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[0]?>" id="label_<?=$row->RowID?>_1"><?=$ans_array[0]?></label></p>
-  		<label for="label_<?=$row->RowID?>_2"><p style="font-size:18px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[1]?>" id="label_<?=$row->RowID?>_2"><?=$ans_array[1]?></label></p>
-  		<label for="label_<?=$row->RowID?>_3"><p style="font-size:18px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[2]?>" id="label_<?=$row->RowID?>_3"><?=$ans_array[2]?></label></p>
-  		<label for="label_<?=$row->RowID?>_4"><p style="font-size:18px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[3]?>" id="label_<?=$row->RowID?>_4"><?=$ans_array[3]?></label></p>
+  		<label for="label_<?=$row->RowID?>_1"><p style="font-size:16px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[0]?>" id="label_<?=$row->RowID?>_1"><?=$ans_array[0]?></label></p>
+  		<label for="label_<?=$row->RowID?>_2"><p style="font-size:16px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[1]?>" id="label_<?=$row->RowID?>_2"><?=$ans_array[1]?></label></p>
+  		<label for="label_<?=$row->RowID?>_3"><p style="font-size:16px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[2]?>" id="label_<?=$row->RowID?>_3"><?=$ans_array[2]?></label></p>
+  		<label for="label_<?=$row->RowID?>_4"><p style="font-size:16px"><input style="margin-right:10px" type="radio" name="quizid<?=$row->RowID?>" value="<?=$ans_array[3]?>" id="label_<?=$row->RowID?>_4"><?=$ans_array[3]?></label></p>
     </div>
     </div>
     <?php  } ?>
 
+    <table style="border:0px;">
+      <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><input type="submit" class="Quizbutton" value="Check" style="float:right;"></input></td></tr>
+      <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+    </table>
+    </form>
 
-  <input type="submit" class="Quizbutton" value="Check"></input>
-</form>
 
-  <button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
   </div>
 
 <?php include 'footer.php';?>

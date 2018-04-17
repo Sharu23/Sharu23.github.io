@@ -36,21 +36,21 @@
    <form method="post" action="<?php echo base_url();?>QuizTest">
 
     <div class="roundedBorder" style="padding-left:10px; margin-bottom:30px;">
-    <p style="font-size:20px"><b><?=$array2[$x]?>.<?=$array3[$x]?></b></p>
+    <p style="font-size:18px"><b><?=$array2[$x]?>.<?=$array3[$x]?></b></p>
 
   <?php if ($array7[$x]!= $array1[$x]) { ?>
-    <p>Your Answer: <span style="color: red; font-size:18px;"><?=$array1[$x]?></span></p>
-    <p>Correct Answer: <span style="color: green; font-size:18px;"><?=$array7[$x]?></span></p>
-    <div style="border:1px solid black; margin-bottom:15px;margin-right:15px;">
-    <p><i>Hint: <?=$array8[$x]?></i></p>
-    <p><b>Explanation: <?=$array9[$x]?></b></p>
+    <p style="padding-bottom:0px; margin-bottom:0px;">Your Answer: <span style="color: red; font-size:16px;"><?=$array1[$x]?></span></p>
+    <p>Correct Answer: <span style="color: green; font-size:16px;"><?=$array7[$x]?></span></p>
+    <div style="border:1px solid black; margin-bottom:15px;margin-right:15px;padding-top:10px; padding-right:10px;">
+    <p><span style="font-size:16px;"><i>Hint: <?=$array8[$x]?></i></span></p>
+    <p><span style="font-size:16px;"><b>Explanation: <?=$array9[$x]?></b></span></p>
   </div>
 
   <?php } else { ?>
 
-      <p><span style="color: green; font-size:18px;"><?=$array1[$x]?></span></p>
-      <div style="border:1px solid black; margin-bottom:15px;margin-right:15px;">
-      <p><b>Explanation: <?=$array9[$x]?></b></p>
+      <p>Correct Answer: <span style="color: green; font-size:16px;"><?=$array7[$x]?></span></p>
+      <div style="border:1px solid black; margin-bottom:15px;margin-right:15px; padding-top:10px; padding-right:10px;">
+      <p><span style="font-size:16px;"><b>Explanation: <?=$array9[$x]?></b></span></p>
       </div>
       <?php $score = $score +1; ?>
 
@@ -62,12 +62,12 @@
   <br><br>
 
   <div style="text-align:center; border: 2px solid #E14658; width:40%; margin-left:auto; margin-right:auto;"> <h2 style="font-size: 30px;padding-top:20px;">Your Score: </h3>
-    <p><span style="font-size:20px"><?=$score?>/10</span></p> </div>
+    <p><span style="font-size:25px"><?=$score?>/10</span></p> </div>
 
-  <table style="border:none;margin-bottom:0px; margin-top:10px;">
-    <tr style="border:none;">
-      <td style="border:none;width:90%;"></td>
-      <td style="border:none;"><input class="Quizbutton" type="submit" value="Start Again"></td>
+  <table style="border:1px solid #FAFAFA;margin-bottom:0px; margin-top:10px;">
+    <tr style="border:1px solid #FAFAFA;">
+      <td style="border:1px solid #FAFAFA;width:60%;"></td>
+      <td style="border:1px solid #FAFAFA;"><a href="<?php echo base_url();?>QuizTest" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</a></td>
     </tr>
   </table>
 
@@ -77,3 +77,9 @@
 
 
 <?php include 'footer.php';?>
+
+<script>
+function refresh(){
+  location.reload();
+}
+</script>

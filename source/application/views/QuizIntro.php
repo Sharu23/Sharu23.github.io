@@ -4,17 +4,16 @@
 <div class="maincell">
 	<h1>Quiz Time</h1>
 	<div style="width:97%; margin-left:auto; margin-right:auto">
-		<h5>The Rules</h5>
-		<p>Let’s see how well you have learned Topic 1 with 10 questions. Read the questions carefully before answering it. You will be happy to know that this quiz does not have a timer, so take your time and answer them carefully. <br class="small">
-		What if I get stuck? There is a hint feature which you may want to use to help you answer the questions. <br class="small">
-		What if I still got it wrong? Don’t worry, we all learn from our mistakes. After each question you get wrong, there will be an explanation to help you understand.<br class="small">
-		At the corner of each the question, the topic icon is presented to help you associate with the topic; this can help to identify which topics you are good at or need revise again.
+	<iframe src="//www.slideshare.net/slideshow/embed_code/key/McZDrojle6tgy1" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+		<br><br><p>Let’s see how well you have learned. Read the questions carefully before answering it. You will be happy to know that this quiz does not have a timer, so take your time and answer them carefully.
+		<br class="small">
 		</p>
+		<br><h5>The Quizzes</h5>
+			<p>Project Management and System Designs Quiz</p>
+			<button class="Quizbutton" type="button" value="Start Quiz" onclick="openWinStart()">Start Quiz</button>
 
-		<form>
-			<input class="Quizbutton" type="button" value="Start Quiz" onclick="openWinStart()">
-		</form>
-
+			<br><br><p>Computer Architecture Quiz</p>
+			<button class="Quizbutton" type="button" value="Start Quiz">Start Quiz</button>
 	</div>
 </div>
 

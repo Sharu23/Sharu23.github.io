@@ -11,8 +11,8 @@
   		<div class="sidebar">
   			<nav>
   				<ul>
-  					<li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController3">&times;</a></li>
-  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController3">&times;</a></li><br>
+  					<li style="margin-top:50px"><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
   					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
   				</ul>
   			</nav>
@@ -214,19 +214,19 @@
 						<div name= "goals_ans" id="goalsID" class="draggable goal item_ans" style="background-color:rgb(102, 255, 153)">Goals</div>
 						<div name= "input_ans" id="inputID" class="draggable input item_ans" style="background-color:rgb(204, 204, 255)">Input</div>
 					</div>
+        </div>
 
-
-				 <br>
-				 <p><span id="TEST"></span></p>
+				 <br><br>
 				 <p><span id="score"></span></p>
-				 <button id="check_button" class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
-				 <button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+         <p><span style="font-size:15px;" id="advice"></span></p>
+         <table style="border:0px;">
+           <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><button id="check_button"  onclick="result()" type="button" class="Quizbutton" value="Check" style="float:right;">Check</button></td></tr>
+           <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+         </table>
 				 </fieldset>
 				 </form>
-			 </div>
-
-	</div>
-
+	      </div>
+  </div>
 	<!-- Section of the pagination -->
 	<div class="pagination">
 		<a href="<?php echo base_url();?>SystemController2">&laquo;</a>
@@ -242,7 +242,7 @@
 	<!-- Footer of the page -->
   <?php include 'footer.php';?>
 
-  </div>
+
 
 	<!-- Script for open and closing image maodel-->
 	<script>
@@ -345,8 +345,9 @@
 		}
 
 		result = question1 + question2 + question3;
-		output = "Out of 7 marks you got " + result;
+		output = "Your Score: " + result + "/7"
 		document.getElementById("score").innerHTML = output;
+    document.getElementById("advice").innerHTML = "Did not get all the questions correct, read the information above and have another go at it.";
 	}
 	</script>
 
@@ -356,6 +357,8 @@
 	}
 	</script>
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 	//added to make .draggable class draggable
 	$(".draggable").draggable();
@@ -396,6 +399,36 @@
 
 							 break;
 
+           case "goalsID":
+
+							 $("#goalsID").attr("name", "context");
+
+							 break;
+
+           case "outputID":
+
+							 $("#outputID").attr("name", "context");
+
+							 break;
+
+           case "constraintsID":
+
+								$("#constraintsID").attr("name", "context");
+
+								break;
+
+            case "stakeholdersID":
+
+								 $("#stakeholdersID").attr("name", "context");
+
+								 break;
+
+           case "inputID":
+
+                $("#inputID").attr("name", "context");
+
+               break;
+
 			 }//end switch case
 
 		}//end drop function
@@ -409,11 +442,40 @@
 
 			 switch(dragging){//begin switch case
 
-					 case "goalsID":
+           case "contextID":
+            $("#contextID").attr("name", "goal");
 
-							 $("#goalsID").attr("name", "goal");
+               break;
 
-							 break;
+           case "goalsID":
+
+               $("#goalsID").attr("name", "goal");
+
+               break;
+
+           case "outputID":
+
+               $("#outputID").attr("name", "goal");
+
+               break;
+
+           case "constraintsID":
+
+                $("#constraintsID").attr("name", "goal");
+
+                break;
+
+            case "stakeholdersID":
+
+                 $("#stakeholdersID").attr("name", "goal");
+
+                 break;
+
+           case "inputID":
+
+                $("#inputID").attr("name", "goal");
+
+               break;
 			 }//end switch case
 
 
@@ -430,11 +492,40 @@
 
 			 switch(dragging){//begin switch case
 
-					 case "outputID":
+         case "contextID":
+          $("#contextID").attr("name", "output");
 
-							 $("#outputID").attr("name", "output");
+             break;
 
-							 break;
+         case "goalsID":
+
+             $("#goalsID").attr("name", "output");
+
+             break;
+
+         case "outputID":
+
+             $("#outputID").attr("name", "output");
+
+             break;
+
+         case "constraintsID":
+
+              $("#constraintsID").attr("name", "output");
+
+              break;
+
+          case "stakeholdersID":
+
+               $("#stakeholdersID").attr("name", "output");
+
+               break;
+
+         case "inputID":
+
+              $("#inputID").attr("name", "output");
+
+             break;
 
 			 }//end switch case
 
@@ -450,11 +541,40 @@
 
 				switch(dragging){//begin switch case
 
-						case "constraintsID":
+            case "contextID":
+             $("#contextID").attr("name", "constraint");
 
-								$("#constraintsID").attr("name", "constraint");
+                break;
 
-								break;
+            case "goalsID":
+
+                $("#goalsID").attr("name", "constraint");
+
+                break;
+
+            case "outputID":
+
+                $("#outputID").attr("name", "constraint");
+
+                break;
+
+            case "constraintsID":
+
+                 $("#constraintsID").attr("name", "constraint");
+
+                 break;
+
+             case "stakeholdersID":
+
+                  $("#stakeholdersID").attr("name", "constraint");
+
+                  break;
+
+            case "inputID":
+
+                 $("#inputID").attr("name", "constraint");
+
+                break;
 
 				}//end switch case
 
@@ -470,11 +590,40 @@
 
 				 switch(dragging){//begin switch case
 
-						 case "stakeholdersID":
+           case "contextID":
+              $("#contextID").attr("name", "stakeholder");
 
-								 $("#stakeholdersID").attr("name", "stakeholder");
+                 break;
 
-								 break;
+             case "goalsID":
+
+                 $("#goalsID").attr("name", "stakeholder");
+
+                 break;
+
+             case "outputID":
+
+                 $("#outputID").attr("name", "stakeholder");
+
+                 break;
+
+             case "constraintsID":
+
+                  $("#constraintsID").attr("name", "stakeholder");
+
+                  break;
+
+              case "stakeholdersID":
+
+                   $("#stakeholdersID").attr("name", "stakeholder");
+
+                   break;
+
+             case "inputID":
+
+                  $("#inputID").attr("name", "stakeholder");
+
+                 break;
 
 				 }//end switch case
 
@@ -486,16 +635,42 @@
 			$("#input").droppable({//begin droppable event
 			drop: function(event,ui) {//begin drop function
 
-
-
 					switch(dragging){//begin switch case
 
-							case "inputID":
+            case "contextID":
+               $("#contextID").attr("name", "input");
 
-									 $("#inputID").attr("name", "input");
+                  break;
 
-									break;
+              case "goalsID":
 
+                  $("#goalsID").attr("name", "input");
+
+                  break;
+
+              case "outputID":
+
+                  $("#outputID").attr("name", "input");
+
+                  break;
+
+              case "constraintsID":
+
+                   $("#constraintsID").attr("name", "input");
+
+                   break;
+
+               case "stakeholdersID":
+
+                    $("#stakeholdersID").attr("name", "input");
+
+                    break;
+
+              case "inputID":
+
+                   $("#inputID").attr("name", "input");
+
+                  break;
 					}//end switch case
 
 

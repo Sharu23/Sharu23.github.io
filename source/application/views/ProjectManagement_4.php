@@ -10,8 +10,8 @@
   		<div class="sidebar">
   			<nav>
   				<ul>
-  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ProjectController4">&times;</a></li>
-  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ProjectController4">&times;</a></li><br>
+  					<li style="margin-top:50px"><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
   					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
   				</ul>
   			</nav>
@@ -119,8 +119,10 @@
 		<br><br>
 
 		<p><span id="score"></span></p>
-		<button id="check_button" class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
-		<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+    <table style="border:0px;">
+      <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><button id="check_button" onclick="result()" type="button" class="Quizbutton" value="Check" style="float:right;">Check</button></td></tr>
+      <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+    </table>
 		</fieldset>
 		</form>
 
@@ -224,15 +226,17 @@
 
 
 		result = question1 + question2 + question3;
-		output = "Out of 10 marks you got " + result;
+		output = "Your Score: " + result + "/10"
 		document.getElementById("score").innerHTML = output;
 
 	}
 
 	</script>
-
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 	//added to make .draggable class draggable
+
 	$(".draggable").draggable();
 
 						 /*on dragstart event*/

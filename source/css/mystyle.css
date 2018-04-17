@@ -117,11 +117,11 @@ nav a:hover {
 	z-index: 1000;
 	top: 0;
 	bottom: 0;
-	width: 300px;
-	padding-top: 80px;
-	padding-left: 40px;
+	width: 100%;
+	padding-top: 100px;
+	padding-left: 100px;
 	background-color: #22252c;
-	transform: translate3d(-200px, 0, 0);
+	transform: translate3d(-10px, 0, 0);
 	transition: transform 0.4s ease;
 }
 .active-nav .sidebar {
@@ -150,6 +150,7 @@ nav a:hover {
   text-align: left;
   color: #fff;
   padding-right: 10px;
+	margin-top:20px;
 }
 .sidebar a:hover {
     color: white;
@@ -178,7 +179,6 @@ nav a:hover {
 	float:right;
 	padding-bottom:20px;
 	font-size:30px;
-	transition: none;
 }
 
 .cross a:hover {
@@ -191,8 +191,6 @@ nav a:hover {
 	display: block;
 	height: 5px;
 	background-color: #22252c;
-
-	position: absolute;
 	bottom: 0;
 	width: 0%;
 
@@ -213,6 +211,11 @@ nav a:hover {
 		padding-top: 5px;
 		padding-left: 10px;
 		margin-bottom: 8px;
+}
+
+.moduleTable td, tr, th{
+	background-color: #fafafa;
+	border: 1px solid #fafafa;
 }
 
 /*----------------------------------------*/
@@ -238,7 +241,7 @@ nav a:hover {
 	border: 2px solid #E14658;
 	text-align: left;
 	outline: none;
-	font-size: 15px;
+	font-size: 18px;
 	transition: 0.4s;
 	margin: 10px;
 }
@@ -494,7 +497,7 @@ img.hover-shadow {
 
 /*----------------------------------------------------*/
 
-/* Elemets that only need to be displayed on tablets and on mobiles*/
+/* Elemets that only need to be displayed on tablets*/
 @media only screen and (min-width:635px){
 
 h1 {
@@ -518,7 +521,7 @@ h1 {
 
 	nav li {
 		display: inline-block;
-		margin-left: 70px;
+		margin-left: 30px;
 	}
 
 	nav a:hover {
@@ -645,6 +648,14 @@ h1 {
 	z-index: 3;
 	height: 60px;
 }
+
+.sidebar {
+	width: 30%;
+	transform: translate3d(-52%,0, 0);
+
+}
+
+
 
 
 

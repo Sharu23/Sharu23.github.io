@@ -10,8 +10,8 @@
       <div class="sidebar">
         <nav>
           <ul>
-            <li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController4">&times;</a></li>
-            <li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+            <li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController4">&times;</a></li><br>
+            <li style="margin-top:50px"><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
             <li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
           </ul>
         </nav>
@@ -117,8 +117,10 @@
 
 				<br>
 				<p><span id="score"></span></p>
-				<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
-				<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+        <table style="border:0px;">
+          <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><button onclick="result()" type="button" class="Quizbutton" value="Check" style="float:right;">Check</button></td></tr>
+          <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+        </table>
 				</fieldset>
 				</form>
 			</div>
@@ -213,7 +215,7 @@
 
 		function result(button) {
 			result = question1 + question2;
-			output = "Out of 2 marks you got " + result;
+			output = "Your Score: " + result + "/2"
 			document.getElementById("score").innerHTML = output;
 		}
 		</script>

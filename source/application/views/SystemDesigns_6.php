@@ -10,8 +10,8 @@
   		<div class="sidebar">
   			<nav>
   				<ul>
-  					<li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController6">&times;</a></li>
-  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>SystemController6">&times;</a></li><br>
+  					<li style="margin-top:50px"><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
   					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
   				</ul>
   			</nav>
@@ -247,52 +247,42 @@
 		<div class="modal-content">
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/component.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/provided.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/required.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/port.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/part.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/delegation.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/direct.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/interface.png" style="width:30%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/compiler.png" style="width:80%">
 			</div>
 
 			<div class="mySlides">
-				<div class="numbertext"></div>
 				<img src="../img/orderFulfillment.png" style="width:80%">
 			</div>
 		</div>
@@ -318,8 +308,10 @@
 			<label for="Nodes"><input type="checkbox" name="question2" value="wrong" id="Nodes" onclick="checkbox()"> Nodes</label><br>
 
 			<p><span id="score"></span></p>
-			<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
-			<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+      <table style="border:0px;">
+        <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><button onclick="result()" type="button" class="Quizbutton" value="Check" style="float:right;">Check</button></td></tr>
+        <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+      </table>
 			</fieldset>
 				</form>
 		</div>
@@ -368,7 +360,6 @@
 	  var i;
 	  var slides = document.getElementsByClassName("mySlides");
 	  var dots = document.getElementsByClassName("demo");
-	  var captionText = document.getElementById("caption");
 	  if (n > slides.length) {slideIndex = 1}
 	  if (n < 1) {slideIndex = slides.length}
 	  for (i = 0; i < slides.length; i++) {
@@ -434,7 +425,7 @@
 
 		function result() {
 			result = question1 + question2;
-			output = "Out of 2 marks you got " + result;
+			output = "Your Score: " + result + "/2"
 			document.getElementById("score").innerHTML = output;
 		}
 		</script>

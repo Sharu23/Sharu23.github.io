@@ -11,8 +11,8 @@
   		<div class="sidebar">
   			<nav>
   				<ul>
-  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ProjectController">&times;</a></li>
-  					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ProjectController">&times;</a></li><br>
+  					<li style="margin-top:50px"><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
   					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
   				</ul>
   			</nav>
@@ -21,7 +21,7 @@
     <h1>Project Management<img src="../img/ProjectManagement_white.png" alt= "Project Management Icon" class="Topicicon"></h1>
     <h4>Background information</h4>
     <button class= "section">What is a project?</button>
-    <div class= "panel">A project is infinite with a defined start and finish, it has specific objectives and are made up of multiple different processes that are used to achieve. There are always people involved, who will benefit from the projects outcome.</div>
+    <div class= "panel"><p>A project is infinite with a defined start and finish, it has specific objectives and are made up of multiple different processes that are used to achieve. There are always people involved, who will benefit from the projects outcome.</p></div>
     <button class= "section">What is project management?</button>
     <div class="panel"><p>It is the processes involved in formally defining the language, methods and resources that will be used in completing your project, in a way that ensures there can be no confusion as to what needs to be done and how at any point in the lifetime of the project.</p>
     <p>Project can fail which can be if it went over the time limit, over budget or has not been completed. These can occur if the project has not been managed or lots of unexpected factors have effected it. </p></div>
@@ -116,8 +116,10 @@
 			<label for="over_time_limit"><input type="checkbox" name="question2" value="right" id="over_time_limit" onclick="checkbox()"> When over the time limit</label>
 			<label for="well_planned"><input type="checkbox" name="question2" value="wrong" id="well_planned" onclick="checkbox()"> When it has been well planned</label><br>
 			<p><span id="score"></span></p>
-			<button class="Quizbutton" type="button" value="Check" onclick="result()">Check</button>
-			<button class="Quizbutton" type="button" onclick="refresh()">Start Again</button>
+      <table style="border:0px;">
+        <tr style="border:0px;padding-bottom:0px"><td style="border:0px;padding-bottom:0px"><button onclick="result()" type="button" class="Quizbutton" value="Check" style="float:right;">Check</button></td></tr>
+        <tr style="border:0px;"><td style="border:0px;"><button type="button" onclick="refresh()" style="float:right;cursor:pointer;text-decoration:underline;color:#C0C0C0;padding-right:10px;">Start Again</button></td></tr>
+      </table>
 			</fieldset>
 				</form>
 		</div>
@@ -227,7 +229,7 @@
 
 		function result() {
 		  result = question1 + question2;
-		  output = "Out of 2 marks you got " + result;
+		  output = "Your Score: " + result + "/2";
 		  document.getElementById("score").innerHTML = output;
 		}
 		</script>

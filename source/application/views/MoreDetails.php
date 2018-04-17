@@ -11,7 +11,7 @@
 						<table>
 							<tr>
 								<th style="border: 1px solid black">Source Name</th>
-								<th style="border: 1px solid black"> Source Type</th>
+								<th style="border: 1px solid black">Source Type</th>
 								<th style="border: 1px solid black">Source Location</th>
 								<th style="border: 1px solid black">Source URL</th>
 							</tr>
@@ -92,6 +92,18 @@
 								<td>Image</td>
 								<td>Module Page</td>
 								<td style="overflow-wrap: break-word; word-break: break-all;">https://d30y9cdsu7xlg0.cloudfront.net/png/9658-200.png</td>
+							</tr>
+							<tr>
+								<td>Slideshow</td>
+								<td>PowerPoint</td>
+								<td>Homepage</td>
+								<td style="overflow-wrap: break-word; word-break: break-all;">https://www.tes.com/teaching-resource/revision-skills-introduction-exam-preparation-y11-6451071</td>
+							</tr>
+							<tr>
+								<td>Slideshow Content</td>
+								<td>PowerPoint</td>
+								<td>Quiz Page</td>
+								<td style="overflow-wrap: break-word; word-break: break-all;">https://www.hwdsb.on.ca/westdale/files/2011/11/Mastering-Multiple-Choice-Questions-2.ppt</td>
 							</tr>
 						</table>
 					</div>

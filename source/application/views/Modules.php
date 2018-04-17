@@ -10,7 +10,7 @@
   		<div class="sidebar">
   			<nav>
   				<ul>
-  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ModulesController">&times;</a></li>
+  					<li class="cross"><a class="cross" href="<?php echo base_url();?>ModulesController">&times;</a></li><br>
   					<li><a href="<?php echo base_url();?>ProjectController">Project Management</a></li>
   					<li><a href="<?php echo base_url();?>SystemController">System Designs</a></li>
   				</ul>
